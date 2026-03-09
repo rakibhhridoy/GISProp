@@ -310,86 +310,142 @@ Understanding the actual cost to deliver each service is critical for pricing an
 
 \subsection{Topographic Survey Project (500 hectares)}
 
+\textbf{Service Overview:} High-resolution LiDAR-based topographic mapping for infrastructure planning, flood risk assessment, and land management. A 500-hectare survey produces a Digital Elevation Model (DEM), Digital Terrain Model (DTM), and contour maps at 10--50\,cm accuracy.
+
+\textbf{Typical Clients:} Government land agencies (DLRS, LGED), infrastructure developers, and environmental consultancies.
+
+\textbf{Scope \& Timeline:}
+\begin{itemize}
+    \item \textbf{Pre-flight:} Ground control point (GCP) placement, flight plan approval --- 2--3 days
+    \item \textbf{Data Acquisition:} 2--3 flight days covering 500 ha at 60\,m altitude
+    \item \textbf{Processing:} Point cloud classification, DEM/DTM generation, QA --- 5--7 days
+    \item \textbf{Deliverables:} GeoTIFF rasters, LAS point cloud, contour shapefile, PDF report
+    \item \textbf{Total Project Duration:} 2--3 weeks
+\end{itemize}
+
 \begin{table}[h!]
     \centering
-    \caption{Cost Breakdown: Topographic Survey}
+    \caption{Cost Breakdown: Topographic Survey (500 ha)}
     \label{tab:survey_cost}
-    \begin{tabularx}{\textwidth}{l | X}
+    \begin{tabularx}{\textwidth}{l | X | X}
         \hline
-        \theader{Cost Element} & \theader{Amount (BDT)} \\
+        \theader{Cost Element} & \theader{Hours / Unit} & \theader{Amount (BDT)} \\
         \hline
-        Flight time (20 hours @ 4,000/hr) & 80,000 \\
+        Drone flight operations (pilot + equipment) & 20 hrs @ 4,000/hr & 80,000 \\
         \hline
-        Processing time (40 hours @ 500/hr) & 20,000 \\
+        Point cloud processing \& DEM generation & 40 hrs @ 500/hr & 20,000 \\
         \hline
-        Equipment depreciation & 10,000 \\
+        Equipment depreciation (LiDAR sensor) & Per mission & 10,000 \\
         \hline
-        Travel \& field costs & 20,000 \\
+        Travel, accommodation \& field logistics & Lump sum & 20,000 \\
         \hline
-        \cellcolor{LightGrey}\textbf{TOTAL DELIVERY COST} & \cellcolor{LightGrey}\textbf{130,000} \\
+        \cellcolor{LightGrey}\textbf{Total Delivery Cost} & & \cellcolor{LightGrey}\textbf{BDT 1,30,000} \\
         \hline
-        \textbf{Selling Price} & \textbf{350,000-500,000} \\
+        \textbf{Selling Price (value-based)} & & \textbf{BDT 3,50,000 -- 5,00,000} \\
         \hline
-        \textbf{Gross Margin} & \textbf{62-74\%} \\
+        \textbf{Gross Margin} & & \textbf{62--74\%} \\
         \hline
     \end{tabularx}
 \end{table}
+
+\begin{successbox}[Pricing Rationale]
+    Government procurement benchmarks for equivalent survey work range from BDT\,4,00,000--8,00,000 per 500\,ha. Precinct Smart's LiDAR accuracy (vs.\ traditional total station methods) justifies a premium while remaining 30--40\% below legacy survey firm rates.
+\end{successbox}
+
+% ---
 
 \subsection{Agricultural Mapping (1,000 hectares)}
 
+\textbf{Service Overview:} Multispectral and LiDAR drone mapping of agricultural land to generate crop health indices (NDVI, NDRE), soil variability maps, and drainage models. Delivered to NGO partners, agricultural departments, and commercial farms.
+
+\textbf{Typical Clients:} BRAC, DAE (Department of Agricultural Extension), large commercial farms, and irrigation boards.
+
+\textbf{Scope \& Timeline:}
+\begin{itemize}
+    \item \textbf{Pre-flight:} Crop calendar coordination, sensor calibration, GCP setup --- 1--2 days
+    \item \textbf{Data Acquisition:} 3--4 flight days covering 1,000\,ha with multispectral payload
+    \item \textbf{Processing:} Orthomosaic, NDVI raster, zone management maps --- 5--6 days
+    \item \textbf{Deliverables:} Prescription maps, NDVI time-series, agronomist report, field-ready PDF
+    \item \textbf{Total Project Duration:} 2--3 weeks
+\end{itemize}
+
 \begin{table}[h!]
     \centering
-    \caption{Cost Breakdown: Agricultural Mapping}
+    \caption{Cost Breakdown: Agricultural Mapping (1,000 ha)}
     \label{tab:agri_cost}
-    \begin{tabularx}{\textwidth}{l | X}
+    \begin{tabularx}{\textwidth}{l | X | X}
         \hline
-        \theader{Cost Element} & \theader{Amount (BDT)} \\
+        \theader{Cost Element} & \theader{Hours / Unit} & \theader{Amount (BDT)} \\
         \hline
-        Flight time (35 hours) & 140,000 \\
+        Drone flight operations (multispectral) & 35 hrs & 1,40,000 \\
         \hline
-        Processing \& analysis (25 hours) & 12,500 \\
+        Spectral processing \& index generation & 25 hrs @ 500/hr & 12,500 \\
         \hline
-        Travel \& accommodation & 40,000 \\
+        Travel \& field accommodation & Lump sum & 40,000 \\
         \hline
-        Equipment \& consumables & 20,000 \\
+        Equipment \& sensor consumables & Per mission & 20,000 \\
         \hline
-        \cellcolor{LightGrey}\textbf{TOTAL DELIVERY COST} & \cellcolor{LightGrey}\textbf{212,500} \\
+        \cellcolor{LightGrey}\textbf{Total Delivery Cost} & & \cellcolor{LightGrey}\textbf{BDT 2,12,500} \\
         \hline
-        \textbf{Selling Price} & \textbf{400,000-600,000} \\
+        \textbf{Selling Price (value-based)} & & \textbf{BDT 4,00,000 -- 6,00,000} \\
         \hline
-        \textbf{Gross Margin} & \textbf{50-65\%} \\
+        \textbf{Gross Margin} & & \textbf{50--65\%} \\
         \hline
     \end{tabularx}
 \end{table}
+
+\begin{successbox}[Farmer ROI Justification]
+    A 1,000\,ha precision agriculture map enables yield gains of 5--15\% for participating farmers. At average paddy yield of BDT\,1,20,000/ha, a 10\% improvement across 1,000\,ha generates BDT\,1.2\,crore in additional farmer income --- making a BDT\,4,00,000--6,00,000 mapping fee highly cost-effective.
+\end{successbox}
+
+% ---
 
 \subsection{Custom GIS Application}
 
+\textbf{Service Overview:} End-to-end development of web or mobile GIS applications tailored to client workflows. Typical products include land record portals, crop monitoring dashboards, real-time flood alert systems, and farmer advisory apps integrated with drone data pipelines.
+
+\textbf{Typical Clients:} Government ministries (MoLand, MoA), NGOs requiring digital field tools, agri-fintech companies, and real estate developers.
+
+\textbf{Scope \& Timeline:}
+\begin{itemize}
+    \item \textbf{Discovery:} Requirements workshops, UX wireframes, technical architecture --- 1--2 weeks
+    \item \textbf{Development:} Backend (Django/FastAPI), frontend (React), GIS layers (PostGIS/GeoServer) --- 6--10 weeks
+    \item \textbf{Integration:} Drone data pipeline, satellite feed, or IoT sensor connection --- 2--3 weeks
+    \item \textbf{Testing \& Deployment:} UAT, cloud deployment (AWS/GCP), user training --- 1--2 weeks
+    \item \textbf{Deliverables:} Source code, documentation, hosted application, 3-month support
+    \item \textbf{Total Project Duration:} 3--4 months
+\end{itemize}
+
 \begin{table}[h!]
     \centering
-    \caption{Cost Breakdown: Custom Application}
+    \caption{Cost Breakdown: Custom GIS Application}
     \label{tab:app_cost}
-    \begin{tabularx}{\textwidth}{l | X}
+    \begin{tabularx}{\textwidth}{l | X | X}
         \hline
-        \theader{Cost Element} & \theader{Amount (BDT)} \\
+        \theader{Cost Element} & \theader{Hours / Unit} & \theader{Amount (BDT)} \\
         \hline
-        Requirements \& design (60 hours) & 30,000 \\
+        Requirements, UX design \& architecture & 60 hrs & 30,000 \\
         \hline
-        Development (100 hours) & 50,000 \\
+        Backend \& GIS development & 100 hrs & 50,000 \\
         \hline
-        Testing \& deployment (40 hours) & 20,000 \\
+        Testing, QA \& deployment & 40 hrs & 20,000 \\
         \hline
-        Cloud infrastructure setup & 50,000 \\
+        Cloud infrastructure setup (AWS/GCP) & Lump sum & 50,000 \\
         \hline
-        Documentation & 10,000 \\
+        Technical documentation \& training & Lump sum & 10,000 \\
         \hline
-        \cellcolor{LightGrey}\textbf{TOTAL DELIVERY COST} & \cellcolor{LightGrey}\textbf{160,000} \\
+        \cellcolor{LightGrey}\textbf{Total Delivery Cost} & & \cellcolor{LightGrey}\textbf{BDT 1,60,000} \\
         \hline
-        \textbf{Selling Price} & \textbf{800,000-1,500,000} \\
+        \textbf{Selling Price (value-based)} & & \textbf{BDT 8,00,000 -- 15,00,000} \\
         \hline
-        \textbf{Gross Margin} & \textbf{70-80\%} \\
+        \textbf{Gross Margin} & & \textbf{70--80\%} \\
         \hline
     \end{tabularx}
 \end{table}
+
+\begin{successbox}[High-Margin Rationale]
+    Custom GIS applications carry the highest margin in the service portfolio because intellectual capital --- not equipment --- drives value. A land record portal for a district government, for instance, replaces manual processes costing BDT\,50--80\,lakhs annually, making a BDT\,10--15\,lakh development fee a compelling ROI for the client.
+\end{successbox}
 
 \section{Cash Flow Management}
 
