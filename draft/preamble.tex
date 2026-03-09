@@ -196,17 +196,16 @@
 
 \titleformat{\chapter}[display]
     {\normalfont\Huge\bfseries\color{PrimaryBlue}}
-    {}
-    {0pt}
+    {\large\normalfont\color{HeaderGrey}\MakeUppercase{\chaptertitlename}~\thechapter}
+    {8pt}
     {%
         \begin{tikzpicture}[remember picture]
-            \fill[PrimaryBlue] (0,0) rectangle (\textwidth, 2pt);
+            \fill[PrimaryBlue] (0,0) rectangle (4cm, 2pt);
         \end{tikzpicture}\\[6pt]
-        \chaptertitlename~\thechapter\quad
     }
-    [{\color{PrimaryBlue}\rule{4cm}{2pt}}\vspace{4pt}]
+    [{\vspace{2pt}}]
 
-\titlespacing*{\chapter}{0pt}{-20pt}{24pt}
+\titlespacing*{\chapter}{0pt}{-10pt}{24pt}
 
 % ============================================================================
 % SECTION STYLING
