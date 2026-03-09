@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+/* Custom CSS for GIS Proposal Reveal.js Presentation — Dark Theme */
+
+:root {
+    --primary-blue: #63B3ED;
+    --secondary-blue: #2B4F8A;
+    --accent-green: #48BB78;
+    --accent-orange: #ED8936;
+    --accent-red: #FC8181;
+    --dark-bg: #111111;
+    --slide-bg: #1A1A1A;
+    --card-bg: #252525;
+    --body-text: #E2E8F0;
+    --muted-text: #A0AEC0;
+    --border-subtle: rgba(99,179,237,0.2);
+    --card-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+
+
+/* Main slides styling */
+.reveal {
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    font-size: 1em;
+    color: #E2E8F0;
+    background-color: #111111;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-weight: 700;
+    text-transform: none;
+    word-wrap: break-word;
+    color: #FFFFFF;
+}
+
+.reveal h1 {
+    font-size: 3em;
+    font-weight: 800;
+    margin-bottom: 0.3em;
+}
+
+.reveal h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 0.8em;
+    padding-bottom: 0.5em;
+    border-bottom: 3px solid #48BB78;
+    display: inline-block;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+.reveal h3 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 0.6em;
+    padding-bottom: 0.4em;
+    border-bottom: 2px solid #63B3ED;
+    display: inline-block;
+    color: #63B3ED;
+}
+
+.reveal h4 {
+    font-size: 1.3em;
+    margin-bottom: 0.6em;
+    color: #48BB78;
+    font-weight: 600;
+}
+
+.reveal p {
+    line-height: 1.7;
+    margin-bottom: 1.2em;
+    font-size: 1.1em;
+    color: #E2E8F0;
+}
+
+/* List styling */
+.reveal ul {
+    list-style: none;
+    padding-left: 1.5em;
+    margin: 0.8em 0;
+}
+
+.reveal li {
+    margin-bottom: 0.8em;
+    line-height: 1.6;
+    font-size: 1em;
+    color: #E2E8F0;
+}
+
+.reveal li:before {
+    content: "▸ ";
+    color: #48BB78;
+    font-weight: bold;
+    margin-right: 0.7em;
+}
+
+.reveal ol {
+    padding-left: 1em;
+}
+
+.reveal ol li {
+    margin-bottom: 0.5em;
+}
+
+/* Table styling */
+.reveal table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2em 0;
+    font-size: 0.95em;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.reveal table th,
+.reveal table td {
+    padding: 1em 1.2em;
+    text-align: left;
+    border-bottom: 1px solid rgba(99,179,237,0.15);
+    color: #E2E8F0;
+}
+
+.reveal table th {
+    background: linear-gradient(135deg, #0D1B3E 0%, #1E4080 100%);
+    font-weight: 600;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+}
+
+.reveal table tbody tr {
+    transition: background-color 0.2s ease;
+    background-color: #1A1A1A;
+}
+
+.reveal table tbody tr:hover {
+    background-color: rgba(72, 187, 120, 0.12);
+}
+
+.reveal table tbody tr:nth-child(even) {
+    background-color: rgba(255,255,255,0.03);
+}
+
+/* Link styling */
+.reveal a {
+    color: #63B3ED;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.reveal a:hover {
+    color: #48BB78;
+}
+
+/* Block quotes and emphasis */
+.reveal blockquote {
+    border-left: 4px solid #48BB78;
+    padding: 1em 1.2em;
+    margin: 1.2em 0;
+    background-color: rgba(72, 187, 120, 0.08);
+    font-style: italic;
+    color: #CBD5E0;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.reveal strong {
+    color: #63B3ED;
+    font-weight: 700;
+}
+
+.reveal em {
+    color: #48BB78;
+    font-style: italic;
+}
+
+/* Slide-specific spacing */
+.reveal section {
+    padding: 2em 2em;
+}
+
+.reveal section section {
+    padding: 2em 2em;
+}
+
+/* Section backgrounds */
+.reveal section {
+    background: #1A1A1A;
+}
+
+/* Notes section styling */
+.reveal aside.notes {
+    display: none;
+}
+
+/* Presentation mode - show notes */
+.speaker-notes {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: #48BB78;
+    font-size: 0.7em;
+    padding: 1em;
+    border: 1px solid #48BB78;
+    overflow: auto;
+    z-index: 1000;
+    font-family: monospace;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .reveal h1 {
+        font-size: 2.5em;
+    }
+
+    .reveal h2 {
+        font-size: 1.8em;
+    }
+
+    .reveal h3 {
+        font-size: 1.3em;
+    }
+
+    .reveal section {
+        padding: 1em;
+    }
+
+    .reveal table {
+        font-size: 0.7em;
+    }
+}
+
+/* Custom classes for content blocks */
+.metric-box {
+    background-color: rgba(99, 179, 237, 0.1);
+    border-left: 4px solid #63B3ED;
+    padding: 1.2em;
+    margin: 1em 0;
+    border-radius: 8px;
+    color: #E2E8F0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.metric-box:hover {
+    box-shadow: 0 6px 20px rgba(99,179,237,0.25);
+}
+
+.success-box {
+    background-color: rgba(72, 187, 120, 0.1);
+    border-left: 4px solid #48BB78;
+    padding: 1.2em;
+    margin: 1em 0;
+    border-radius: 8px;
+    color: #E2E8F0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.success-box:hover {
+    box-shadow: 0 4px 16px rgba(72,187,120,0.2);
+}
+
+.warning-box {
+    background-color: rgba(237, 137, 54, 0.1);
+    border-left: 4px solid #ED8936;
+    padding: 1.2em;
+    margin: 1em 0;
+    border-radius: 8px;
+    color: #E2E8F0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.warning-box:hover {
+    box-shadow: 0 4px 16px rgba(237,137,54,0.2);
+}
+
+/* Section header overlay card */
+.section-header-slide {
+    background: rgba(10, 20, 40, 0.85);
+    padding: 1em 2em;
+    border-radius: 12px;
+    border-left: 4px solid #48BB78;
+    display: inline-block;
+}
+
+/* Title hero layout */
+.title-hero {
+    background: rgba(10, 20, 40, 0.9);
+    padding: 2em 3em;
+    border-radius: 16px;
+    border-left: 6px solid #48BB78;
+    display: inline-block;
+    max-width: 85%;
+}
+
+/* Progress bar */
+.reveal .progress {
+    color: #48BB78;
+}
+
+.reveal .progress span {
+    background-color: #48BB78;
+}
+
+/* Fragment animations */
+.reveal .fragment {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.reveal .fragment.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Slide number styling */
+.reveal .slide-number {
+    color: #63B3ED;
+    font-size: 0.7em;
+}
+
+/* Print styles */
+@media print {
+    .reveal section {
+        page-break-after: always;
+    }
+
+    .reveal section[data-background-color] {
+        background: white !important;
+        color: black !important;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3 {
+        color: #1A202C !important;
+    }
+
+    .reveal a {
+        color: #2B6CB0 !important;
+    }
+}
+
+/* ============================================================================ */
+/* LAYOUT FIX - CENTER CONTENT & REMOVE EXCESS MARGINS */
+/* ============================================================================ */
+
+/* Center all section content */
+.reveal section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Override text-align for specific content areas */
+.reveal section > div:not([style*="display: grid"]),
+.reveal section h3:not([style*="text"]),
+.reveal section p:not([style*="text"]) {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Fix grid layouts to center properly */
+.reveal section div[style*="display: grid"] {
+    margin: 0 auto;
+    max-width: 95%;
+}
+
+/* Fix table centering and width */
+.reveal table {
+    margin: 1.2em auto !important;
+    max-width: 95%;
+}
+
+/* Fix list centering */
+.reveal ul, .reveal ol {
+    text-align: left;
+    display: inline-block;
+    margin: 0.8em auto;
+}
+
+/* Fix background boxes */
+.metric-box, .success-box, .warning-box {
+    margin: 1em auto;
+}
+
+/* Ensure blockquotes are centered */
+.reveal blockquote {
+    margin: 1.2em auto;
+    max-width: 90%;
+}
+
+/* Fix image containers to center */
+.reveal section img {
+    margin: 0 auto;
+    display: block;
+}
+
+/* Center all divs within sections */
+.reveal section > div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Fix nested divs in grids */
+.reveal section div[style*="grid"] > div {
+    margin: 0;
+}
+
+/* ============================================================================ */
+/* AGGRESSIVE ALIGNMENT FIX - ENSURE ALL CONTENT IS CENTERED */
+/* ============================================================================ */
+
+/* Force all divs to respect width constraints */
+.reveal section > div {
+    max-width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Ensure all nested divs with display: grid have max-width */
+div[style*="display: grid"] {
+    max-width: 95% !important;
+    margin: 0 auto !important;
+}
+
+/* Fix all tables to be properly centered and constrained */
+.reveal table {
+    max-width: 90% !important;
+    margin: 1.2em auto !important;
+}
+
+/* Ensure all content boxes are centered */
+div[style*="background-color"] {
+    max-width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Center all section subsections */
+.reveal section section {
+    width: 100%;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+/* Fix reveal section width to prevent overflow */
+.reveal section {
+    width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Ensure slide width is properly constrained */
+.reveal {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* ============================================================================ */
+/* GRID ITEM ALIGNMENT - ENSURE ALL GRID CHILDREN ARE PROPERLY ALIGNED */
+/* ============================================================================ */
+
+/* Fix grid child divs to prevent overflow */
+div[style*="display: grid"] > div {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Ensure box content doesn't overflow */
+div[style*="background-color: rgba"] {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+/* ============================================================================ */
+/* BACKGROUND IMAGES WITH LIGHT OVERLAYS - DISABLED */
+/* ============================================================================ */
+
+/* NOTE: Background images disabled due to conflicts with nested sections */
+/* Reveal.js vertical slides require transparent outer containers */
+/* Background images should be applied at slide-by-slide level, not section level */
+
+/* Disable background images on all sections */
+.reveal section[data-background-image] {
+    background-image: none !important;
+    background-color: transparent !important;
+}
