@@ -22,26 +22,46 @@ Precinct Smart is establishing a \textbf{geospatial intelligence platform} combi
 
 Six major competitors were identified. All have significant gaps that Precinct Smart uniquely addresses:
 
-\begin{table}[h!]
+% Competitive Differentiation — TikZ comparison matrix
+\begin{figure}[H]
     \centering
-    \caption{Our Competitive Differentiation}
+    \begin{tikzpicture}[x=1cm, y=0.85cm]
+        % Column header backgrounds
+        \fill[PrimaryBlue]   (0,0) rectangle (3.4,0.75);
+        \fill[PrimaryBlue]   (3.5,0) rectangle (8.0,0.75);
+        \fill[AccentGreen!80](8.1,0) rectangle (13.5,0.75);
+        % Header text
+        \node[text=white,font=\bfseries\small,anchor=west] at (0.1,0.37)    {Capability};
+        \node[text=white,font=\bfseries\small,anchor=west] at (3.6,0.37)    {Competitors};
+        \node[text=white,font=\bfseries\small,anchor=west] at (8.2,0.37)    {Precinct Smart};
+        % Row data
+        \foreach \row/\cap/\comp/\us in {
+            1/{Technology}/{Photogrammetry OR basic LiDAR}/{LiDAR + Data Science (only ones)},
+            2/{Services}/{Data collection only}/{Data + apps + consulting},
+            3/{Distribution}/{Direct sales}/{NGO partnerships (10M farmers)},
+            4/{Revenue}/{Projects only}/{Projects + subscriptions},
+            5/{First-Mover}/{---}/{18--24 month advantage}
+        }{
+            \pgfmathsetmacro{\ybot}{-(\row-1)*0.75}
+            \pgfmathsetmacro{\ytop}{\ybot+0.75}
+            % Alternating row shading
+            \ifodd\row
+                \fill[LightGrey!60] (0,\ybot) rectangle (13.5,\ytop);
+            \fi
+            \draw[MidGrey!50] (0,\ybot) -- (13.5,\ybot);
+            \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,\ybot+0.37) {\cap};
+            \node[anchor=west,font=\small,text=DarkGrey,text width=4.3cm] at (3.6,\ybot+0.37) {\comp};
+            \node[anchor=west,font=\small\bfseries,text=AccentGreen,text width=5.2cm] at (8.2,\ybot+0.37) {\us};
+        }
+        % Outer border
+        \draw[PrimaryBlue,thick] (0,-3.75) rectangle (13.5,0.75);
+        % Column dividers
+        \draw[MidGrey] (3.45,-3.75) -- (3.45,0.75);
+        \draw[MidGrey] (8.05,-3.75) -- (8.05,0.75);
+    \end{tikzpicture}
+    \caption{Competitive Differentiation: Precinct Smart vs.\ Competitors}
     \label{tab:exec_differentiation}
-    \begin{tabularx}{\textwidth}{l | X | X}
-        \hline
-        \theader{Capability} & \theader{Competitors} & \theader{We Offer} \\
-        \hline
-        Technology & Photogrammetry OR basic LiDAR & LiDAR + Data Science (only ones) \\
-        \hline
-        Services & Data collection only & Data + apps + consulting \\
-        \hline
-        Distribution & Direct sales & NGO partnerships (10M farmers) \\
-        \hline
-        Revenue & Projects only & Projects + subscriptions \\
-        \hline
-        First-Mover & - & 18-24 month advantage \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
 \section*{Business Model}
 
@@ -57,22 +77,68 @@ Six major competitors were identified. All have significant gaps that Precinct S
 
 \section*{Financial Projections}
 
-\begin{table}[h!]
+% 3-Year Financial Summary — grouped bar chart
+\begin{figure}[H]
     \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            bar width=16pt,
+            width=0.88\textwidth,
+            height=7cm,
+            enlarge x limits=0.3,
+            symbolic x coords={Year 1, Year 2, Year 3},
+            xtick=data,
+            xlabel={\textbf{Year}},
+            ylabel={\textbf{BDT (Lakhs)}},
+            ymin=0, ymax=230,
+            ytick={0,50,100,150,200},
+            grid=major,
+            grid style={dotted,gray!40},
+            legend style={at={(0.97,0.97)},anchor=north east,font=\small,
+                          draw=MidGrey,fill=LightGrey},
+            tick label style={font=\small},
+            label style={font=\small\bfseries},
+            title={\textbf{3-Year Financial Summary (BDT Lakhs)}},
+            title style={font=\normalsize\bfseries\color{PrimaryBlue}},
+            nodes near coords,
+            nodes near coords style={font=\scriptsize\bfseries,color=DarkGrey},
+        ]
+        \addplot[fill=SecondaryBlue!80,draw=PrimaryBlue] coordinates
+            {(Year 1,30)(Year 2,96.5)(Year 3,204)};
+        \addplot[fill=AccentRed!60,draw=AccentRed] coordinates
+            {(Year 1,28)(Year 2,47)(Year 3,68)};
+        \addplot[fill=AccentGreen!70,draw=AccentGreen] coordinates
+            {(Year 1,2)(Year 2,49.5)(Year 3,136)};
+        \legend{Revenue, Costs, Net Profit}
+        \end{axis}
+    \end{tikzpicture}
     \caption{3-Year Financial Summary}
     \label{tab:exec_financials}
-    \begin{tabularx}{\textwidth}{l | X | X | X}
-        \hline
-        \theader{Metric} & \theader{Year 1} & \theader{Year 2} & \theader{Year 3} \\
-        \hline
-        Revenue (BDT Lakhs) & 30 & 96.5 & 204 \\
-        \hline
-        Profit (BDT Lakhs) & 2 & 49.5 & 136 \\
-        \hline
-        Margin & 7\% & 51\% & 67\% \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
+
+\noindent
+\begin{minipage}[t]{0.3\textwidth}
+    \begin{tcolorbox}[colback=BoxBlue,colframe=SecondaryBlue,arc=4pt,boxrule=1pt,
+        halign=center,top=6pt,bottom=6pt]
+        {\large\bfseries\color{PrimaryBlue}BDT 30L}\\[2pt]
+        {\small\color{DarkGrey}Year 1 Revenue\\7\% margin}
+    \end{tcolorbox}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+    \begin{tcolorbox}[colback=BoxBlue,colframe=SecondaryBlue,arc=4pt,boxrule=1pt,
+        halign=center,top=6pt,bottom=6pt]
+        {\large\bfseries\color{PrimaryBlue}BDT 96.5L}\\[2pt]
+        {\small\color{DarkGrey}Year 2 Revenue\\51\% margin}
+    \end{tcolorbox}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+    \begin{tcolorbox}[colback=BoxGreen,colframe=AccentGreen,arc=4pt,boxrule=1pt,
+        halign=center,top=6pt,bottom=6pt]
+        {\large\bfseries\color{AccentGreen}BDT 204L}\\[2pt]
+        {\small\color{DarkGrey}Year 3 Revenue\\67\% margin}
+    \end{tcolorbox}
+\end{minipage}
 
 \begin{itemize}
     \item \textbf{Break-even:} Month 10, Year 1
@@ -108,26 +174,60 @@ Three apps delivering clear ROI:
     \item \textbf{Water Planning:} 30\% water savings = BDT 30-80K farmer value
 \end{itemize}
 
-Farmer price: BDT 5-8K/year (3-12 week payback period) — compelling economics for adoption.
+Farmer price: BDT 5-8K/year (3-12 week payback period) --- compelling economics for adoption.
 
 \section*{Key Risks \& Mitigation}
 
-\begin{table}[h!]
+% Top 3 Risks — TikZ risk cards
+\begin{figure}[H]
     \centering
-    \caption{Top 3 Risks}
+    \begin{tikzpicture}[x=1cm,y=1cm]
+        % Card 1 — Competitive Pressure
+        \fill[AccentRed!10] (0,0) rectangle (4.3,3.8);
+        \draw[AccentRed,thick] (0,0) rectangle (4.3,3.8);
+        \fill[AccentRed] (0,3.1) rectangle (4.3,3.8);
+        \node[text=white,font=\bfseries\small,text width=4cm,align=center]
+            at (2.15,3.45) {Competitive Pressure};
+        \node[font=\bfseries\footnotesize,text=AccentRed,text width=3.9cm,align=left]
+            at (2.15,2.6) {Impact:};
+        \node[font=\footnotesize,text=DarkGrey,text width=3.9cm,align=left]
+            at (2.15,2.22) {Reduce differentiation};
+        \node[font=\bfseries\footnotesize,text=AccentGreen,text width=3.9cm,align=left]
+            at (2.15,1.7) {Mitigation:};
+        \node[font=\footnotesize,text=DarkGrey,text width=3.9cm,align=left]
+            at (2.15,1.0) {Speed + NGO lock-in (exclusive deals) + data moat};
+        % Card 2 — NGO Partnership Failure
+        \fill[AccentOrange!10] (4.6,0) rectangle (8.9,3.8);
+        \draw[AccentOrange,thick] (4.6,0) rectangle (8.9,3.8);
+        \fill[AccentOrange] (4.6,3.1) rectangle (8.9,3.8);
+        \node[text=white,font=\bfseries\small,text width=4cm,align=center]
+            at (6.75,3.45) {NGO Partnership Failure};
+        \node[font=\bfseries\footnotesize,text=AccentOrange,text width=3.9cm,align=left]
+            at (6.75,2.6) {Impact:};
+        \node[font=\footnotesize,text=DarkGrey,text width=3.9cm,align=left]
+            at (6.75,2.22) {Delayed app revenue};
+        \node[font=\bfseries\footnotesize,text=AccentGreen,text width=3.9cm,align=left]
+            at (6.75,1.7) {Mitigation:};
+        \node[font=\footnotesize,text=DarkGrey,text width=3.9cm,align=left]
+            at (6.75,1.0) {Phased pilot (5K farmers) before full scale};
+        % Card 3 — Farmer Adoption Delays
+        \fill[SecondaryBlue!8] (9.2,0) rectangle (13.5,3.8);
+        \draw[SecondaryBlue,thick] (9.2,0) rectangle (13.5,3.8);
+        \fill[SecondaryBlue] (9.2,3.1) rectangle (13.5,3.8);
+        \node[text=white,font=\bfseries\small,text width=4cm,align=center]
+            at (11.35,3.45) {Farmer Adoption Delays};
+        \node[font=\bfseries\footnotesize,text=SecondaryBlue,text width=3.9cm,align=left]
+            at (11.35,2.6) {Impact:};
+        \node[font=\footnotesize,text=DarkGrey,text width=3.9cm,align=left]
+            at (11.35,2.22) {Slower revenue ramp};
+        \node[font=\bfseries\footnotesize,text=AccentGreen,text width=3.9cm,align=left]
+            at (11.35,1.7) {Mitigation:};
+        \node[font=\footnotesize,text=DarkGrey,text width=3.9cm,align=left]
+            at (11.35,1.0) {Proven market (127K already adopt), reasonable pricing};
+    \end{tikzpicture}
+    \caption{Top 3 Risks \& Mitigation Strategies}
     \label{tab:exec_risks}
-    \begin{tabularx}{\textwidth}{l | X | X}
-        \hline
-        \theader{Risk} & \theader{Impact} & \theader{Mitigation} \\
-        \hline
-        Competitive pressure & Reduce differentiation & Speed + NGO lock-in (exclusive deals) + data moat \\
-        \hline
-        NGO partnership failure & Delayed app revenue & Phased pilot (5K farmers) before scale \\
-        \hline
-        Farmer adoption delays & Slower revenue & Proven market (127K already adopt), reasonable pricing \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
 \section*{Investment Required}
 

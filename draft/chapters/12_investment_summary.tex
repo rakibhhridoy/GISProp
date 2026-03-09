@@ -10,26 +10,49 @@
 
 \subsection{Capital Allocation}
 
-\begin{table}[h!]
+% Investment Capital Breakdown — pgf-pie
+\begin{figure}[H]
     \centering
-    \caption{Investment Capital Breakdown}
+    \begin{tikzpicture}
+        \pie[
+            radius=3.2,
+            color={SecondaryBlue!80, AccentGreen!70, AccentOrange!80, MidGrey!90},
+            text=legend,
+            style={drop shadow},
+            before number=\phantom{},
+            after number=\%,
+            sum=100
+        ]{
+            75/Equipment \& Technology (75\%),
+            7/Office \& Infrastructure (7\%),
+            11/Regulatory \& Compliance (11\%),
+            11/Working Capital (11\%)
+        }
+    \end{tikzpicture}
+    \caption{Investment Capital Breakdown (BDT 120--140 Lakhs)}
     \label{tab:investment_breakdown}
-    \begin{tabularx}{\textwidth}{l | X | X}
-        \hline
-        \theader{Category} & \theader{Amount (BDT L)} & \theader{\%} \\
-        \hline
-        Equipment \& Technology & 90-100 & 73-80\% \\
-        \hline
-        Office \& Infrastructure & 8-10 & 6-8\% \\
-        \hline
-        Regulatory \& Compliance & 12-15 & 10-12\% \\
-        \hline
-        Working Capital Buffer & 10-15 & 8-12\% \\
-        \hline
-        \cellcolor{LightGrey}\textbf{TOTAL} & \cellcolor{LightGrey}\textbf{120-140} & \cellcolor{LightGrey}\textbf{100\%} \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+    \begin{tcolorbox}[colback=BoxBlue,colframe=SecondaryBlue,arc=4pt,boxrule=1pt,
+        top=6pt,bottom=6pt,left=8pt,right=8pt]
+        \small
+        \textbf{\textcolor{PrimaryBlue}{Capital Breakdown:}}\\[4pt]
+        \textbf{Equipment \& Technology:} BDT 90--100L (73--80\%)\\
+        \textbf{Office \& Infrastructure:} BDT 8--10L (6--8\%)\\
+        \textbf{Regulatory \& Compliance:} BDT 12--15L (10--12\%)\\
+        \textbf{Working Capital Buffer:} BDT 10--15L (8--12\%)
+    \end{tcolorbox}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \begin{tcolorbox}[colback=BoxGreen,colframe=AccentGreen,arc=4pt,boxrule=1pt,
+        top=6pt,bottom=6pt,left=8pt,right=8pt,halign=center]
+        {\large\bfseries\color{AccentGreen}BDT 120--140 Lakhs}\\[4pt]
+        {\small\color{DarkGrey}Total Capital Required}\\[2pt]
+        {\small\color{DarkGrey}Minimum recommended: BDT 100--125L}
+    \end{tcolorbox}
+\end{minipage}
 
 \subsection{Capital Allocation Chart}
 
@@ -57,22 +80,48 @@
 
 \section{Expected Returns (3-Year Horizon)}
 
-\begin{table}[h!]
+% 3-Year Financial Returns — pgfplots grouped bar chart
+\begin{figure}[H]
     \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            bar width=20pt,
+            width=0.85\textwidth,
+            height=7cm,
+            enlarge x limits=0.3,
+            symbolic x coords={Year 1, Year 2, Year 3},
+            xtick=data,
+            xlabel={\textbf{Year}},
+            ylabel={\textbf{BDT (Lakhs)}},
+            ymin=0, ymax=230,
+            ytick={0,50,100,150,200},
+            grid=major,
+            grid style={dotted,gray!40},
+            legend style={at={(0.97,0.97)},anchor=north east,font=\small,
+                          draw=MidGrey,fill=LightGrey},
+            tick label style={font=\small},
+            label style={font=\small\bfseries},
+            title={\textbf{3-Year Financial Returns (BDT Lakhs)}},
+            title style={font=\normalsize\bfseries\color{PrimaryBlue}},
+            nodes near coords,
+            nodes near coords style={font=\scriptsize\bfseries,color=DarkGrey},
+        ]
+        \addplot[fill=SecondaryBlue!75,draw=PrimaryBlue] coordinates {
+            (Year 1,30)(Year 2,96.5)(Year 3,204)
+        };
+        \addplot[fill=AccentGreen!65,draw=AccentGreen] coordinates {
+            (Year 1,2)(Year 2,49.5)(Year 3,136)
+        };
+        \addplot[fill=AccentOrange!70,draw=AccentOrange] coordinates {
+            (Year 1,2)(Year 2,51.5)(Year 3,187.5)
+        };
+        \legend{Revenue, Net Profit, Cumulative Profit}
+        \end{axis}
+    \end{tikzpicture}
     \caption{3-Year Financial Returns}
     \label{tab:returns}
-    \begin{tabularx}{\textwidth}{l | X | X | X}
-        \hline
-        \theader{Year} & \theader{Revenue (BDT L)} & \theader{Profit (BDT L)} & \theader{Cumulative (BDT L)} \\
-        \hline
-        Year 1 & 30 & 2 & 2 \\
-        \hline
-        Year 2 & 96.5 & 49.5 & 51.5 \\
-        \hline
-        Year 3 & 204 & 136 & 187.5 \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
 \section{Key Financial Metrics}
 
@@ -140,4 +189,3 @@
 % ============================================================================
 % END OF CHAPTER 12
 % ============================================================================
-

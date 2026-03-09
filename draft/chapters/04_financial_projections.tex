@@ -8,30 +8,52 @@
 
 The total startup capital required is shown in the following detailed breakdown:
 
-\begin{table}[h!]
+% Startup Capital — pgf-pie chart
+\begin{figure}[H]
     \centering
-    \caption{Total Startup Capital Requirement}
+    \begin{tikzpicture}
+        \pie[
+            radius=3.0,
+            color={SecondaryBlue!80, AccentGreen!70, AccentOrange!80, AccentRed!60, MidGrey!80},
+            text=legend,
+            style={drop shadow},
+            before number=\phantom{},
+            after number=\%,
+            sum=100
+        ]{
+            68/Equipment \& Hardware (68\%),
+            4/Office Setup (4\%),
+            5/Software Licenses (5\%),
+            11/Regulatory \& Compliance (11\%),
+            12/Working Capital (12\%)
+        }
+    \end{tikzpicture}
+    \caption{Total Startup Capital Requirement (BDT 132.6 Lakhs)}
     \label{tab:startup_capital}
-    \begin{tabularx}{\textwidth}{l | X | X}
-        \hline
-        \theader{Category} & \theader{Amount (BDT Lakhs)} & \theader{Percentage} \\
-        \hline
-        Equipment \& Hardware (Drones, LiDAR, servers) & 90.6 & 68\% \\
-        \hline
-        Office Setup \& Infrastructure & 5 & 4\% \\
-        \hline
-        Software Licenses \& Tools & 7 & 5\% \\
-        \hline
-        Regulatory \& Compliance (CAAB, registration, insurance) & 15 & 11\% \\
-        \hline
-        Working Capital (6 months operations buffer) & 15 & 11\% \\
-        \hline
-        \cellcolor{LightGrey}\textbf{TOTAL CAPITAL REQUIRED} & \cellcolor{LightGrey}\textbf{132.6} & \cellcolor{LightGrey}\textbf{100\%} \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
-\textbf{Recommendation:} Budget \textbf{BDT 100-125 lakhs minimum}; 132.6 lakhs provides optimal financial cushion.
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+    \begin{tcolorbox}[colback=BoxBlue,colframe=SecondaryBlue,arc=4pt,boxrule=1pt,
+        top=6pt,bottom=6pt,left=8pt,right=8pt]
+        \small
+        \textbf{\textcolor{PrimaryBlue}{Capital Breakdown:}}\\[4pt]
+        \textbf{Equipment \& Hardware:} BDT 90.6L (68\%)\\
+        \textbf{Office Setup:} BDT 5L (4\%)\\
+        \textbf{Software Licenses:} BDT 7L (5\%)\\
+        \textbf{Regulatory \& Compliance:} BDT 15L (11\%)\\
+        \textbf{Working Capital:} BDT 15L (12\%)
+    \end{tcolorbox}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \begin{tcolorbox}[colback=BoxGreen,colframe=AccentGreen,arc=4pt,boxrule=1pt,
+        top=6pt,bottom=6pt,left=8pt,right=8pt,halign=center]
+        {\large\bfseries\color{AccentGreen}BDT 132.6 Lakhs}\\[4pt]
+        {\small\color{DarkGrey}Total Capital Required}\\[2pt]
+        {\small\color{DarkGrey}Recommendation: BDT 100--125L minimum\\
+        (132.6L provides optimal cushion)}
+    \end{tcolorbox}
+\end{minipage}
 
 \section{Year-by-Year Revenue Projections}
 
@@ -39,53 +61,67 @@ The total startup capital required is shown in the following detailed breakdown:
 
 \textbf{Operational Target:} 5-8 projects, 12-15 sq. km coverage
 
-\begin{table}[h!]
+% Year 1 Revenue — pgfplots bar chart
+\begin{figure}[H]
     \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            xbar,
+            bar width=14pt,
+            width=0.82\textwidth,
+            height=6cm,
+            enlarge y limits=0.25,
+            symbolic y coords={Consulting,Urban Planning,Agricultural,Topographic},
+            ytick=data,
+            xlabel={\textbf{Revenue (BDT Lakhs)}},
+            xmin=0, xmax=20,
+            xtick={0,3,6,9,12,15,18},
+            grid=major,
+            grid style={dotted,gray!40},
+            title={\textbf{Year 1 Revenue by Project Type (BDT Lakhs)}},
+            title style={font=\normalsize\bfseries\color{PrimaryBlue}},
+            tick label style={font=\small},
+            label style={font=\small\bfseries},
+            nodes near coords,
+            nodes near coords style={font=\scriptsize\bfseries,color=DarkGrey},
+        ]
+        \addplot[fill=SecondaryBlue!75,draw=PrimaryBlue] coordinates {
+            (4,Consulting)(5,Urban Planning)(6,Agricultural)(15,Topographic)
+        };
+        \end{axis}
+    \end{tikzpicture}
     \caption{Year 1 Revenue Projection (Conservative Scenario)}
     \label{tab:year1_revenue}
-    \begin{tabularx}{\textwidth}{l | X | X | X}
-        \hline
-        \theader{Project Type} & \theader{Quantity} & \theader{Avg Fee (BDT)} & \theader{Revenue (BDT)} \\
-        \hline
-        Topographic Survey & 3 & 5,00,000 & 15,00,000 \\
-        \hline
-        Agricultural Mapping & 2 & 3,00,000 & 6,00,000 \\
-        \hline
-        Urban Planning Study & 1 & 5,00,000 & 5,00,000 \\
-        \hline
-        Consulting Engagement & 2 & 2,00,000 & 4,00,000 \\
-        \hline
-        \cellcolor{LightGrey}\textbf{TOTAL REVENUE} & & & \cellcolor{LightGrey}\textbf{30,00,000 (30 Lakhs)} \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
-\textbf{Operating Costs:}
-
-\begin{table}[h!]
+% Year 1 Operating Costs — tcolorbox KPI grid
+\begin{figure}[H]
     \centering
-    \caption{Year 1 Operating Costs}
+    \noindent
+    \begin{minipage}[t]{0.32\textwidth}
+        \begin{tcolorbox}[colback=BoxBlue,colframe=SecondaryBlue,arc=5pt,boxrule=1pt,
+            halign=center,top=6pt,bottom=6pt]
+            {\large\bfseries\color{PrimaryBlue}BDT 18L}\\[2pt]
+            {\small\color{DarkGrey}Staff Salaries\\(12 people)}
+        \end{tcolorbox}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.32\textwidth}
+        \begin{tcolorbox}[colback=BoxBlue,colframe=SecondaryBlue,arc=5pt,boxrule=1pt,
+            halign=center,top=6pt,bottom=6pt]
+            {\large\bfseries\color{PrimaryBlue}BDT 5L}\\[2pt]
+            {\small\color{DarkGrey}Office + Equipment\\Maintenance}
+        \end{tcolorbox}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.32\textwidth}
+        \begin{tcolorbox}[colback=BoxBlue,colframe=SecondaryBlue,arc=5pt,boxrule=1pt,
+            halign=center,top=6pt,bottom=6pt]
+            {\large\bfseries\color{PrimaryBlue}BDT 5L}\\[2pt]
+            {\small\color{DarkGrey}Travel + Marketing\\+ Misc.}
+        \end{tcolorbox}
+    \end{minipage}
+    \caption{Year 1 Operating Costs (Total: BDT 28 Lakhs)}
     \label{tab:year1_costs}
-    \begin{tabularx}{\textwidth}{l | X}
-        \hline
-        \theader{Cost Category} & \theader{Amount (BDT Lakhs)} \\
-        \hline
-        Staff Salaries (12 people, avg 1.5L/month) & 18 \\
-        \hline
-        Office rent \& utilities & 3 \\
-        \hline
-        Equipment maintenance \& repairs & 2 \\
-        \hline
-        Travel \& field operations & 2 \\
-        \hline
-        Marketing \& business development & 1.5 \\
-        \hline
-        Miscellaneous (insurance, permits, supplies) & 1.5 \\
-        \hline
-        \cellcolor{LightGrey}\textbf{TOTAL OPERATING COSTS} & \cellcolor{LightGrey}\textbf{28 Lakhs} \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
 \textbf{Year 1 Financial Summary:}
 \begin{itemize}
@@ -99,53 +135,67 @@ The total startup capital required is shown in the following detailed breakdown:
 
 \textbf{Operational Target:} 15-20 projects, 30-40 sq. km coverage, 2 hubs operational
 
-\begin{table}[h!]
+% Year 2 Revenue — pgfplots bar chart
+\begin{figure}[H]
     \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            xbar,
+            bar width=14pt,
+            width=0.82\textwidth,
+            height=6cm,
+            enlarge y limits=0.25,
+            symbolic y coords={Consulting,Custom Apps,Subscriptions,Project Services},
+            ytick=data,
+            xlabel={\textbf{Revenue (BDT Lakhs)}},
+            xmin=0, xmax=60,
+            xtick={0,15,30,45,60},
+            grid=major,
+            grid style={dotted,gray!40},
+            title={\textbf{Year 2 Revenue by Stream (BDT Lakhs)}},
+            title style={font=\normalsize\bfseries\color{PrimaryBlue}},
+            tick label style={font=\small},
+            label style={font=\small\bfseries},
+            nodes near coords,
+            nodes near coords style={font=\scriptsize\bfseries,color=DarkGrey},
+        ]
+        \addplot[fill=AccentGreen!65,draw=AccentGreen] coordinates {
+            (9,Consulting)(20,Custom Apps)(15,Subscriptions)(52.5,Project Services)
+        };
+        \end{axis}
+    \end{tikzpicture}
     \caption{Year 2 Revenue Projection (Growth Scenario)}
     \label{tab:year2_revenue}
-    \begin{tabularx}{\textwidth}{l | X | X | X}
-        \hline
-        \theader{Revenue Stream} & \theader{Projects/Units} & \theader{Avg Fee (BDT)} & \theader{Revenue (BDT)} \\
-        \hline
-        Per-Project Services & 15 & 3,50,000 & 52,50,000 \\
-        \hline
-        Data Subscriptions & 3 contracts & 5,00,000 & 15,00,000 \\
-        \hline
-        Custom Applications & 2 apps & 10,00,000 & 20,00,000 \\
-        \hline
-        Consulting \& Training & 3 engagements & 3,00,000 & 9,00,000 \\
-        \hline
-        \cellcolor{LightGrey}\textbf{TOTAL REVENUE} & & & \cellcolor{LightGrey}\textbf{96,50,000 (96.5 Lakhs)} \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
-\textbf{Operating Costs:}
-
-\begin{table}[h!]
+% Year 2 Operating Costs — tcolorbox KPI grid
+\begin{figure}[H]
     \centering
-    \caption{Year 2 Operating Costs}
+    \noindent
+    \begin{minipage}[t]{0.32\textwidth}
+        \begin{tcolorbox}[colback=BoxBlue,colframe=SecondaryBlue,arc=5pt,boxrule=1pt,
+            halign=center,top=6pt,bottom=6pt]
+            {\large\bfseries\color{PrimaryBlue}BDT 28L}\\[2pt]
+            {\small\color{DarkGrey}Staff Salaries\\(18 people)}
+        \end{tcolorbox}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.32\textwidth}
+        \begin{tcolorbox}[colback=BoxBlue,colframe=SecondaryBlue,arc=5pt,boxrule=1pt,
+            halign=center,top=6pt,bottom=6pt]
+            {\large\bfseries\color{PrimaryBlue}BDT 10L}\\[2pt]
+            {\small\color{DarkGrey}Office + 2 Hubs\\Equipment}
+        \end{tcolorbox}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.32\textwidth}
+        \begin{tcolorbox}[colback=BoxBlue,colframe=SecondaryBlue,arc=5pt,boxrule=1pt,
+            halign=center,top=6pt,bottom=6pt]
+            {\large\bfseries\color{PrimaryBlue}BDT 9L}\\[2pt]
+            {\small\color{DarkGrey}Travel + Marketing\\+ Misc.}
+        \end{tcolorbox}
+    \end{minipage}
+    \caption{Year 2 Operating Costs (Total: BDT 47 Lakhs)}
     \label{tab:year2_costs}
-    \begin{tabularx}{\textwidth}{l | X}
-        \hline
-        \theader{Cost Category} & \theader{Amount (BDT Lakhs)} \\
-        \hline
-        Staff Salaries (18 people, expanded team) & 28 \\
-        \hline
-        Office expansion \& 2 hubs & 5 \\
-        \hline
-        Equipment \& maintenance & 5 \\
-        \hline
-        Travel \& field operations & 4 \\
-        \hline
-        Marketing \& business development & 2 \\
-        \hline
-        Miscellaneous & 3 \\
-        \hline
-        \cellcolor{LightGrey}\textbf{TOTAL OPERATING COSTS} & \cellcolor{LightGrey}\textbf{47 Lakhs} \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
 \textbf{Year 2 Financial Summary:}
 \begin{itemize}
@@ -160,53 +210,67 @@ The total startup capital required is shown in the following detailed breakdown:
 
 \textbf{Operational Target:} 40-50 projects, 70-80 sq. km coverage, 3+ hubs, Data Science platform scaling
 
-\begin{table}[h!]
+% Year 3 Revenue — pgfplots bar chart
+\begin{figure}[H]
     \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            xbar,
+            bar width=14pt,
+            width=0.82\textwidth,
+            height=6cm,
+            enlarge y limits=0.25,
+            symbolic y coords={Consulting,Custom Apps,Subscriptions,Project Services},
+            ytick=data,
+            xlabel={\textbf{Revenue (BDT Lakhs)}},
+            xmin=0, xmax=120,
+            xtick={0,30,60,90,120},
+            grid=major,
+            grid style={dotted,gray!40},
+            title={\textbf{Year 3 Revenue by Stream (BDT Lakhs)}},
+            title style={font=\normalsize\bfseries\color{PrimaryBlue}},
+            tick label style={font=\small},
+            label style={font=\small\bfseries},
+            nodes near coords,
+            nodes near coords style={font=\scriptsize\bfseries,color=DarkGrey},
+        ]
+        \addplot[fill=AccentOrange!70,draw=AccentOrange] coordinates {
+            (21,Consulting)(48,Custom Apps)(30,Subscriptions)(105,Project Services)
+        };
+        \end{axis}
+    \end{tikzpicture}
     \caption{Year 3 Revenue Projection (Scaling Scenario)}
     \label{tab:year3_revenue}
-    \begin{tabularx}{\textwidth}{l | X | X | X}
-        \hline
-        \theader{Revenue Stream} & \theader{Projects/Units} & \theader{Avg Fee (BDT)} & \theader{Revenue (BDT)} \\
-        \hline
-        Per-Project Services & 35 & 3,00,000 & 105,00,000 \\
-        \hline
-        Data Subscriptions & 5 contracts & 6,00,000 & 30,00,000 \\
-        \hline
-        Custom Applications & 4 apps & 12,00,000 & 48,00,000 \\
-        \hline
-        Consulting \& Training & 6 engagements & 3,50,000 & 21,00,000 \\
-        \hline
-        \cellcolor{LightGrey}\textbf{TOTAL REVENUE} & & & \cellcolor{LightGrey}\textbf{204,00,000 (204 Lakhs)} \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
-\textbf{Operating Costs:}
-
-\begin{table}[h!]
+% Year 3 Operating Costs — tcolorbox KPI grid
+\begin{figure}[H]
     \centering
-    \caption{Year 3 Operating Costs}
+    \noindent
+    \begin{minipage}[t]{0.32\textwidth}
+        \begin{tcolorbox}[colback=BoxBlue,colframe=SecondaryBlue,arc=5pt,boxrule=1pt,
+            halign=center,top=6pt,bottom=6pt]
+            {\large\bfseries\color{PrimaryBlue}BDT 40L}\\[2pt]
+            {\small\color{DarkGrey}Staff Salaries\\(22--25 people)}
+        \end{tcolorbox}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.32\textwidth}
+        \begin{tcolorbox}[colback=BoxBlue,colframe=SecondaryBlue,arc=5pt,boxrule=1pt,
+            halign=center,top=6pt,bottom=6pt]
+            {\large\bfseries\color{PrimaryBlue}BDT 16L}\\[2pt]
+            {\small\color{DarkGrey}Office (3--4 Hubs)\\R\&D + Equipment}
+        \end{tcolorbox}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.32\textwidth}
+        \begin{tcolorbox}[colback=BoxBlue,colframe=SecondaryBlue,arc=5pt,boxrule=1pt,
+            halign=center,top=6pt,bottom=6pt]
+            {\large\bfseries\color{PrimaryBlue}BDT 12L}\\[2pt]
+            {\small\color{DarkGrey}Travel + Marketing\\+ Misc.}
+        \end{tcolorbox}
+    \end{minipage}
+    \caption{Year 3 Operating Costs (Total: BDT 68 Lakhs)}
     \label{tab:year3_costs}
-    \begin{tabularx}{\textwidth}{l | X}
-        \hline
-        \theader{Cost Category} & \theader{Amount (BDT Lakhs)} \\
-        \hline
-        Staff Salaries (22-25 people, multi-hub) & 40 \\
-        \hline
-        Office operations (3-4 hubs) & 8 \\
-        \hline
-        Equipment, R\&D \& upgrades & 8 \\
-        \hline
-        Travel \& field operations & 6 \\
-        \hline
-        Marketing \& business development & 3 \\
-        \hline
-        Miscellaneous & 3 \\
-        \hline
-        \cellcolor{LightGrey}\textbf{TOTAL OPERATING COSTS} & \cellcolor{LightGrey}\textbf{68 Lakhs} \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
 \textbf{Year 3 Financial Summary:}
 \begin{itemize}
@@ -219,35 +283,7 @@ The total startup capital required is shown in the following detailed breakdown:
 
 \section{3-Year Summary \& Key Metrics}
 
-\begin{table}[h!]
-    \centering
-    \caption{3-Year Financial Summary}
-    \label{tab:3year_summary}
-    \begin{tabularx}{\textwidth}{l | X | X | X}
-        \hline
-        \theader{Metric} & \theader{Year 1} & \theader{Year 2} & \theader{Year 3} \\
-        \hline
-        Revenue (BDT Lakhs) & 30 & 96.5 & 204 \\
-        \hline
-        Operating Costs & 28 & 47 & 68 \\
-        \hline
-        Net Profit & 2 & 49.5 & 136 \\
-        \hline
-        Profit Margin & 7\% & 51\% & 67\% \\
-        \hline
-        Break-even Month & 10 & 2 (at start) & - \\
-        \hline
-        ROI & 1.5\% & 49\% & 104\% \\
-        \hline
-        Payback Period & 45 months & 24 months & 11 months \\
-        \hline
-        \textbf{Cumulative Profit} & \textbf{2} & \textbf{51.5} & \textbf{187.5} \\
-        \hline
-    \end{tabularx}
-\end{table}
-
-\subsection{Revenue Growth Visualization}
-
+% 3-Year Summary — grouped bar chart
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}
@@ -295,6 +331,57 @@ The total startup capital required is shown in the following detailed breakdown:
     \label{fig:revenue_growth}
 \end{figure}
 
+% 3-Year Summary KPI cards
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[x=1cm,y=0.82cm]
+        % Header
+        \fill[PrimaryBlue] (0,0) rectangle (13.5,0.82);
+        \foreach \xpos/\lbl in {
+            0.1/{Metric},
+            3.4/{Year 1},
+            6.0/{Year 2},
+            8.9/{Year 3}}{
+            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.41) {\lbl};
+        }
+        % Summary rows
+        \foreach \row/\metric/\ya/\yb/\yc in {
+            1/{Revenue (BDT Lakhs)}/{30}/{96.5}/{204},
+            2/{Operating Costs}/{28}/{47}/{68},
+            3/{Net Profit}/{2}/{49.5}/{136},
+            4/{Profit Margin}/{7\%}/{51\%}/{67\%},
+            5/{Break-even Month}/{10}/{2 (at start)}/{--},
+            6/{ROI}/{1.5\%}/{49\%}/{104\%},
+            7/{Payback Period}/{45 mo.}/{24 mo.}/{11 mo.}
+        }{
+            \pgfmathsetmacro{\ybot}{-(\row-1)*0.82}
+            \pgfmathsetmacro{\ytop}{\ybot+0.82}
+            \ifodd\row
+                \fill[LightGrey!60] (0,\ybot) rectangle (13.5,\ytop);
+            \fi
+            \draw[MidGrey!50] (0,\ybot) -- (13.5,\ybot);
+            \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,\ybot+0.41) {\metric};
+            \node[anchor=west,font=\small,text=DarkGrey] at (3.4,\ybot+0.41) {\ya};
+            \node[anchor=west,font=\small\bfseries,text=SecondaryBlue] at (6.0,\ybot+0.41) {\yb};
+            \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (8.9,\ybot+0.41) {\yc};
+        }
+        % Cumulative profit row
+        \fill[AccentGreen!15] (0,-5.74) rectangle (13.5,-4.92);
+        \draw[AccentGreen,thick] (0,-5.74) rectangle (13.5,-4.92);
+        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,-5.33) {Cumulative Profit};
+        \node[anchor=west,font=\small\bfseries,text=DarkGrey] at (3.4,-5.33) {BDT 2L};
+        \node[anchor=west,font=\small\bfseries,text=SecondaryBlue] at (6.0,-5.33) {BDT 51.5L};
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (8.9,-5.33) {BDT 187.5L};
+        % Outer border + column lines
+        \draw[PrimaryBlue,thick] (0,-5.74) rectangle (13.5,0.82);
+        \foreach \xd in {3.35,5.95,8.85}{
+            \draw[MidGrey!70] (\xd,-5.74) -- (\xd,0.82);
+        }
+    \end{tikzpicture}
+    \caption{3-Year Financial Summary}
+    \label{tab:3year_summary}
+\end{figure}
+
 \begin{successbox}[3-Year Financial Highlights]
     \begin{tabular}{@{}llll@{}}
         \textbf{Metric} & \textbf{Year 1} & \textbf{Year 2} & \textbf{Year 3} \\
@@ -323,30 +410,56 @@ Understanding the actual cost to deliver each service is critical for pricing an
     \item \textbf{Total Project Duration:} 2--3 weeks
 \end{itemize}
 
-\begin{table}[h!]
+% Survey cost breakdown — TikZ card
+\begin{figure}[H]
     \centering
+    \begin{tikzpicture}[x=1cm,y=0.82cm]
+        % Header
+        \fill[PrimaryBlue] (0,0) rectangle (13.0,0.82);
+        \foreach \xpos/\lbl in {0.1/{Cost Element}, 6.5/{Hours / Unit}, 9.5/{Amount (BDT)}}{
+            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.41) {\lbl};
+        }
+        % Cost rows
+        \foreach \row/\el/\hrs/\amt in {
+            1/{Drone flight operations (pilot + equipment)}/{20 hrs @ 4\,000/hr}/{80\,000},
+            2/{Point cloud processing \& DEM generation}/{40 hrs @ 500/hr}/{20\,000},
+            3/{Equipment depreciation (LiDAR sensor)}/{Per mission}/{10\,000},
+            4/{Travel, accommodation \& field logistics}/{Lump sum}/{20\,000}
+        }{
+            \pgfmathsetmacro{\ybot}{-(\row-1)*0.82}
+            \pgfmathsetmacro{\ytop}{\ybot+0.82}
+            \ifodd\row
+                \fill[LightGrey!60] (0,\ybot) rectangle (13.0,\ytop);
+            \fi
+            \draw[MidGrey!50] (0,\ybot) -- (13.0,\ybot);
+            \node[anchor=west,font=\small,text=DarkGrey,text width=6.2cm] at (0.1,\ybot+0.41) {\el};
+            \node[anchor=west,font=\small,text=DarkGrey] at (6.5,\ybot+0.41) {\hrs};
+            \node[anchor=west,font=\small,text=DarkGrey] at (9.5,\ybot+0.41) {\amt};
+        }
+        % Total delivery cost
+        \fill[PrimaryBlue!15] (0,-3.28) rectangle (13.0,-2.46);
+        \draw[PrimaryBlue] (0,-3.28) -- (13.0,-3.28);
+        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,-2.87) {Total Delivery Cost};
+        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (9.5,-2.87) {BDT 1,30,000};
+        % Selling price
+        \fill[AccentGreen!15] (0,-4.10) rectangle (13.0,-3.28);
+        \draw[AccentGreen!60] (0,-4.10) -- (13.0,-4.10);
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (0.1,-3.69) {Selling Price (value-based)};
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-3.69) {BDT 3,50,000 -- 5,00,000};
+        % Margin
+        \fill[AccentGreen!25] (0,-4.92) rectangle (13.0,-4.10);
+        \draw[AccentGreen,thick] (0,-4.92) rectangle (13.0,-4.10);
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (0.1,-4.51) {Gross Margin};
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-4.51) {62--74\%};
+        % Outer border + column lines
+        \draw[PrimaryBlue,thick] (0,-4.92) rectangle (13.0,0.82);
+        \foreach \xd in {6.45,9.45}{
+            \draw[MidGrey!70] (\xd,-4.92) -- (\xd,0.82);
+        }
+    \end{tikzpicture}
     \caption{Cost Breakdown: Topographic Survey (500 ha)}
     \label{tab:survey_cost}
-    \begin{tabularx}{\textwidth}{l | X | X}
-        \hline
-        \theader{Cost Element} & \theader{Hours / Unit} & \theader{Amount (BDT)} \\
-        \hline
-        Drone flight operations (pilot + equipment) & 20 hrs @ 4,000/hr & 80,000 \\
-        \hline
-        Point cloud processing \& DEM generation & 40 hrs @ 500/hr & 20,000 \\
-        \hline
-        Equipment depreciation (LiDAR sensor) & Per mission & 10,000 \\
-        \hline
-        Travel, accommodation \& field logistics & Lump sum & 20,000 \\
-        \hline
-        \cellcolor{LightGrey}\textbf{Total Delivery Cost} & & \cellcolor{LightGrey}\textbf{BDT 1,30,000} \\
-        \hline
-        \textbf{Selling Price (value-based)} & & \textbf{BDT 3,50,000 -- 5,00,000} \\
-        \hline
-        \textbf{Gross Margin} & & \textbf{62--74\%} \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
 \begin{successbox}[Pricing Rationale]
     Government procurement benchmarks for equivalent survey work range from BDT\,4,00,000--8,00,000 per 500\,ha. Precinct Smart's LiDAR accuracy (vs.\ traditional total station methods) justifies a premium while remaining 30--40\% below legacy survey firm rates.
@@ -369,30 +482,56 @@ Understanding the actual cost to deliver each service is critical for pricing an
     \item \textbf{Total Project Duration:} 2--3 weeks
 \end{itemize}
 
-\begin{table}[h!]
+% Agricultural mapping cost — TikZ card
+\begin{figure}[H]
     \centering
+    \begin{tikzpicture}[x=1cm,y=0.82cm]
+        % Header
+        \fill[AccentGreen!70] (0,0) rectangle (13.0,0.82);
+        \foreach \xpos/\lbl in {0.1/{Cost Element}, 6.5/{Hours / Unit}, 9.5/{Amount (BDT)}}{
+            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.41) {\lbl};
+        }
+        % Cost rows
+        \foreach \row/\el/\hrs/\amt in {
+            1/{Drone flight operations (multispectral)}/{35 hrs}/{1,40,000},
+            2/{Spectral processing \& index generation}/{25 hrs @ 500/hr}/{12,500},
+            3/{Travel \& field accommodation}/{Lump sum}/{40,000},
+            4/{Equipment \& sensor consumables}/{Per mission}/{20,000}
+        }{
+            \pgfmathsetmacro{\ybot}{-(\row-1)*0.82}
+            \pgfmathsetmacro{\ytop}{\ybot+0.82}
+            \ifodd\row
+                \fill[LightGrey!60] (0,\ybot) rectangle (13.0,\ytop);
+            \fi
+            \draw[MidGrey!50] (0,\ybot) -- (13.0,\ybot);
+            \node[anchor=west,font=\small,text=DarkGrey,text width=6.2cm] at (0.1,\ybot+0.41) {\el};
+            \node[anchor=west,font=\small,text=DarkGrey] at (6.5,\ybot+0.41) {\hrs};
+            \node[anchor=west,font=\small,text=DarkGrey] at (9.5,\ybot+0.41) {\amt};
+        }
+        % Total delivery cost
+        \fill[AccentGreen!15] (0,-3.28) rectangle (13.0,-2.46);
+        \draw[AccentGreen] (0,-3.28) -- (13.0,-3.28);
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (0.1,-2.87) {Total Delivery Cost};
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-2.87) {BDT 2,12,500};
+        % Selling price
+        \fill[AccentGreen!25] (0,-4.10) rectangle (13.0,-3.28);
+        \draw[AccentGreen!60] (0,-4.10) -- (13.0,-4.10);
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (0.1,-3.69) {Selling Price (value-based)};
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-3.69) {BDT 4,00,000 -- 6,00,000};
+        % Margin
+        \fill[AccentGreen!35] (0,-4.92) rectangle (13.0,-4.10);
+        \draw[AccentGreen,thick] (0,-4.92) rectangle (13.0,-4.10);
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (0.1,-4.51) {Gross Margin};
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-4.51) {50--65\%};
+        % Outer border + column lines
+        \draw[AccentGreen!80,thick] (0,-4.92) rectangle (13.0,0.82);
+        \foreach \xd in {6.45,9.45}{
+            \draw[MidGrey!70] (\xd,-4.92) -- (\xd,0.82);
+        }
+    \end{tikzpicture}
     \caption{Cost Breakdown: Agricultural Mapping (1,000 ha)}
     \label{tab:agri_cost}
-    \begin{tabularx}{\textwidth}{l | X | X}
-        \hline
-        \theader{Cost Element} & \theader{Hours / Unit} & \theader{Amount (BDT)} \\
-        \hline
-        Drone flight operations (multispectral) & 35 hrs & 1,40,000 \\
-        \hline
-        Spectral processing \& index generation & 25 hrs @ 500/hr & 12,500 \\
-        \hline
-        Travel \& field accommodation & Lump sum & 40,000 \\
-        \hline
-        Equipment \& sensor consumables & Per mission & 20,000 \\
-        \hline
-        \cellcolor{LightGrey}\textbf{Total Delivery Cost} & & \cellcolor{LightGrey}\textbf{BDT 2,12,500} \\
-        \hline
-        \textbf{Selling Price (value-based)} & & \textbf{BDT 4,00,000 -- 6,00,000} \\
-        \hline
-        \textbf{Gross Margin} & & \textbf{50--65\%} \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
 \begin{successbox}[Farmer ROI Justification]
     A 1,000\,ha precision agriculture map enables yield gains of 5--15\% for participating farmers. At average paddy yield of BDT\,1,20,000/ha, a 10\% improvement across 1,000\,ha generates BDT\,1.2\,crore in additional farmer income --- making a BDT\,4,00,000--6,00,000 mapping fee highly cost-effective.
@@ -416,32 +555,57 @@ Understanding the actual cost to deliver each service is critical for pricing an
     \item \textbf{Total Project Duration:} 3--4 months
 \end{itemize}
 
-\begin{table}[h!]
+% Custom GIS App cost — TikZ card
+\begin{figure}[H]
     \centering
+    \begin{tikzpicture}[x=1cm,y=0.82cm]
+        % Header
+        \fill[SecondaryBlue!85] (0,0) rectangle (13.0,0.82);
+        \foreach \xpos/\lbl in {0.1/{Cost Element}, 6.5/{Hours / Unit}, 9.5/{Amount (BDT)}}{
+            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.41) {\lbl};
+        }
+        % Cost rows
+        \foreach \row/\el/\hrs/\amt in {
+            1/{Requirements, UX design \& architecture}/{60 hrs}/{30,000},
+            2/{Backend \& GIS development}/{100 hrs}/{50,000},
+            3/{Testing, QA \& deployment}/{40 hrs}/{20,000},
+            4/{Cloud infrastructure setup (AWS/GCP)}/{Lump sum}/{50,000},
+            5/{Technical documentation \& training}/{Lump sum}/{10,000}
+        }{
+            \pgfmathsetmacro{\ybot}{-(\row-1)*0.82}
+            \pgfmathsetmacro{\ytop}{\ybot+0.82}
+            \ifodd\row
+                \fill[LightGrey!60] (0,\ybot) rectangle (13.0,\ytop);
+            \fi
+            \draw[MidGrey!50] (0,\ybot) -- (13.0,\ybot);
+            \node[anchor=west,font=\small,text=DarkGrey,text width=6.2cm] at (0.1,\ybot+0.41) {\el};
+            \node[anchor=west,font=\small,text=DarkGrey] at (6.5,\ybot+0.41) {\hrs};
+            \node[anchor=west,font=\small,text=DarkGrey] at (9.5,\ybot+0.41) {\amt};
+        }
+        % Total delivery cost
+        \fill[SecondaryBlue!15] (0,-4.10) rectangle (13.0,-3.28);
+        \draw[SecondaryBlue] (0,-4.10) -- (13.0,-4.10);
+        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,-3.69) {Total Delivery Cost};
+        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (9.5,-3.69) {BDT 1,60,000};
+        % Selling price
+        \fill[SecondaryBlue!20] (0,-4.92) rectangle (13.0,-4.10);
+        \draw[SecondaryBlue!60] (0,-4.92) -- (13.0,-4.92);
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (0.1,-4.51) {Selling Price (value-based)};
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-4.51) {BDT 8,00,000 -- 15,00,000};
+        % Margin
+        \fill[AccentGreen!20] (0,-5.74) rectangle (13.0,-4.92);
+        \draw[SecondaryBlue,thick] (0,-5.74) rectangle (13.0,-4.92);
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (0.1,-5.33) {Gross Margin};
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-5.33) {70--80\%};
+        % Outer border + column lines
+        \draw[SecondaryBlue,thick] (0,-5.74) rectangle (13.0,0.82);
+        \foreach \xd in {6.45,9.45}{
+            \draw[MidGrey!70] (\xd,-5.74) -- (\xd,0.82);
+        }
+    \end{tikzpicture}
     \caption{Cost Breakdown: Custom GIS Application}
     \label{tab:app_cost}
-    \begin{tabularx}{\textwidth}{l | X | X}
-        \hline
-        \theader{Cost Element} & \theader{Hours / Unit} & \theader{Amount (BDT)} \\
-        \hline
-        Requirements, UX design \& architecture & 60 hrs & 30,000 \\
-        \hline
-        Backend \& GIS development & 100 hrs & 50,000 \\
-        \hline
-        Testing, QA \& deployment & 40 hrs & 20,000 \\
-        \hline
-        Cloud infrastructure setup (AWS/GCP) & Lump sum & 50,000 \\
-        \hline
-        Technical documentation \& training & Lump sum & 10,000 \\
-        \hline
-        \cellcolor{LightGrey}\textbf{Total Delivery Cost} & & \cellcolor{LightGrey}\textbf{BDT 1,60,000} \\
-        \hline
-        \textbf{Selling Price (value-based)} & & \textbf{BDT 8,00,000 -- 15,00,000} \\
-        \hline
-        \textbf{Gross Margin} & & \textbf{70--80\%} \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
 \begin{successbox}[High-Margin Rationale]
     Custom GIS applications carry the highest margin in the service portfolio because intellectual capital --- not equipment --- drives value. A land record portal for a district government, for instance, replaces manual processes costing BDT\,50--80\,lakhs annually, making a BDT\,10--15\,lakh development fee a compelling ROI for the client.
@@ -470,24 +634,40 @@ This structure ensures:
 
 \section{Financial Risk Factors}
 
-\begin{table}[h!]
+% Financial Risk Analysis — TikZ risk matrix
+\begin{figure}[H]
     \centering
+    \begin{tikzpicture}[x=1cm,y=0.9cm]
+        % Header
+        \fill[AccentRed!70] (0,0) rectangle (13.5,0.9);
+        \foreach \xpos/\lbl in {0.1/{Risk}, 4.2/{Impact}, 8.0/{Mitigation}}{
+            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.45) {\lbl};
+        }
+        % Risk rows
+        \foreach \row/\risk/\imp/\mit in {
+            1/{50\% lower revenue than projected}/{Loss of BDT 15L Y1}/{Reduce costs; seek investor support},
+            2/{Equipment malfunction}/{3-month downtime}/{Backup drone; maintenance fund},
+            3/{Pilot certification delay}/{Unable to fly 2--3 months}/{Start process immediately},
+            4/{Monsoon (40\% non-flyable)}/{Revenue loss Jun--Sep}/{Multi-region operations}
+        }{
+            \pgfmathsetmacro{\ybot}{-(\row-1)*0.9}
+            \pgfmathsetmacro{\ytop}{\ybot+0.9}
+            \ifodd\row
+                \fill[LightGrey!60] (0,\ybot) rectangle (13.5,\ytop);
+            \fi
+            \draw[MidGrey!50] (0,\ybot) -- (13.5,\ybot);
+            \node[anchor=west,font=\small,text=DarkGrey,text width=3.9cm] at (0.1,\ybot+0.45) {\risk};
+            \node[anchor=west,font=\small,text=AccentOrange,text width=3.5cm] at (4.2,\ybot+0.45) {\imp};
+            \node[anchor=west,font=\small,text=AccentGreen,text width=5.2cm] at (8.0,\ybot+0.45) {\mit};
+        }
+        \draw[AccentRed,thick] (0,-3.6) rectangle (13.5,0.9);
+        \foreach \xd in {4.15,7.95}{
+            \draw[MidGrey!70] (\xd,-3.6) -- (\xd,0.9);
+        }
+    \end{tikzpicture}
     \caption{Financial Risk Analysis}
     \label{tab:financial_risks}
-    \begin{tabularx}{\textwidth}{l | X | X}
-        \hline
-        \theader{Risk} & \theader{Impact} & \theader{Mitigation} \\
-        \hline
-        50\% lower revenue than projected & Loss of BDT 15L Y1 & Reduce costs; seek investor support \\
-        \hline
-        Equipment malfunction & 3-month downtime & Backup drone; maintenance fund \\
-        \hline
-        Pilot certification delay & Unable to fly for 2-3 months & Start process immediately \\
-        \hline
-        Monsoon (40\% year non-flyable) & Revenue loss in Jun-Sep & Multi-region operations \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
 % ============================================================================
 % END OF CHAPTER 4

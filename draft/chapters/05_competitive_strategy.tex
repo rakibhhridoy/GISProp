@@ -94,7 +94,7 @@ Precinct Smart will occupy a unique position in the market:
 
 \vspace{1cm}
 
-Your position in the \textbf{upper-left quadrant} (advanced technology + affordable pricing) is defensible and attractive to all market segments.
+The position in the \textbf{upper-left quadrant} (advanced technology + affordable pricing) is defensible and attractive to all market segments.
 
 \section{Go-to-Market Strategy}
 
@@ -136,30 +136,49 @@ Your position in the \textbf{upper-left quadrant} (advanced technology + afforda
 
 \section{Differentiation Strategy}
 
-\subsection{Why Customers Will Choose You}
+\subsection{Why Customers Will Choose Precinct Smart}
 
-\begin{table}[h!]
+% Competitive Differentiation Matrix — TikZ grid
+\begin{figure}[H]
     \centering
+    \begin{tikzpicture}[x=1cm,y=0.85cm]
+        % Header
+        \fill[PrimaryBlue] (0,0) rectangle (13.5,0.85);
+        \foreach \xpos/\lbl in {
+            0.1/{Factor},
+            2.8/{Competitors},
+            6.3/{Precinct Smart},
+            10.2/{Customer Benefit}}{
+            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.425) {\lbl};
+        }
+        % Rows
+        \foreach \row/\fac/\comp/\us/\ben in {
+            1/{Technology}/{Photo + LiDAR}/{LiDAR + Photo + Data Science}/{Better accuracy + insights},
+            2/{Pricing}/{Premium (10--15\% above)}/{Value-based}/{Better ROI},
+            3/{Applications}/{Raw data only}/{Data + Apps + Consulting}/{Complete solution},
+            4/{NGO Partnerships}/{None}/{Strategic focus}/{Farmer access},
+            5/{Innovation}/{Stable, incremental}/{Rapid iteration}/{Future-proof},
+            6/{Customer Service}/{Transactional}/{Partnership-oriented}/{Long-term relationship}
+        }{
+            \pgfmathsetmacro{\ybot}{-(\row-1)*0.85}
+            \pgfmathsetmacro{\ytop}{\ybot+0.85}
+            \ifodd\row
+                \fill[LightGrey!60] (0,\ybot) rectangle (13.5,\ytop);
+            \fi
+            \draw[MidGrey!50] (0,\ybot) -- (13.5,\ybot);
+            \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,\ybot+0.425) {\fac};
+            \node[anchor=west,font=\small,text=DarkGrey,text width=3.3cm] at (2.8,\ybot+0.425) {\comp};
+            \node[anchor=west,font=\small\bfseries,text=AccentGreen,text width=3.7cm] at (6.3,\ybot+0.425) {\us};
+            \node[anchor=west,font=\small,text=SecondaryBlue,text width=3.0cm] at (10.2,\ybot+0.425) {\ben};
+        }
+        \draw[PrimaryBlue,thick] (0,-5.1) rectangle (13.5,0.85);
+        \foreach \xd in {2.75,6.25,10.15}{
+            \draw[MidGrey!70] (\xd,-5.1) -- (\xd,0.85);
+        }
+    \end{tikzpicture}
     \caption{Competitive Differentiation Matrix}
     \label{tab:differentiation}
-    \begin{tabularx}{\textwidth}{l | X | X | X}
-        \hline
-        \theader{Factor} & \theader{GeoTech/Competitors} & \theader{Precinct Smart} & \theader{Customer Benefit} \\
-        \hline
-        \textbf{Technology} & Photogrammetry + LiDAR & LiDAR + Photogrammetry + Data Science & Better accuracy + insights \\
-        \hline
-        \textbf{Pricing} & Premium (10-15\% above) & Value-based & Better ROI \\
-        \hline
-        \textbf{Applications} & Raw data only & Data + Apps + Consulting & Complete solution \\
-        \hline
-        \textbf{NGO Partnerships} & None & Strategic focus & Farmer access \\
-        \hline
-        \textbf{Innovation} & Stable, incremental & Rapid iteration & Future-proof \\
-        \hline
-        \textbf{Customer Service} & Transactional & Partnership-oriented & Long-term relationship \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
 \section{Competitive Response Strategies}
 

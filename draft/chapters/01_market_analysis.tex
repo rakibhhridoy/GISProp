@@ -75,23 +75,38 @@ Bangladesh is experiencing unprecedented infrastructure development:
 
 \subsection{Regional Market Context}
 
-According to market research data:
-
-\begin{table}[h!]
+% Asia Pacific LiDAR Market — pgfplots bar chart
+\begin{figure}[H]
     \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            bar width=28pt,
+            width=0.82\textwidth,
+            height=6.5cm,
+            symbolic x coords={2024,2025,{2026--2030},{2033}},
+            xtick=data,
+            xlabel={\textbf{Year}},
+            ylabel={\textbf{Market Size (USD Million)}},
+            ymin=0, ymax=2800,
+            ytick={0,500,1000,1500,2000,2500},
+            grid=major,
+            grid style={dotted,gray!40},
+            title={\textbf{Asia Pacific LiDAR Market Size (USD Millions)}},
+            title style={font=\normalsize\bfseries\color{PrimaryBlue}},
+            tick label style={font=\small},
+            label style={font=\small\bfseries},
+            nodes near coords,
+            nodes near coords style={font=\scriptsize\bfseries,color=DarkGrey},
+        ]
+        \addplot[fill=SecondaryBlue!75,draw=PrimaryBlue] coordinates {
+            (2024,340)(2025,410)({2026--2030},1200)({2033},2500)
+        };
+        \end{axis}
+    \end{tikzpicture}
     \caption{Asia Pacific LiDAR Market Size (USD Millions)}
     \label{tab:market_size}
-    \begin{tabularx}{\textwidth}{l | X | X | X}
-        \hline
-        \theader{Year} & \theader{Market Size (USD M)} & \theader{Growth Rate} & \theader{Status} \\
-        \hline
-        2024 & 340 & - & Baseline \\
-        2025 & 410 & +20.59\% & Current \\
-        2026-2030 & 820-1,200 & 20-25\% CAGR & Projected \\
-        2033 & 2,500+ & Cumulative & Long-term \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
 \subsection{Bangladesh Addressable Market}
 
@@ -173,26 +188,56 @@ This represents a substantial opportunity for a well-positioned startup with adv
 
 \section{Competitive Landscape Analysis}
 
-\begin{table}[h!]
+% Competitive Positioning — TikZ matrix
+\begin{figure}[H]
     \centering
+    \begin{tikzpicture}[x=1cm, y=0.82cm]
+        % Header row
+        \fill[PrimaryBlue] (0,0) rectangle (13.5,0.82);
+        \foreach \xpos/\lbl in {
+            0.1/{Company},
+            3.2/{Technology},
+            6.0/{Price Tier},
+            8.2/{Sector Focus},
+            10.6/{Strength}}{
+            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.41) {\lbl};
+        }
+        % Competitors
+        \foreach \row/\company/\tech/\price/\focus/\str in {
+            1/{GeoTech Eng.}/{Photo + LiDAR}/{Premium}/{Infrastructure}/{Established},
+            2/{Digital Survey BD}/{Photogrammetry}/{Medium}/{Multi-sector}/{Cost-effective},
+            3/{BDS Thapati}/{Photogrammetry}/{Medium}/{Construction}/{Quick turnaround},
+            4/{Grihayan BD}/{Basic Drones}/{Low}/{Agriculture}/{Affordability}
+        }{
+            \pgfmathsetmacro{\ybot}{-(\row-1)*0.82}
+            \pgfmathsetmacro{\ytop}{\ybot+0.82}
+            \ifodd\row
+                \fill[LightGrey!60] (0,\ybot) rectangle (13.5,\ytop);
+            \fi
+            \draw[MidGrey!50] (0,\ybot) -- (13.5,\ybot);
+            \node[anchor=west,font=\small,text=DarkGrey] at (0.1,\ybot+0.41) {\company};
+            \node[anchor=west,font=\small,text=DarkGrey,text width=2.6cm] at (3.2,\ybot+0.41) {\tech};
+            \node[anchor=west,font=\small,text=DarkGrey] at (6.0,\ybot+0.41) {\price};
+            \node[anchor=west,font=\small,text=DarkGrey,text width=2.2cm] at (8.2,\ybot+0.41) {\focus};
+            \node[anchor=west,font=\small,text=DarkGrey,text width=2.6cm] at (10.6,\ybot+0.41) {\str};
+        }
+        % Precinct Smart highlighted
+        \fill[AccentGreen!20] (0,-3.28) rectangle (13.5,-2.46);
+        \draw[AccentGreen,thick] (0,-3.28) rectangle (13.5,-2.46);
+        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,-2.87) {Precinct Smart};
+        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue,text width=2.6cm] at (3.2,-2.87) {LiDAR + ML};
+        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (6.0,-2.87) {Value-based};
+        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue,text width=2.2cm] at (8.2,-2.87) {Multi-sector};
+        \node[anchor=west,font=\small\bfseries,text=AccentGreen,text width=2.6cm] at (10.6,-2.87) {Tech + Impact};
+        % Outer border + column lines
+        \draw[PrimaryBlue,thick] (0,-3.28) rectangle (13.5,0.82);
+        \foreach \xd in {3.15,5.95,8.15,10.55}{
+            \draw[MidGrey!70] (\xd,-3.28) -- (\xd,0.82);
+        }
+    \end{tikzpicture}
     \caption{Competitive Positioning of Bangladesh GIS Service Providers}
     \label{tab:competitive}
-    \begin{tabularx}{\textwidth}{l | X | X | X | X}
-        \hline
-        \theader{Company} & \theader{Technology} & \theader{Price} & \theader{Sector Focus} & \theader{Strength} \\
-        \hline
-        GeoTech Eng. & Photogrammetry + LiDAR & Premium & Infrastructure & Established \\
-        \hline
-        Digital Survey BD & Photogrammetry & Medium & Multi-sector & Cost-effective \\
-        \hline
-        BDS Thapati & Photogrammetry & Medium & Construction & Quick turnaround \\
-        \hline
-        Grihayan BD & Basic Drones & Low & Agriculture & Affordability \\
-        \hline
-        \cellcolor{LightGrey}\textbf{Precinct Smart} & \cellcolor{LightGrey}\textbf{LiDAR + ML} & \cellcolor{LightGrey}\textbf{Value-based} & \cellcolor{LightGrey}\textbf{Multi-sector} & \cellcolor{LightGrey}\textbf{Tech + Impact} \\
-        \hline
-    \end{tabularx}
-\end{table}
+\end{figure}
 
 \section{Market Entry Strategy Recommendations}
 
@@ -208,7 +253,7 @@ This represents a substantial opportunity for a well-positioned startup with adv
 
 The Bangladesh GIS services market is experiencing rapid growth driven by infrastructure development, agricultural modernization, and government digitization initiatives. While competition exists, significant opportunities remain for a technology-forward startup combining LiDAR, photogrammetry, and Data Science capabilities.
 
-\textcolor{SecondaryBlue}{\textbf{Key Takeaway:}} The competitive advantage lies in advanced technology (LiDAR + ML) combined with a multi-sector approach and strong NGO partnerships—capabilities that existing competitors have not yet integrated effectively.
+\textcolor{SecondaryBlue}{\textbf{Key Takeaway:}} The competitive advantage lies in advanced technology (LiDAR + ML) combined with a multi-sector approach and strong NGO partnerships---capabilities that existing competitors have not yet integrated effectively.
 
 % ============================================================================
 % END OF CHAPTER 1
