@@ -331,56 +331,33 @@ The total startup capital required is shown in the following detailed breakdown:
     \label{fig:revenue_growth}
 \end{figure}
 
-% 3-Year Summary KPI cards
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.82cm]
-        % Header
-        \fill[PrimaryBlue] (0,0) rectangle (13.5,0.82);
-        \foreach \xpos/\lbl in {
-            0.1/{Metric},
-            3.4/{Year 1},
-            6.0/{Year 2},
-            8.9/{Year 3}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.41) {\lbl};
-        }
-        % Summary rows
-        \foreach \row/\metric/\ya/\yb/\yc in {
-            1/{Revenue (BDT Lakhs)}/{30}/{96.5}/{204},
-            2/{Operating Costs}/{28}/{47}/{68},
-            3/{Net Profit}/{2}/{49.5}/{136},
-            4/{Profit Margin}/{7\%}/{51\%}/{67\%},
-            5/{Break-even Month}/{10}/{2 (at start)}/{--},
-            6/{ROI}/{1.5\%}/{49\%}/{104\%},
-            7/{Payback Period}/{45 mo.}/{24 mo.}/{11 mo.}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.82}
-            \pgfmathsetmacro{\ytop}{\ybot+0.82}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.5,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.5,\ybot);
-            \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,\ybot+0.41) {\metric};
-            \node[anchor=west,font=\small,text=DarkGrey] at (3.4,\ybot+0.41) {\ya};
-            \node[anchor=west,font=\small\bfseries,text=SecondaryBlue] at (6.0,\ybot+0.41) {\yb};
-            \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (8.9,\ybot+0.41) {\yc};
-        }
-        % Cumulative profit row
-        \fill[AccentGreen!15] (0,-5.74) rectangle (13.5,-4.92);
-        \draw[AccentGreen,thick] (0,-5.74) rectangle (13.5,-4.92);
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,-5.33) {Cumulative Profit};
-        \node[anchor=west,font=\small\bfseries,text=DarkGrey] at (3.4,-5.33) {BDT 2L};
-        \node[anchor=west,font=\small\bfseries,text=SecondaryBlue] at (6.0,-5.33) {BDT 51.5L};
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (8.9,-5.33) {BDT 187.5L};
-        % Outer border + column lines
-        \draw[PrimaryBlue,thick] (0,-5.74) rectangle (13.5,0.82);
-        \foreach \xd in {3.35,5.95,8.85}{
-            \draw[MidGrey!70] (\xd,-5.74) -- (\xd,0.82);
-        }
-    \end{tikzpicture}
     \caption{3-Year Financial Summary}
     \label{tab:3year_summary}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{X | l | l | l}
+        \hline
+        \theader{Metric} & \theader{Year 1} & \theader{Year 2} & \theader{Year 3} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Revenue (BDT Lakhs)}} & 30 & \textbf{\textcolor{SecondaryBlue}{96.5}} & \textbf{\textcolor{AccentGreen}{204}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Operating Costs}} & 28 & \textbf{\textcolor{SecondaryBlue}{47}} & \textbf{\textcolor{AccentGreen}{68}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Net Profit}} & 2 & \textbf{\textcolor{SecondaryBlue}{49.5}} & \textbf{\textcolor{AccentGreen}{136}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Profit Margin}} & 7\% & \textbf{\textcolor{SecondaryBlue}{51\%}} & \textbf{\textcolor{AccentGreen}{67\%}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Break-even Month}} & 10 & \textbf{\textcolor{SecondaryBlue}{2 (at start)}} & \textbf{\textcolor{AccentGreen}{--}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{ROI}} & 1.5\% & \textbf{\textcolor{SecondaryBlue}{49\%}} & \textbf{\textcolor{AccentGreen}{104\%}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Payback Period}} & 45 mo. & \textbf{\textcolor{SecondaryBlue}{24 mo.}} & \textbf{\textcolor{AccentGreen}{11 mo.}} \\
+        \hline
+        \cellcolor{AccentGreen!15}\textbf{Cumulative Profit} & \cellcolor{AccentGreen!15}BDT 2L & \cellcolor{AccentGreen!15}\textbf{\textcolor{SecondaryBlue}{BDT 51.5L}} & \cellcolor{AccentGreen!15}\textbf{\textcolor{AccentGreen}{BDT 187.5L}} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \begin{successbox}[3-Year Financial Highlights]
     \begin{tabular}{@{}llll@{}}
@@ -410,56 +387,31 @@ Understanding the actual cost to deliver each service is critical for pricing an
     \item \textbf{Total Project Duration:} 2--3 weeks
 \end{itemize}
 
-% Survey cost breakdown — TikZ card
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.82cm]
-        % Header
-        \fill[PrimaryBlue] (0,0) rectangle (13.0,0.82);
-        \foreach \xpos/\lbl in {0.1/{Cost Element}, 6.5/{Hours / Unit}, 9.5/{Amount (BDT)}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.41) {\lbl};
-        }
-        % Cost rows
-        \foreach \row/\el/\hrs/\amt in {
-            1/{Drone flight operations (pilot + equipment)}/{20 hrs @ 4\,000/hr}/{80\,000},
-            2/{Point cloud processing \& DEM generation}/{40 hrs @ 500/hr}/{20\,000},
-            3/{Equipment depreciation (LiDAR sensor)}/{Per mission}/{10\,000},
-            4/{Travel, accommodation \& field logistics}/{Lump sum}/{20\,000}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.82}
-            \pgfmathsetmacro{\ytop}{\ybot+0.82}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.0,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.0,\ybot);
-            \node[anchor=west,font=\small,text=DarkGrey,text width=6.2cm] at (0.1,\ybot+0.41) {\el};
-            \node[anchor=west,font=\small,text=DarkGrey] at (6.5,\ybot+0.41) {\hrs};
-            \node[anchor=west,font=\small,text=DarkGrey] at (9.5,\ybot+0.41) {\amt};
-        }
-        % Total delivery cost
-        \fill[PrimaryBlue!15] (0,-3.28) rectangle (13.0,-2.46);
-        \draw[PrimaryBlue] (0,-3.28) -- (13.0,-3.28);
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,-2.87) {Total Delivery Cost};
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (9.5,-2.87) {BDT 1,30,000};
-        % Selling price
-        \fill[AccentGreen!15] (0,-4.10) rectangle (13.0,-3.28);
-        \draw[AccentGreen!60] (0,-4.10) -- (13.0,-4.10);
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (0.1,-3.69) {Selling Price (value-based)};
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-3.69) {BDT 3,50,000 -- 5,00,000};
-        % Margin
-        \fill[AccentGreen!25] (0,-4.92) rectangle (13.0,-4.10);
-        \draw[AccentGreen,thick] (0,-4.92) rectangle (13.0,-4.10);
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (0.1,-4.51) {Gross Margin};
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-4.51) {62--74\%};
-        % Outer border + column lines
-        \draw[PrimaryBlue,thick] (0,-4.92) rectangle (13.0,0.82);
-        \foreach \xd in {6.45,9.45}{
-            \draw[MidGrey!70] (\xd,-4.92) -- (\xd,0.82);
-        }
-    \end{tikzpicture}
     \caption{Cost Breakdown: Topographic Survey (500 ha)}
     \label{tab:survey_cost}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{X | l | l}
+        \hline
+        \theader{Cost Element} & \theader{Hours / Unit} & \theader{Amount (BDT)} \\
+        \hline
+        Drone flight operations (pilot + equipment) & 20 hrs @ 4,000/hr & 80,000 \\
+        \hline
+        Point cloud processing \& DEM generation & 40 hrs @ 500/hr & 20,000 \\
+        \hline
+        Equipment depreciation (LiDAR sensor) & Per mission & 10,000 \\
+        \hline
+        Travel, accommodation \& field logistics & Lump sum & 20,000 \\
+        \hline
+        \cellcolor{LightGrey}\textbf{Total Delivery Cost} & \cellcolor{LightGrey} & \cellcolor{LightGrey}\textbf{\textcolor{PrimaryBlue}{BDT 1,30,000}} \\
+        \hline
+        \cellcolor{AccentGreen!15}\textbf{Selling Price (value-based)} & \cellcolor{AccentGreen!15} & \cellcolor{AccentGreen!15}\textbf{\textcolor{AccentGreen}{BDT 3,50,000 -- 5,00,000}} \\
+        \hline
+        \cellcolor{AccentGreen!25}\textbf{Gross Margin} & \cellcolor{AccentGreen!25} & \cellcolor{AccentGreen!25}\textbf{\textcolor{AccentGreen}{62--74\%}} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \begin{successbox}[Pricing Rationale]
     Government procurement benchmarks for equivalent survey work range from BDT\,4,00,000--8,00,000 per 500\,ha. Precinct Smart's LiDAR accuracy (vs.\ traditional total station methods) justifies a premium while remaining 30--40\% below legacy survey firm rates.
@@ -482,56 +434,31 @@ Understanding the actual cost to deliver each service is critical for pricing an
     \item \textbf{Total Project Duration:} 2--3 weeks
 \end{itemize}
 
-% Agricultural mapping cost — TikZ card
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.82cm]
-        % Header
-        \fill[AccentGreen!70] (0,0) rectangle (13.0,0.82);
-        \foreach \xpos/\lbl in {0.1/{Cost Element}, 6.5/{Hours / Unit}, 9.5/{Amount (BDT)}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.41) {\lbl};
-        }
-        % Cost rows
-        \foreach \row/\el/\hrs/\amt in {
-            1/{Drone flight operations (multispectral)}/{35 hrs}/{1,40,000},
-            2/{Spectral processing \& index generation}/{25 hrs @ 500/hr}/{12,500},
-            3/{Travel \& field accommodation}/{Lump sum}/{40,000},
-            4/{Equipment \& sensor consumables}/{Per mission}/{20,000}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.82}
-            \pgfmathsetmacro{\ytop}{\ybot+0.82}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.0,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.0,\ybot);
-            \node[anchor=west,font=\small,text=DarkGrey,text width=6.2cm] at (0.1,\ybot+0.41) {\el};
-            \node[anchor=west,font=\small,text=DarkGrey] at (6.5,\ybot+0.41) {\hrs};
-            \node[anchor=west,font=\small,text=DarkGrey] at (9.5,\ybot+0.41) {\amt};
-        }
-        % Total delivery cost
-        \fill[AccentGreen!15] (0,-3.28) rectangle (13.0,-2.46);
-        \draw[AccentGreen] (0,-3.28) -- (13.0,-3.28);
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (0.1,-2.87) {Total Delivery Cost};
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-2.87) {BDT 2,12,500};
-        % Selling price
-        \fill[AccentGreen!25] (0,-4.10) rectangle (13.0,-3.28);
-        \draw[AccentGreen!60] (0,-4.10) -- (13.0,-4.10);
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (0.1,-3.69) {Selling Price (value-based)};
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-3.69) {BDT 4,00,000 -- 6,00,000};
-        % Margin
-        \fill[AccentGreen!35] (0,-4.92) rectangle (13.0,-4.10);
-        \draw[AccentGreen,thick] (0,-4.92) rectangle (13.0,-4.10);
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (0.1,-4.51) {Gross Margin};
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-4.51) {50--65\%};
-        % Outer border + column lines
-        \draw[AccentGreen!80,thick] (0,-4.92) rectangle (13.0,0.82);
-        \foreach \xd in {6.45,9.45}{
-            \draw[MidGrey!70] (\xd,-4.92) -- (\xd,0.82);
-        }
-    \end{tikzpicture}
     \caption{Cost Breakdown: Agricultural Mapping (1,000 ha)}
     \label{tab:agri_cost}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{X | l | l}
+        \hline
+        \theader{Cost Element} & \theader{Hours / Unit} & \theader{Amount (BDT)} \\
+        \hline
+        Drone flight operations (multispectral) & 35 hrs & 1,40,000 \\
+        \hline
+        Spectral processing \& index generation & 25 hrs @ 500/hr & 12,500 \\
+        \hline
+        Travel \& field accommodation & Lump sum & 40,000 \\
+        \hline
+        Equipment \& sensor consumables & Per mission & 20,000 \\
+        \hline
+        \cellcolor{AccentGreen!15}\textbf{Total Delivery Cost} & \cellcolor{AccentGreen!15} & \cellcolor{AccentGreen!15}\textbf{\textcolor{AccentGreen}{BDT 2,12,500}} \\
+        \hline
+        \cellcolor{AccentGreen!25}\textbf{Selling Price (value-based)} & \cellcolor{AccentGreen!25} & \cellcolor{AccentGreen!25}\textbf{\textcolor{AccentGreen}{BDT 4,00,000 -- 6,00,000}} \\
+        \hline
+        \cellcolor{AccentGreen!35}\textbf{Gross Margin} & \cellcolor{AccentGreen!35} & \cellcolor{AccentGreen!35}\textbf{\textcolor{AccentGreen}{50--65\%}} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \begin{successbox}[Farmer ROI Justification]
     A 1,000\,ha precision agriculture map enables yield gains of 5--15\% for participating farmers. At average paddy yield of BDT\,1,20,000/ha, a 10\% improvement across 1,000\,ha generates BDT\,1.2\,crore in additional farmer income --- making a BDT\,4,00,000--6,00,000 mapping fee highly cost-effective.
@@ -555,57 +482,33 @@ Understanding the actual cost to deliver each service is critical for pricing an
     \item \textbf{Total Project Duration:} 3--4 months
 \end{itemize}
 
-% Custom GIS App cost — TikZ card
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.82cm]
-        % Header
-        \fill[SecondaryBlue!85] (0,0) rectangle (13.0,0.82);
-        \foreach \xpos/\lbl in {0.1/{Cost Element}, 6.5/{Hours / Unit}, 9.5/{Amount (BDT)}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.41) {\lbl};
-        }
-        % Cost rows
-        \foreach \row/\el/\hrs/\amt in {
-            1/{Requirements, UX design \& architecture}/{60 hrs}/{30,000},
-            2/{Backend \& GIS development}/{100 hrs}/{50,000},
-            3/{Testing, QA \& deployment}/{40 hrs}/{20,000},
-            4/{Cloud infrastructure setup (AWS/GCP)}/{Lump sum}/{50,000},
-            5/{Technical documentation \& training}/{Lump sum}/{10,000}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.82}
-            \pgfmathsetmacro{\ytop}{\ybot+0.82}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.0,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.0,\ybot);
-            \node[anchor=west,font=\small,text=DarkGrey,text width=6.2cm] at (0.1,\ybot+0.41) {\el};
-            \node[anchor=west,font=\small,text=DarkGrey] at (6.5,\ybot+0.41) {\hrs};
-            \node[anchor=west,font=\small,text=DarkGrey] at (9.5,\ybot+0.41) {\amt};
-        }
-        % Total delivery cost
-        \fill[SecondaryBlue!15] (0,-4.10) rectangle (13.0,-3.28);
-        \draw[SecondaryBlue] (0,-4.10) -- (13.0,-4.10);
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,-3.69) {Total Delivery Cost};
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (9.5,-3.69) {BDT 1,60,000};
-        % Selling price
-        \fill[SecondaryBlue!20] (0,-4.92) rectangle (13.0,-4.10);
-        \draw[SecondaryBlue!60] (0,-4.92) -- (13.0,-4.92);
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (0.1,-4.51) {Selling Price (value-based)};
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-4.51) {BDT 8,00,000 -- 15,00,000};
-        % Margin
-        \fill[AccentGreen!20] (0,-5.74) rectangle (13.0,-4.92);
-        \draw[SecondaryBlue,thick] (0,-5.74) rectangle (13.0,-4.92);
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (0.1,-5.33) {Gross Margin};
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-5.33) {70--80\%};
-        % Outer border + column lines
-        \draw[SecondaryBlue,thick] (0,-5.74) rectangle (13.0,0.82);
-        \foreach \xd in {6.45,9.45}{
-            \draw[MidGrey!70] (\xd,-5.74) -- (\xd,0.82);
-        }
-    \end{tikzpicture}
     \caption{Cost Breakdown: Custom GIS Application}
     \label{tab:app_cost}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{X | l | l}
+        \hline
+        \theader{Cost Element} & \theader{Hours / Unit} & \theader{Amount (BDT)} \\
+        \hline
+        Requirements, UX design \& architecture & 60 hrs & 30,000 \\
+        \hline
+        Backend \& GIS development & 100 hrs & 50,000 \\
+        \hline
+        Testing, QA \& deployment & 40 hrs & 20,000 \\
+        \hline
+        Cloud infrastructure setup (AWS/GCP) & Lump sum & 50,000 \\
+        \hline
+        Technical documentation \& training & Lump sum & 10,000 \\
+        \hline
+        \cellcolor{LightGrey}\textbf{Total Delivery Cost} & \cellcolor{LightGrey} & \cellcolor{LightGrey}\textbf{\textcolor{PrimaryBlue}{BDT 1,60,000}} \\
+        \hline
+        \cellcolor{AccentGreen!15}\textbf{Selling Price (value-based)} & \cellcolor{AccentGreen!15} & \cellcolor{AccentGreen!15}\textbf{\textcolor{AccentGreen}{BDT 8,00,000 -- 15,00,000}} \\
+        \hline
+        \cellcolor{AccentGreen!20}\textbf{Gross Margin} & \cellcolor{AccentGreen!20} & \cellcolor{AccentGreen!20}\textbf{\textcolor{AccentGreen}{70--80\%}} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \begin{successbox}[High-Margin Rationale]
     Custom GIS applications carry the highest margin in the service portfolio because intellectual capital --- not equipment --- drives value. A land record portal for a district government, for instance, replaces manual processes costing BDT\,50--80\,lakhs annually, making a BDT\,10--15\,lakh development fee a compelling ROI for the client.
@@ -634,40 +537,25 @@ This structure ensures:
 
 \section{Financial Risk Factors}
 
-% Financial Risk Analysis — TikZ risk matrix
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.9cm]
-        % Header
-        \fill[AccentRed!70] (0,0) rectangle (13.5,0.9);
-        \foreach \xpos/\lbl in {0.1/{Risk}, 4.2/{Impact}, 8.0/{Mitigation}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.45) {\lbl};
-        }
-        % Risk rows
-        \foreach \row/\risk/\imp/\mit in {
-            1/{50\% lower revenue than projected}/{Loss of BDT 15L Y1}/{Reduce costs; seek investor support},
-            2/{Equipment malfunction}/{3-month downtime}/{Backup drone; maintenance fund},
-            3/{Pilot certification delay}/{Unable to fly 2--3 months}/{Start process immediately},
-            4/{Monsoon (40\% non-flyable)}/{Revenue loss Jun--Sep}/{Multi-region operations}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.9}
-            \pgfmathsetmacro{\ytop}{\ybot+0.9}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.5,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.5,\ybot);
-            \node[anchor=west,font=\small,text=DarkGrey,text width=3.9cm] at (0.1,\ybot+0.45) {\risk};
-            \node[anchor=west,font=\small,text=AccentOrange,text width=3.5cm] at (4.2,\ybot+0.45) {\imp};
-            \node[anchor=west,font=\small,text=AccentGreen,text width=5.2cm] at (8.0,\ybot+0.45) {\mit};
-        }
-        \draw[AccentRed,thick] (0,-3.6) rectangle (13.5,0.9);
-        \foreach \xd in {4.15,7.95}{
-            \draw[MidGrey!70] (\xd,-3.6) -- (\xd,0.9);
-        }
-    \end{tikzpicture}
     \caption{Financial Risk Analysis}
     \label{tab:financial_risks}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{X | X | X}
+        \hline
+        \theader{Risk} & \theader{Impact} & \theader{Mitigation} \\
+        \hline
+        50\% lower revenue than projected & \textcolor{AccentOrange}{Loss of BDT 15L Y1} & \textcolor{AccentGreen}{Reduce costs; seek investor support} \\
+        \hline
+        Equipment malfunction & \textcolor{AccentOrange}{3-month downtime} & \textcolor{AccentGreen}{Backup drone; maintenance fund} \\
+        \hline
+        Pilot certification delay & \textcolor{AccentOrange}{Unable to fly 2--3 months} & \textcolor{AccentGreen}{Start process immediately} \\
+        \hline
+        Monsoon (40\% non-flyable) & \textcolor{AccentOrange}{Revenue loss Jun--Sep} & \textcolor{AccentGreen}{Multi-region operations} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 % ============================================================================
 % END OF CHAPTER 4

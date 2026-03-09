@@ -188,56 +188,27 @@ This represents a substantial opportunity for a well-positioned startup with adv
 
 \section{Competitive Landscape Analysis}
 
-% Competitive Positioning — TikZ matrix
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm, y=0.82cm]
-        % Header row
-        \fill[PrimaryBlue] (0,0) rectangle (13.5,0.82);
-        \foreach \xpos/\lbl in {
-            0.1/{Company},
-            3.2/{Technology},
-            6.0/{Price Tier},
-            8.2/{Sector Focus},
-            10.6/{Strength}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.41) {\lbl};
-        }
-        % Competitors
-        \foreach \row/\company/\tech/\price/\focus/\str in {
-            1/{GeoTech Eng.}/{Photo + LiDAR}/{Premium}/{Infrastructure}/{Established},
-            2/{Digital Survey BD}/{Photogrammetry}/{Medium}/{Multi-sector}/{Cost-effective},
-            3/{BDS Thapati}/{Photogrammetry}/{Medium}/{Construction}/{Quick turnaround},
-            4/{Grihayan BD}/{Basic Drones}/{Low}/{Agriculture}/{Affordability}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.82}
-            \pgfmathsetmacro{\ytop}{\ybot+0.82}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.5,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.5,\ybot);
-            \node[anchor=west,font=\small,text=DarkGrey] at (0.1,\ybot+0.41) {\company};
-            \node[anchor=west,font=\small,text=DarkGrey,text width=2.6cm] at (3.2,\ybot+0.41) {\tech};
-            \node[anchor=west,font=\small,text=DarkGrey] at (6.0,\ybot+0.41) {\price};
-            \node[anchor=west,font=\small,text=DarkGrey,text width=2.2cm] at (8.2,\ybot+0.41) {\focus};
-            \node[anchor=west,font=\small,text=DarkGrey,text width=2.6cm] at (10.6,\ybot+0.41) {\str};
-        }
-        % Precinct Smart highlighted
-        \fill[AccentGreen!20] (0,-3.28) rectangle (13.5,-2.46);
-        \draw[AccentGreen,thick] (0,-3.28) rectangle (13.5,-2.46);
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,-2.87) {Precinct Smart};
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue,text width=2.6cm] at (3.2,-2.87) {LiDAR + ML};
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (6.0,-2.87) {Value-based};
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue,text width=2.2cm] at (8.2,-2.87) {Multi-sector};
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen,text width=2.6cm] at (10.6,-2.87) {Tech + Impact};
-        % Outer border + column lines
-        \draw[PrimaryBlue,thick] (0,-3.28) rectangle (13.5,0.82);
-        \foreach \xd in {3.15,5.95,8.15,10.55}{
-            \draw[MidGrey!70] (\xd,-3.28) -- (\xd,0.82);
-        }
-    \end{tikzpicture}
     \caption{Competitive Positioning of Bangladesh GIS Service Providers}
     \label{tab:competitive}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{l | X | l | l | X}
+        \hline
+        \theader{Company} & \theader{Technology} & \theader{Price Tier} & \theader{Sector Focus} & \theader{Strength} \\
+        \hline
+        GeoTech Eng. & Photo + LiDAR & Premium & Infrastructure & Established \\
+        \hline
+        Digital Survey BD & Photogrammetry & Medium & Multi-sector & Cost-effective \\
+        \hline
+        BDS Thapati & Photogrammetry & Medium & Construction & Quick turnaround \\
+        \hline
+        Grihayan BD & Basic Drones & Low & Agriculture & Affordability \\
+        \hline
+        \cellcolor{AccentGreen!20}\textbf{\textcolor{PrimaryBlue}{Precinct Smart}} & \cellcolor{AccentGreen!20}\textbf{LiDAR + ML} & \cellcolor{AccentGreen!20}\textbf{Value-based} & \cellcolor{AccentGreen!20}\textbf{Multi-sector} & \cellcolor{AccentGreen!20}\textbf{\textcolor{AccentGreen}{Tech + Impact}} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \section{Market Entry Strategy Recommendations}
 

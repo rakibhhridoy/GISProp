@@ -48,79 +48,61 @@
     \label{tab:business_kpis}
 \end{figure}
 
-% Detailed KPI table — TikZ matrix
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.80cm]
-        % Header
-        \fill[PrimaryBlue] (0,0) rectangle (13.5,0.80);
-        \foreach \xpos/\lbl in {0.1/{KPI}, 4.4/{Year 1}, 7.0/{Year 2}, 10.2/{Year 3}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.40) {\lbl};
-        }
-        \foreach \row/\kpi/\ya/\yb/\yc in {
-            1/{Projects Completed}/{5--8}/{15--20}/{40--50},
-            2/{Area Covered (sq. km)}/{12--15}/{35--40}/{70--80},
-            3/{Total Revenue (BDT L)}/{30}/{96.5}/{204},
-            4/{Gross Margin}/{35\%}/{55\%}/{70\%},
-            5/{Net Profit (BDT L)}/{2}/{49.5}/{136},
-            6/{Customer Acquisition Cost (BDT)}/{5\,000}/{4\,000}/{3\,000},
-            7/{Customer Lifetime Value (BDT)}/{25\,000}/{50\,000}/{1\,00\,000},
-            8/{Repeat Customer Rate}/{40\%}/{60\%}/{75\%}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.80}
-            \pgfmathsetmacro{\ytop}{\ybot+0.80}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.5,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.5,\ybot);
-            \node[anchor=west,font=\small\bfseries,text=PrimaryBlue,text width=4.2cm]
-                at (0.1,\ybot+0.40) {\kpi};
-            \node[anchor=west,font=\small,text=DarkGrey] at (4.4,\ybot+0.40) {\ya};
-            \node[anchor=west,font=\small\bfseries,text=SecondaryBlue] at (7.0,\ybot+0.40) {\yb};
-            \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (10.2,\ybot+0.40) {\yc};
-        }
-        \draw[PrimaryBlue,thick] (0,-6.40) rectangle (13.5,0.80);
-        \foreach \xd in {4.35,6.95,10.15}{
-            \draw[MidGrey!70] (\xd,-6.40) -- (\xd,0.80);
-        }
-    \end{tikzpicture}
-\end{figure}
+    \caption{Detailed Business KPI Targets}
+    \label{tab:detailed_business_kpis}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{X | l | l | l}
+        \hline
+        \theader{KPI} & \theader{Year 1} & \theader{Year 2} & \theader{Year 3} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Projects Completed}} & 5--8 & \textbf{\textcolor{SecondaryBlue}{15--20}} & \textbf{\textcolor{AccentGreen}{40--50}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Area Covered (sq. km)}} & 12--15 & \textbf{\textcolor{SecondaryBlue}{35--40}} & \textbf{\textcolor{AccentGreen}{70--80}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Total Revenue (BDT L)}} & 30 & \textbf{\textcolor{SecondaryBlue}{96.5}} & \textbf{\textcolor{AccentGreen}{204}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Gross Margin}} & 35\% & \textbf{\textcolor{SecondaryBlue}{55\%}} & \textbf{\textcolor{AccentGreen}{70\%}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Net Profit (BDT L)}} & 2 & \textbf{\textcolor{SecondaryBlue}{49.5}} & \textbf{\textcolor{AccentGreen}{136}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Customer Acquisition Cost (BDT)}} & 5,000 & \textbf{\textcolor{SecondaryBlue}{4,000}} & \textbf{\textcolor{AccentGreen}{3,000}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Customer Lifetime Value (BDT)}} & 25,000 & \textbf{\textcolor{SecondaryBlue}{50,000}} & \textbf{\textcolor{AccentGreen}{1,00,000}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Repeat Customer Rate}} & 40\% & \textbf{\textcolor{SecondaryBlue}{60\%}} & \textbf{\textcolor{AccentGreen}{75\%}} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \section{Operational KPIs}
 
-% Operational KPIs — tcolorbox card grid
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.80cm]
-        \fill[SecondaryBlue!80] (0,0) rectangle (13.0,0.80);
-        \foreach \xpos/\lbl in {0.1/{KPI}, 7.0/{Target}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.40) {\lbl};
-        }
-        \foreach \row/\kpi/\tgt in {
-            1/{Project On-time Delivery}/{>95\%},
-            2/{Data Accuracy (RMSE)}/{<10 cm (LiDAR), <5 cm (GPS)},
-            3/{Customer Satisfaction Score}/{>4.5/5.0},
-            4/{Team Retention Rate}/{>90\%},
-            5/{Equipment Uptime}/{>90\%},
-            6/{Data Processing Time}/{<2 weeks},
-            7/{Safety Incidents}/{Zero}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.80}
-            \pgfmathsetmacro{\ytop}{\ybot+0.80}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.0,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.0,\ybot);
-            \node[anchor=west,font=\small\bfseries,text=PrimaryBlue,text width=6.5cm]
-                at (0.1,\ybot+0.40) {\kpi};
-            \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (7.0,\ybot+0.40) {\tgt};
-        }
-        \draw[SecondaryBlue,thick] (0,-5.60) rectangle (13.0,0.80);
-        \draw[MidGrey!70] (6.95,-5.60) -- (6.95,0.80);
-    \end{tikzpicture}
     \caption{Operational KPI Targets}
     \label{tab:operational_kpis}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{X | l}
+        \hline
+        \theader{KPI} & \theader{Target} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Project On-time Delivery}} & \textbf{\textcolor{AccentGreen}{>95\%}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Data Accuracy (RMSE)}} & \textbf{\textcolor{AccentGreen}{<10 cm (LiDAR), <5 cm (GPS)}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Customer Satisfaction Score}} & \textbf{\textcolor{AccentGreen}{>4.5/5.0}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Team Retention Rate}} & \textbf{\textcolor{AccentGreen}{>90\%}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Equipment Uptime}} & \textbf{\textcolor{AccentGreen}{>90\%}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Data Processing Time}} & \textbf{\textcolor{AccentGreen}{<2 weeks}} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Safety Incidents}} & \textbf{\textcolor{AccentGreen}{Zero}} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \section{ML \& Farmer Impact KPIs}
 

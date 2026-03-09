@@ -216,60 +216,31 @@ This chapter provides detailed market research on existing GIS, drone, and LiDAR
 
 \section{Competitive Landscape Summary}
 
-% Competitive Landscape Matrix — TikZ grid
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm, y=0.78cm]
-        % --- Column widths (cumulative x positions) ---
-        % Col0: 0–3.2 | Col1: 3.3–6.3 | Col2: 6.4–8.8 | Col3: 9.0–10.4 | Col4: 10.6–12.0
-        % Header row
-        \fill[PrimaryBlue] (0,0) rectangle (12.2,0.78);
-        \foreach \xpos/\lbl in {
-            0.1/{Company},
-            3.3/{Technology},
-            6.4/{Primary Focus},
-            9.0/{ML/AI},
-            10.6/{Farmer Focus}}{
-            \node[text=white,font=\bfseries\scriptsize,anchor=west] at (\xpos,0.39) {\lbl};
-        }
-        % Data rows
-        \foreach \row/\company/\tech/\focus/\ml/\farmer in {
-            1/{GeoTech Eng.}/{Photo + LiDAR}/{Infrastructure}/{No}/{No},
-            2/{Digital Survey BD}/{Photogrammetry}/{General Mapping}/{No}/{No},
-            3/{BDS Thapati}/{Photogrammetry}/{Construction/Dev}/{No}/{Limited},
-            4/{Grihayan}/{Photogrammetry}/{Geotechnical}/{No}/{No},
-            5/{Agnibot}/{Basic Drones}/{Agriculture}/{Limited}/{Yes},
-            6/{Golden Info}/{LiDAR}/{Infrastructure}/{No}/{No}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.78}
-            \pgfmathsetmacro{\ytop}{\ybot+0.78}
-            \ifodd\row
-                \fill[LightGrey!70] (0,\ybot) rectangle (12.2,\ytop);
-            \fi
-            \draw[MidGrey!60] (0,\ybot) -- (12.2,\ybot);
-            \node[anchor=west,font=\scriptsize,text=DarkGrey] at (0.1,\ybot+0.39) {\company};
-            \node[anchor=west,font=\scriptsize,text=DarkGrey,text width=2.8cm] at (3.3,\ybot+0.39) {\tech};
-            \node[anchor=west,font=\scriptsize,text=DarkGrey,text width=2.2cm] at (6.4,\ybot+0.39) {\focus};
-            \node[anchor=west,font=\scriptsize,text=AccentRed] at (9.0,\ybot+0.39) {\ml};
-            \node[anchor=west,font=\scriptsize,text=AccentRed] at (10.6,\ybot+0.39) {\farmer};
-        }
-        % Precinct Smart highlighted row
-        \fill[AccentGreen!20] (0,-4.68) rectangle (12.2,-3.9);
-        \draw[AccentGreen,thick] (0,-4.68) rectangle (12.2,-3.9);
-        \node[anchor=west,font=\scriptsize\bfseries,text=PrimaryBlue] at (0.1,-4.29) {PRECINCT SMART};
-        \node[anchor=west,font=\scriptsize\bfseries,text=PrimaryBlue,text width=2.8cm] at (3.3,-4.29) {LiDAR + ML};
-        \node[anchor=west,font=\scriptsize\bfseries,text=PrimaryBlue,text width=2.2cm] at (6.4,-4.29) {Multi-sector};
-        \node[anchor=west,font=\scriptsize\bfseries,text=AccentGreen] at (9.0,-4.29) {Yes};
-        \node[anchor=west,font=\scriptsize\bfseries,text=AccentGreen] at (10.6,-4.29) {Yes};
-        % Outer border and column lines
-        \draw[PrimaryBlue,thick] (0,-4.68) rectangle (12.2,0.78);
-        \foreach \xd in {3.25,6.35,8.95,10.55}{
-            \draw[MidGrey!70] (\xd,-4.68) -- (\xd,0.78);
-        }
-    \end{tikzpicture}
     \caption{Competitive Landscape: Service Provider Comparison}
     \label{tab:competitive_landscape}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{l | X | X | l | l}
+        \hline
+        \theader{Company} & \theader{Technology} & \theader{Primary Focus} & \theader{ML/AI} & \theader{Farmer Focus} \\
+        \hline
+        GeoTech Eng. & Photo + LiDAR & Infrastructure & No & No \\
+        \hline
+        Digital Survey BD & Photogrammetry & General Mapping & No & No \\
+        \hline
+        BDS Thapati & Photogrammetry & Construction/Dev & No & Limited \\
+        \hline
+        Grihayan & Photogrammetry & Geotechnical & No & No \\
+        \hline
+        Agnibot & Basic Drones & Agriculture & Limited & Yes \\
+        \hline
+        Golden Info & LiDAR & Infrastructure & No & No \\
+        \hline
+        \cellcolor{AccentGreen!20}\textbf{\textcolor{PrimaryBlue}{PRECINCT SMART}} & \cellcolor{AccentGreen!20}\textbf{LiDAR + ML} & \cellcolor{AccentGreen!20}\textbf{Multi-sector} & \cellcolor{AccentGreen!20}\textbf{\textcolor{AccentGreen}{Yes}} & \cellcolor{AccentGreen!20}\textbf{\textcolor{AccentGreen}{Yes}} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \section{Market Size \& Opportunity Analysis}
 
@@ -401,47 +372,29 @@ Assuming Bangladesh captures 5-10\% of regional market:
 
 \subsection{Precinct Smart Competitive Advantage}
 
-% Precinct Smart vs Competitors — TikZ comparison matrix
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm, y=0.85cm]
-        % Header
-        \fill[PrimaryBlue] (0,0) rectangle (13.5,0.85);
-        \foreach \xpos/\lbl in {
-            0.1/{Capability},
-            3.3/{Competitors},
-            7.0/{Precinct Smart},
-            10.5/{Impact}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.42) {\lbl};
-        }
-        % Rows
-        \foreach \row/\cap/\comp/\us/\imp in {
-            1/{Technology}/{Photo + Basic LiDAR}/{LiDAR + Data Science}/{Accuracy + Insights},
-            2/{Services}/{Data Collection}/{Data + Apps + Consulting}/{Complete Solution},
-            3/{Focus}/{Multi-sector}/{Multi-sector + Farmers}/{Broader Market},
-            4/{Distribution}/{Direct Sales}/{Direct + NGO Channel}/{10M+ Farmer Reach},
-            5/{Revenue Model}/{Projects Only}/{Projects + Subscriptions}/{Recurring Revenue},
-            6/{Innovation}/{Stable}/{Rapid Data Science Development}/{Future-Proof}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.85}
-            \pgfmathsetmacro{\ytop}{\ybot+0.85}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.5,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.5,\ybot);
-            \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,\ybot+0.42) {\cap};
-            \node[anchor=west,font=\small,text=DarkGrey,text width=3.5cm] at (3.3,\ybot+0.42) {\comp};
-            \node[anchor=west,font=\small\bfseries,text=AccentGreen,text width=3.3cm] at (7.0,\ybot+0.42) {\us};
-            \node[anchor=west,font=\small,text=SecondaryBlue,text width=2.8cm] at (10.5,\ybot+0.42) {\imp};
-        }
-        \draw[PrimaryBlue,thick] (0,-5.1) rectangle (13.5,0.85);
-        \foreach \xd in {3.25,6.95,10.45}{
-            \draw[MidGrey!70] (\xd,-5.1) -- (\xd,0.85);
-        }
-    \end{tikzpicture}
     \caption{Precinct Smart vs.\ Competitors: Differentiation}
     \label{tab:your_advantage}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{l | X | X | X}
+        \hline
+        \theader{Capability} & \theader{Competitors} & \theader{Precinct Smart} & \theader{Impact} \\
+        \hline
+        Technology & Photo + Basic LiDAR & \textbf{\textcolor{AccentGreen}{LiDAR + Data Science}} & Accuracy + Insights \\
+        \hline
+        Services & Data Collection & \textbf{\textcolor{AccentGreen}{Data + Apps + Consulting}} & Complete Solution \\
+        \hline
+        Focus & Multi-sector & \textbf{\textcolor{AccentGreen}{Multi-sector + Farmers}} & Broader Market \\
+        \hline
+        Distribution & Direct Sales & \textbf{\textcolor{AccentGreen}{Direct + NGO Channel}} & 10M+ Farmer Reach \\
+        \hline
+        Revenue Model & Projects Only & \textbf{\textcolor{AccentGreen}{Projects + Subscriptions}} & Recurring Revenue \\
+        \hline
+        Innovation & Stable & \textbf{\textcolor{AccentGreen}{Rapid Data Science Development}} & Future-Proof \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \subsection{Market Entry Strategy Rationale}
 

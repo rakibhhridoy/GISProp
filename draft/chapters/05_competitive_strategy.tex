@@ -138,47 +138,29 @@ The position in the \textbf{upper-left quadrant} (advanced technology + affordab
 
 \subsection{Why Customers Will Choose Precinct Smart}
 
-% Competitive Differentiation Matrix — TikZ grid
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.85cm]
-        % Header
-        \fill[PrimaryBlue] (0,0) rectangle (13.5,0.85);
-        \foreach \xpos/\lbl in {
-            0.1/{Factor},
-            2.8/{Competitors},
-            6.3/{Precinct Smart},
-            10.2/{Customer Benefit}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.425) {\lbl};
-        }
-        % Rows
-        \foreach \row/\fac/\comp/\us/\ben in {
-            1/{Technology}/{Photo + LiDAR}/{LiDAR + Photo + Data Science}/{Better accuracy + insights},
-            2/{Pricing}/{Premium (10--15\% above)}/{Value-based}/{Better ROI},
-            3/{Applications}/{Raw data only}/{Data + Apps + Consulting}/{Complete solution},
-            4/{NGO Partnerships}/{None}/{Strategic focus}/{Farmer access},
-            5/{Innovation}/{Stable, incremental}/{Rapid iteration}/{Future-proof},
-            6/{Customer Service}/{Transactional}/{Partnership-oriented}/{Long-term relationship}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.85}
-            \pgfmathsetmacro{\ytop}{\ybot+0.85}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.5,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.5,\ybot);
-            \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,\ybot+0.425) {\fac};
-            \node[anchor=west,font=\small,text=DarkGrey,text width=3.3cm] at (2.8,\ybot+0.425) {\comp};
-            \node[anchor=west,font=\small\bfseries,text=AccentGreen,text width=3.7cm] at (6.3,\ybot+0.425) {\us};
-            \node[anchor=west,font=\small,text=SecondaryBlue,text width=3.0cm] at (10.2,\ybot+0.425) {\ben};
-        }
-        \draw[PrimaryBlue,thick] (0,-5.1) rectangle (13.5,0.85);
-        \foreach \xd in {2.75,6.25,10.15}{
-            \draw[MidGrey!70] (\xd,-5.1) -- (\xd,0.85);
-        }
-    \end{tikzpicture}
     \caption{Competitive Differentiation Matrix}
     \label{tab:differentiation}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{l | X | X | X}
+        \hline
+        \theader{Factor} & \theader{Competitors} & \theader{Precinct Smart} & \theader{Customer Benefit} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Technology}} & Photo + LiDAR & \textbf{\textcolor{AccentGreen}{LiDAR + Photo + Data Science}} & \textcolor{SecondaryBlue}{Better accuracy + insights} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Pricing}} & Premium (10--15\% above) & \textbf{\textcolor{AccentGreen}{Value-based}} & \textcolor{SecondaryBlue}{Better ROI} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Applications}} & Raw data only & \textbf{\textcolor{AccentGreen}{Data + Apps + Consulting}} & \textcolor{SecondaryBlue}{Complete solution} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{NGO Partnerships}} & None & \textbf{\textcolor{AccentGreen}{Strategic focus}} & \textcolor{SecondaryBlue}{Farmer access} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Innovation}} & Stable, incremental & \textbf{\textcolor{AccentGreen}{Rapid iteration}} & \textcolor{SecondaryBlue}{Future-proof} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Customer Service}} & Transactional & \textbf{\textcolor{AccentGreen}{Partnership-oriented}} & \textcolor{SecondaryBlue}{Long-term relationship} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \section{Competitive Response Strategies}
 

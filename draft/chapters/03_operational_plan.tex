@@ -10,102 +10,71 @@
 
 The following infographic outlines the critical equipment needed for Year 1 operations:
 
-% Equipment Investment — TikZ card grid
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.85cm]
-        % Header
-        \fill[PrimaryBlue] (0,0) rectangle (13.5,0.85);
-        \foreach \xpos/\lbl in {
-            0.1/{Equipment},
-            4.0/{Specification},
-            7.4/{Unit Cost (USD)},
-            9.8/{Qty},
-            11.0/{Total (USD)}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.425) {\lbl};
-        }
-        % Equipment rows
-        \foreach \row/\eq/\spec/\ucost/\qty/\tot in {
-            1/{Drone -- Enterprise}/{DJI Matrice 300 RTK}/{15\,000}/{2}/{30\,000},
-            2/{LiDAR Sensor}/{Zenmuse H30T (LiDAR)}/{8\,000}/{2}/{16\,000},
-            3/{RGB Camera}/{High-res camera}/{2\,000}/{2}/{4\,000},
-            4/{RTK GPS}/{GPS receivers for GCP}/{3\,000}/{2}/{6\,000},
-            5/{Processing Server}/{Workstation (32GB, GPU)}/{3\,000}/{1}/{3\,000},
-            6/{LiDAR Software}/{CloudCompare, LasTools}/{5\,000}/{--}/{5\,000},
-            7/{GIS Software}/{QGIS, PostGIS, tools}/{2\,000}/{--}/{2\,000},
-            8/{Office Equipment}/{Computers, monitors, furniture}/{5\,000}/{--}/{5\,000},
-            9/{Office Space (6 mo.)}/{Dhaka location}/{3\,000}/{--}/{3\,000},
-            10/{Contingency (10\%)}/{Backup equipment, repairs}/{--}/{--}/{7\,400}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.85}
-            \pgfmathsetmacro{\ytop}{\ybot+0.85}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.5,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.5,\ybot);
-            \node[anchor=west,font=\scriptsize\bfseries,text=PrimaryBlue] at (0.1,\ybot+0.425) {\eq};
-            \node[anchor=west,font=\scriptsize,text=DarkGrey,text width=3.2cm] at (4.0,\ybot+0.425) {\spec};
-            \node[anchor=west,font=\scriptsize,text=DarkGrey] at (7.4,\ybot+0.425) {\ucost};
-            \node[anchor=west,font=\scriptsize,text=DarkGrey] at (9.8,\ybot+0.425) {\qty};
-            \node[anchor=west,font=\scriptsize,text=DarkGrey] at (11.0,\ybot+0.425) {\tot};
-        }
-        % Total row
-        \fill[PrimaryBlue!15] (0,-8.5) rectangle (13.5,-7.65);
-        \draw[PrimaryBlue,thick] (0,-8.5) rectangle (13.5,-7.65);
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,-8.075) {TOTAL CAPEX};
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (11.0,-8.075) {82\,400 USD};
-        % Outer border + column lines
-        \draw[PrimaryBlue,thick] (0,-8.5) rectangle (13.5,0.85);
-        \foreach \xd in {3.95,7.35,9.75,10.95}{
-            \draw[MidGrey!70] (\xd,-8.5) -- (\xd,0.85);
-        }
-    \end{tikzpicture}
     \caption{Equipment Investment Breakdown}
     \label{tab:equipment_investment}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{X | X | l | l | l}
+        \hline
+        \theader{Equipment} & \theader{Specification} & \theader{Unit Cost (USD)} & \theader{Qty} & \theader{Total (USD)} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Drone -- Enterprise}} & DJI Matrice 300 RTK & 15,000 & 2 & 30,000 \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{LiDAR Sensor}} & Zenmuse H30T (LiDAR) & 8,000 & 2 & 16,000 \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{RGB Camera}} & High-res camera & 2,000 & 2 & 4,000 \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{RTK GPS}} & GPS receivers for GCP & 3,000 & 2 & 6,000 \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Processing Server}} & Workstation (32GB, GPU) & 3,000 & 1 & 3,000 \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{LiDAR Software}} & CloudCompare, LasTools & 5,000 & -- & 5,000 \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{GIS Software}} & QGIS, PostGIS, tools & 2,000 & -- & 2,000 \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Office Equipment}} & Computers, monitors, furniture & 5,000 & -- & 5,000 \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Office Space (6 mo.)}} & Dhaka location & 3,000 & -- & 3,000 \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Contingency (10\%)}} & Backup equipment, repairs & -- & -- & 7,400 \\
+        \hline
+        \cellcolor{LightGrey}\textbf{TOTAL CAPEX} & \cellcolor{LightGrey} & \cellcolor{LightGrey} & \cellcolor{LightGrey} & \cellcolor{LightGrey}\textbf{\textcolor{AccentGreen}{82,400 USD}} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \textbf{Converted Cost:} USD 82,400 × 110 BDT/USD = \textcolor{AccentGreen}{\textbf{BDT 90.6 lakhs}}
 
 \subsection{Software Stack}
 
-% Software Stack — TikZ matrix
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.82cm]
-        % Header
-        \fill[PrimaryBlue] (0,0) rectangle (12.0,0.82);
-        \foreach \xpos/\lbl in {0.1/{Category}, 3.2/{Tools}, 7.6/{Cost Model}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.41) {\lbl};
-        }
-        % Software rows
-        \foreach \row/\cat/\tools/\cost in {
-            1/{GIS Processing}/{QGIS, PostGIS, ArcGIS Online}/{Open-source + Freemium},
-            2/{LiDAR Processing}/{CloudCompare, LasTools}/{Free + Commercial licenses},
-            3/{Photogrammetry}/{Pix4D, Agisoft, WebODM}/{Freemium alternatives},
-            4/{Custom Development}/{Python, JavaScript, Node.js}/{Open-source},
-            5/{Web Frameworks}/{React, Vue.js, Flask}/{Open-source},
-            6/{Database}/{PostgreSQL + PostGIS}/{Open-source},
-            7/{Cloud Hosting}/{AWS, Google Cloud GIS}/{Pay-as-you-go},
-            8/{Version Control}/{Git, GitHub, GitLab}/{Free + subscription}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.82}
-            \pgfmathsetmacro{\ytop}{\ybot+0.82}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (12.0,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (12.0,\ybot);
-            \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,\ybot+0.41) {\cat};
-            \node[anchor=west,font=\small,text=DarkGrey,text width=4.2cm] at (3.2,\ybot+0.41) {\tools};
-            \node[anchor=west,font=\small,text=AccentGreen,text width=3.8cm] at (7.6,\ybot+0.41) {\cost};
-        }
-        \draw[PrimaryBlue,thick] (0,-6.56) rectangle (12.0,0.82);
-        \foreach \xd in {3.15,7.55}{
-            \draw[MidGrey!70] (\xd,-6.56) -- (\xd,0.82);
-        }
-    \end{tikzpicture}
     \caption{Software Tools \& Cost Model}
     \label{tab:software_stack}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{l | X | X}
+        \hline
+        \theader{Category} & \theader{Tools} & \theader{Cost Model} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{GIS Processing}} & QGIS, PostGIS, ArcGIS Online & \textcolor{AccentGreen}{Open-source + Freemium} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{LiDAR Processing}} & CloudCompare, LasTools & \textcolor{AccentGreen}{Free + Commercial licenses} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Photogrammetry}} & Pix4D, Agisoft, WebODM & \textcolor{AccentGreen}{Freemium alternatives} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Custom Development}} & Python, JavaScript, Node.js & \textcolor{AccentGreen}{Open-source} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Web Frameworks}} & React, Vue.js, Flask & \textcolor{AccentGreen}{Open-source} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Database}} & PostgreSQL + PostGIS & \textcolor{AccentGreen}{Open-source} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Cloud Hosting}} & AWS, Google Cloud GIS & \textcolor{AccentGreen}{Pay-as-you-go} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Version Control}} & Git, GitHub, GitLab & \textcolor{AccentGreen}{Free + subscription} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \textbf{Software Cost Strategy:} Leverage open-source tools to minimize licensing costs while maintaining professional-grade capabilities.
 
@@ -169,50 +138,35 @@ The company will establish three regional hubs in Year 1, with expansion to a fo
 
 \subsection{Year 1 Team Composition (12 People)}
 
-% Team Structure — TikZ KPI-style cards
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.82cm]
-        % Header
-        \fill[PrimaryBlue] (0,0) rectangle (13.0,0.82);
-        \foreach \xpos/\lbl in {0.1/{Role}, 4.2/{Count}, 5.8/{Primary Responsibility}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.41) {\lbl};
-        }
-        % Team rows
-        \foreach \row/\role/\cnt/\resp in {
-            1/{Operations Manager}/{1}/{Overall business, client relations, strategy},
-            2/{GIS Analyst (Senior)}/{2}/{Project design, data processing, QA},
-            3/{Drone Pilot (Certified)}/{2}/{Flight operations, data collection, safety},
-            4/{Software Developer}/{2}/{Custom app development, API integration},
-            5/{Data Processing Specialist}/{2}/{Point cloud processing, map generation},
-            6/{Business Development}/{1}/{Client acquisition, partnerships},
-            7/{Finance \& Administration}/{1}/{Accounting, HR, compliance, reporting},
-            8/{Part-time Consultants}/{Varies}/{Specialized domain expertise as needed}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.82}
-            \pgfmathsetmacro{\ytop}{\ybot+0.82}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.0,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.0,\ybot);
-            \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,\ybot+0.41) {\role};
-            \node[anchor=center,font=\small\bfseries,text=AccentGreen] at (5.0,\ybot+0.41) {\cnt};
-            \node[anchor=west,font=\small,text=DarkGrey,text width=6.8cm] at (5.8,\ybot+0.41) {\resp};
-        }
-        % Total row
-        \fill[PrimaryBlue!15] (0,-6.56) rectangle (13.0,-5.74);
-        \draw[PrimaryBlue,thick] (0,-6.56) rectangle (13.0,-5.74);
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,-6.15) {TOTAL STAFF};
-        \node[anchor=center,font=\small\bfseries,text=AccentGreen] at (5.0,-6.15) {12};
-        % Outer border + column lines
-        \draw[PrimaryBlue,thick] (0,-6.56) rectangle (13.0,0.82);
-        \foreach \xd in {4.15,5.75}{
-            \draw[MidGrey!70] (\xd,-6.56) -- (\xd,0.82);
-        }
-    \end{tikzpicture}
     \caption{Year 1 Team Structure \& Roles}
     \label{tab:year1_team}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{X | l | X}
+        \hline
+        \theader{Role} & \theader{Count} & \theader{Primary Responsibility} \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Operations Manager}} & \textbf{\textcolor{AccentGreen}{1}} & Overall business, client relations, strategy \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{GIS Analyst (Senior)}} & \textbf{\textcolor{AccentGreen}{2}} & Project design, data processing, QA \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Drone Pilot (Certified)}} & \textbf{\textcolor{AccentGreen}{2}} & Flight operations, data collection, safety \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Software Developer}} & \textbf{\textcolor{AccentGreen}{2}} & Custom app development, API integration \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Data Processing Specialist}} & \textbf{\textcolor{AccentGreen}{2}} & Point cloud processing, map generation \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Business Development}} & \textbf{\textcolor{AccentGreen}{1}} & Client acquisition, partnerships \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Finance \& Administration}} & \textbf{\textcolor{AccentGreen}{1}} & Accounting, HR, compliance, reporting \\
+        \hline
+        \textbf{\textcolor{PrimaryBlue}{Part-time Consultants}} & \textbf{\textcolor{AccentGreen}{Varies}} & Specialized domain expertise as needed \\
+        \hline
+        \cellcolor{LightGrey}\textbf{TOTAL STAFF} & \cellcolor{LightGrey}\textbf{\textcolor{AccentGreen}{12}} & \cellcolor{LightGrey} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \subsection{Year 2-3 Expansion}
 
@@ -340,40 +294,23 @@ Each flight operation must obtain clearance from:
 
 \subsection{4. Operational Categories}
 
-% CAAB Operational Categories — TikZ comparison cards
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=1cm]
-        % Open Category card
-        \fill[AccentGreen!15] (0,0) rectangle (4.1,3.2);
-        \draw[AccentGreen,thick] (0,0) rectangle (4.1,3.2);
-        \fill[AccentGreen] (0,2.5) rectangle (4.1,3.2);
-        \node[text=white,font=\bfseries\small,align=center] at (2.05,2.85) {OPEN CATEGORY};
-        \node[font=\bfseries\footnotesize,text=AccentGreen] at (2.05,2.1) {Risk Level: Low};
-        \node[font=\footnotesize,text=DarkGrey,text width=3.8cm,align=center]
-            at (2.05,1.25) {Commercial surveying, mapping, photography};
-        % Specific Category card (highlighted — this is Precinct Smart's category)
-        \fill[SecondaryBlue!15] (4.35,0) rectangle (8.45,3.2);
-        \draw[SecondaryBlue,very thick] (4.35,0) rectangle (8.45,3.2);
-        \fill[SecondaryBlue] (4.35,2.5) rectangle (8.45,3.2);
-        \node[text=white,font=\bfseries\small,align=center] at (6.4,2.85) {SPECIFIC CATEGORY};
-        \node[font=\bfseries\small,text=SecondaryBlue] at (6.4,2.1) {Risk Level: Medium};
-        \node[font=\footnotesize,text=DarkGrey,text width=3.8cm,align=center]
-            at (6.4,1.4) {Complex operations in populated areas};
-        \node[font=\bfseries\footnotesize,text=AccentGreen,align=center]
-            at (6.4,0.35) {Precinct Smart Operations};
-        % Certified Category card
-        \fill[AccentRed!10] (8.7,0) rectangle (12.8,3.2);
-        \draw[AccentRed,thick] (8.7,0) rectangle (12.8,3.2);
-        \fill[AccentRed] (8.7,2.5) rectangle (12.8,3.2);
-        \node[text=white,font=\bfseries\small,align=center] at (10.75,2.85) {CERTIFIED CATEGORY};
-        \node[font=\bfseries\footnotesize,text=AccentRed] at (10.75,2.1) {Risk Level: High};
-        \node[font=\footnotesize,text=DarkGrey,text width=3.8cm,align=center]
-            at (10.75,1.25) {Cargo delivery, passenger transport};
-    \end{tikzpicture}
     \caption{CAAB Operational Categories}
     \label{tab:operational_categories}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{l | l | X | l}
+        \hline
+        \theader{Category} & \theader{Risk Level} & \theader{Typical Operations} & \theader{Applicability} \\
+        \hline
+        \textbf{\textcolor{AccentGreen}{Open Category}} & Low & Commercial surveying, mapping, photography & General use \\
+        \hline
+        \textbf{\textcolor{SecondaryBlue}{Specific Category}} & Medium & Complex operations in populated areas & \textbf{\textcolor{AccentGreen}{Precinct Smart Operations}} \\
+        \hline
+        \textbf{\textcolor{AccentRed}{Certified Category}} & High & Cargo delivery, passenger transport & Not applicable \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 The proposed operations fall under the \textbf{Specific Category} (surveying, mapping in various areas).
 
@@ -423,123 +360,45 @@ The proposed operations fall under the \textbf{Specific Category} (surveying, ma
 
 \textbf{Critical Path for CAAB Compliance:}
 
-% Regulatory Timeline — TikZ flowchart with phases
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.80cm]
-        % Phase header rows and data
-        % Month 0 — Business setup
-        \fill[PrimaryBlue!80] (0,0) rectangle (13.0,0.80);
-        \node[text=white,font=\bfseries\small,anchor=west] at (0.2,0.40)
-            {Month 0 (Pre-Launch)};
-
-        % Row 1
-        \fill[LightGrey!70] (0,-0.80) rectangle (13.0,0);
-        \draw[MidGrey!50] (0,-0.80) -- (13.0,-0.80);
-        \node[anchor=west,font=\small,text=DarkGrey] at (0.2,-0.40)
-            {Business registration (RJSC)};
-        \node[anchor=west,font=\small,text=DarkGrey] at (6.0,-0.40) {Week 1--2};
-        \node[anchor=west,font=\small,text=AccentGreen] at (9.5,-0.40) {BDT 1--2 lakhs};
-
-        % Row 2
-        \fill[white] (0,-1.60) rectangle (13.0,-0.80);
-        \draw[MidGrey!50] (0,-1.60) -- (13.0,-1.60);
-        \node[anchor=west,font=\small,text=DarkGrey] at (0.2,-1.20)
-            {TIN and tax compliance (NBR)};
-        \node[anchor=west,font=\small,text=DarkGrey] at (6.0,-1.20) {Week 2--3};
-        \node[anchor=west,font=\small,text=AccentGreen] at (9.5,-1.20) {BDT 50K--1L};
-
-        % Month 1-2 — Pilot Cert
-        \fill[SecondaryBlue!70] (0,-2.40) rectangle (13.0,-1.60);
-        \node[text=white,font=\bfseries\small,anchor=west] at (0.2,-2.00)
-            {Month 1--2 (Pilot Certification)};
-
-        % Row 3
-        \fill[LightGrey!70] (0,-3.20) rectangle (13.0,-2.40);
-        \draw[MidGrey!50] (0,-3.20) -- (13.0,-3.20);
-        \node[anchor=west,font=\small,text=DarkGrey,text width=5.5cm] at (0.2,-2.80)
-            {Avion Aerospace Academy Training (50+ hrs)};
-        \node[anchor=west,font=\small,text=DarkGrey] at (6.0,-2.80) {4--6 weeks};
-        \node[anchor=west,font=\small,text=AccentGreen] at (9.5,-2.80) {BDT 4--6 lakhs};
-
-        % Row 4
-        \fill[white] (0,-4.00) rectangle (13.0,-3.20);
-        \draw[MidGrey!50] (0,-4.00) -- (13.0,-4.00);
-        \node[anchor=west,font=\small,text=DarkGrey] at (0.2,-3.60)
-            {CAAB Medical Certification (Class 3)};
-        \node[anchor=west,font=\small,text=DarkGrey] at (6.0,-3.60) {Week 1--2};
-        \node[anchor=west,font=\small,text=AccentGreen] at (9.5,-3.60) {BDT 50K--1L};
-
-        % Row 5
-        \fill[LightGrey!70] (0,-4.80) rectangle (13.0,-4.00);
-        \draw[MidGrey!50] (0,-4.80) -- (13.0,-4.80);
-        \node[anchor=west,font=\small,text=DarkGrey] at (0.2,-4.40)
-            {CAAB Pilot Examination \& ROC};
-        \node[anchor=west,font=\small,text=DarkGrey] at (6.0,-4.40) {Week 6--8};
-        \node[anchor=west,font=\small,text=AccentGreen] at (9.5,-4.40) {BDT 1--2 lakhs};
-
-        % Month 1-3 — Equipment
-        \fill[AccentGreen!60] (0,-5.60) rectangle (13.0,-4.80);
-        \node[text=white,font=\bfseries\small,anchor=west] at (0.2,-5.20)
-            {Month 1--3 (Drone \& Equipment)};
-
-        % Row 6
-        \fill[white] (0,-6.40) rectangle (13.0,-5.60);
-        \draw[MidGrey!50] (0,-6.40) -- (13.0,-6.40);
-        \node[anchor=west,font=\small,text=DarkGrey] at (0.2,-6.00)
-            {Drone equipment procurement};
-        \node[anchor=west,font=\small,text=DarkGrey] at (6.0,-6.00) {Week 1--4};
-        \node[anchor=west,font=\small,text=AccentGreen] at (9.5,-6.00) {BDT 80--90 lakhs};
-
-        % Row 7
-        \fill[LightGrey!70] (0,-7.20) rectangle (13.0,-6.40);
-        \draw[MidGrey!50] (0,-7.20) -- (13.0,-7.20);
-        \node[anchor=west,font=\small,text=DarkGrey] at (0.2,-6.80)
-            {CAAB Drone Registration (online)};
-        \node[anchor=west,font=\small,text=DarkGrey] at (6.0,-6.80) {Week 8--12};
-        \node[anchor=west,font=\small,text=AccentGreen] at (9.5,-6.80) {BDT 50K--1L};
-
-        % Row 8
-        \fill[white] (0,-8.00) rectangle (13.0,-7.20);
-        \draw[MidGrey!50] (0,-8.00) -- (13.0,-8.00);
-        \node[anchor=west,font=\small,text=DarkGrey] at (0.2,-7.60)
-            {Equipment import permits \& customs};
-        \node[anchor=west,font=\small,text=DarkGrey] at (6.0,-7.60) {Month 1--2};
-        \node[anchor=west,font=\small,text=AccentGreen] at (9.5,-7.60) {BDT 2--3 lakhs};
-
-        % Row 9 — Insurance
-        \fill[LightGrey!70] (0,-8.80) rectangle (13.0,-8.00);
-        \draw[MidGrey!50] (0,-8.80) -- (13.0,-8.80);
-        \node[anchor=west,font=\small,text=DarkGrey] at (0.2,-8.40)
-            {Insurance (3-year liability coverage)};
-        \node[anchor=west,font=\small,text=DarkGrey] at (6.0,-8.40) {Month 1};
-        \node[anchor=west,font=\small,text=AccentGreen] at (9.5,-8.40) {BDT 10--15 lakhs};
-
-        % Total rows
-        \fill[PrimaryBlue!12] (0,-9.60) rectangle (13.0,-8.80);
-        \draw[PrimaryBlue] (0,-9.60) rectangle (13.0,-8.80);
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.2,-9.20)
-            {TOTAL (Pre-Launch)};
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-9.20) {BDT 21--35 lakhs};
-
-        \fill[PrimaryBlue!20] (0,-10.40) rectangle (13.0,-9.60);
-        \draw[PrimaryBlue,thick] (0,-10.40) rectangle (13.0,-9.60);
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.2,-10.00)
-            {TOTAL (First Year, incl.\ operations)};
-        \node[anchor=west,font=\small\bfseries,text=AccentGreen] at (9.5,-10.00) {BDT 25--45 lakhs};
-
-        % Outer border + column lines
-        \draw[PrimaryBlue,thick] (0,-10.40) rectangle (13.0,0.80);
-        \foreach \xd in {5.95,9.45}{
-            \draw[MidGrey!70] (\xd,-10.40) -- (\xd,0.80);
-        }
-        % Column headers
-        \node[text=white,font=\bfseries\small,anchor=west] at (6.1,0.40) {Timeline};
-        \node[text=white,font=\bfseries\small,anchor=west] at (9.6,0.40) {Est. Cost (BDT)};
-    \end{tikzpicture}
     \caption{Regulatory Compliance Timeline \& Costs (CAAB-Based)}
     \label{tab:regulatory_timeline}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{X | l | l}
+        \hline
+        \theader{Item} & \theader{Timeline} & \theader{Est. Cost (BDT)} \\
+        \hline
+        \multicolumn{3}{l}{\cellcolor{PrimaryBlue!80}\textbf{\textcolor{white}{Month 0 (Pre-Launch)}}} \\
+        \hline
+        Business registration (RJSC) & Week 1--2 & \textcolor{AccentGreen}{1--2 lakhs} \\
+        \hline
+        TIN and tax compliance (NBR) & Week 2--3 & \textcolor{AccentGreen}{50K--1L} \\
+        \hline
+        \multicolumn{3}{l}{\cellcolor{SecondaryBlue!70}\textbf{\textcolor{white}{Month 1--2 (Pilot Certification)}}} \\
+        \hline
+        Avion Aerospace Academy Training (50+ hrs) & 4--6 weeks & \textcolor{AccentGreen}{4--6 lakhs} \\
+        \hline
+        CAAB Medical Certification (Class 3) & Week 1--2 & \textcolor{AccentGreen}{50K--1L} \\
+        \hline
+        CAAB Pilot Examination \& ROC & Week 6--8 & \textcolor{AccentGreen}{1--2 lakhs} \\
+        \hline
+        \multicolumn{3}{l}{\cellcolor{AccentGreen!60}\textbf{\textcolor{white}{Month 1--3 (Drone \& Equipment)}}} \\
+        \hline
+        Drone equipment procurement & Week 1--4 & \textcolor{AccentGreen}{80--90 lakhs} \\
+        \hline
+        CAAB Drone Registration (online) & Week 8--12 & \textcolor{AccentGreen}{50K--1L} \\
+        \hline
+        Equipment import permits \& customs & Month 1--2 & \textcolor{AccentGreen}{2--3 lakhs} \\
+        \hline
+        Insurance (3-year liability coverage) & Month 1 & \textcolor{AccentGreen}{10--15 lakhs} \\
+        \hline
+        \cellcolor{LightGrey}\textbf{TOTAL (Pre-Launch)} & \cellcolor{LightGrey} & \cellcolor{LightGrey}\textbf{\textcolor{AccentGreen}{BDT 21--35 lakhs}} \\
+        \hline
+        \cellcolor{LightGrey}\textbf{TOTAL (First Year, incl.\ operations)} & \cellcolor{LightGrey} & \cellcolor{LightGrey}\textbf{\textcolor{AccentGreen}{BDT 25--45 lakhs}} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \textbf{Key Timeline Notes:}
 \begin{itemize}
