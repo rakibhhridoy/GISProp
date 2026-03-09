@@ -1,0 +1,239 @@
+% ============================================================================
+% CHAPTER 3: OPERATIONS AND REGULATORY
+% ============================================================================
+
+\chapter{Operations, Regulatory \& Implementation}
+
+\section{CAAB Regulatory Requirements}
+
+Bangladesh's drone regulations are clear and achievable through the Civil Aviation Authority Bangladesh (CAAB):
+
+\subsection{1. Drone Registration}
+
+\begin{itemize}
+    \item \textbf{Required for:} Drones >248g or range >100m
+    \item \textbf{Process:} Submit specs, insurance proof, operator credentials
+    \item \textbf{Timeline:} 2-3 weeks
+    \item \textbf{Cost:} BDT 10-20K per aircraft
+\end{itemize}
+
+\subsection{2. Remote Pilot Certification (ROC)}
+
+\begin{itemize}
+    \item \textbf{Training Partner:} Avion Aerospace Academy (CAAB-approved)
+    \item \textbf{Requirements:} 50+ flight hours, ground school, Class 3 medical cert, written + practical exam
+    \item \textbf{Duration:} 4-6 weeks per pilot
+    \item \textbf{Cost:} BDT 8-12L per pilot (includes all training)
+    \item \textbf{Benefit:} 160+ pilots already trained by Avion Academy
+\end{itemize}
+
+\subsection{3. Flight Safety Request (FSR) \& Security Clearances}
+
+\begin{itemize}
+    \item \textbf{Submission:} 45 days in advance per mission
+    \item \textbf{Approvals:} ADOC (airspace), DGFI (security), NSI (intelligence), Local Police
+    \item \textbf{Timeline:} Typically 30-45 days
+    \item \textbf{Strategy:} Plan missions in batches to optimize approval process
+\end{itemize}
+
+\subsection{4. Insurance \& Operational Restrictions}
+
+\begin{itemize}
+    \item \textbf{Third-Party Liability Insurance:} Mandatory, BDT 50-100L coverage minimum
+    \item \textbf{Premium:} BDT 3-5L annually
+    \item \textbf{Altitude:} Max 120m AGL for "Specific" operations
+    \item \textbf{Line of Sight:} Visual contact required at all times
+    \item \textbf{Hours:} Daylight operations only (30 min before sunrise to 30 min after sunset)
+    \item \textbf{Wind:} No operations in wind >10 m/s
+\end{itemize}
+
+\section{Getting Started Timeline}
+
+\begin{table}[h!]
+    \centering
+    \caption{Regulatory Timeline to First Operations}
+    \label{tab:regulatory_timeline}
+    \begin{tabularx}{\textwidth}{l | X | X}
+        \hline
+        \theader{Phase} & \theader{Duration} & \theader{Key Milestones} \\
+        \hline
+        Pilot Training (Avion Academy) & 4-6 weeks & Class 3 medical, ground school, flight hours \\
+        \hline
+        CAAB Certification & 2-3 weeks & Exam, ROC certificate received \\
+        \hline
+        Equipment \& Registration & 2-3 weeks & Drones procured, registered with CAAB \\
+        \hline
+        Insurance & 1-2 weeks & Policy obtained \\
+        \hline
+        First Mission FSR & 45 days & Submitted at Month 3, approved by Month 4-5 \\
+        \hline
+        \textbf{First Commercial Flight} & \textbf{6-8 weeks} & \textbf{Operational by Month 2-3} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\textbf{Critical Path:} Pilot training is the bottleneck. Starting immediately ensures operations by Month 3.
+
+\section{Equipment \& Technology}
+
+\subsection{Drones}
+
+\textbf{Platform:} DJI Matrice 300 RTK (professional-grade)
+\begin{itemize}
+    \item 55-minute flight time
+    \item 2.7 kg weight
+    \item Proven in South Asia market
+    \item CAAB-compatible
+    \item Cost: BDT 30-40L for 2-3 aircraft with redundancy
+\end{itemize}
+
+\textbf{LiDAR Sensor:} Zenmuse H30T
+\begin{itemize}
+    \item Integrated LiDAR + RGB + thermal camera
+    \item High-precision scanning
+    \item Cost: BDT 8-12L
+\end{itemize}
+
+\subsection{Processing Infrastructure}
+
+\textbf{Software Stack:}
+\begin{itemize}
+    \item \textbf{GIS:} QGIS (open-source), PostGIS (spatial database)
+    \item \textbf{LiDAR:} CloudCompare, LasTools, PDAL
+    \item \textbf{ML:} Python (TensorFlow, scikit-learn)
+    \item \textbf{Web/Mobile:} JavaScript/React, Node.js backend
+\end{itemize}
+
+\textbf{Infrastructure:}
+\begin{itemize}
+    \item Local GPU workstations for LiDAR processing
+    \item AWS/Azure for cloud storage and APIs
+    \item PostgreSQL + PostGIS for geospatial data
+\end{itemize}
+
+\section{Geographic Expansion Strategy}
+
+\begin{table}[h!]
+    \centering
+    \caption{Regional Hub Expansion}
+    \label{tab:hub_expansion}
+    \begin{tabularx}{\textwidth}{l | X | X | X}
+        \hline
+        \theader{Hub} & \theader{Timeline} & \theader{Team Size} & \theader{Coverage} \\
+        \hline
+        Dhaka (HQ) & Year 1 & 8-10 & Central Bangladesh \\
+        \hline
+        Chittagong & Year 2 & 3-4 & Southeast region \\
+        \hline
+        Khulna & Year 2 & 3-4 & Southwest + agriculture \\
+        \hline
+        Sylhet & Year 3 & 2-3 & Northeast + tea plantations \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\section{36-Month Implementation Plan}
+
+\subsection{Year 1: Foundation Phase (Months 1-12)}
+
+\textbf{Q1 (Months 1-3):}
+\begin{itemize}
+    \item Recruit team (CEO, ops lead, 2 pilots)
+    \item Pilot training at Avion Academy (complete by Month 6)
+    \item Medical certification + CAAB exam
+    \item Procure drones + equipment
+    \item Register with CAAB
+\end{itemize}
+
+\textbf{Q2 (Months 4-6):}
+\begin{itemize}
+    \item Secure insurance (3rd-party liability)
+    \item Set up processing lab + cloud infrastructure
+    \item Begin FSR submissions for first missions
+    \item Start customer outreach
+\end{itemize}
+
+\textbf{Q3-Q4 (Months 7-12):}
+\begin{itemize}
+    \item Complete 5-8 government/commercial projects (BDT 30L revenue)
+    \item Achieve break-even (Month 10)
+    \item Hire data analyst + junior GIS engineer
+    \item Start farmer app MVP development
+    \item Sign LOI with BRAC/ASA for Year 2 partnership
+\end{itemize}
+
+\textbf{Year 1 Deliverable:} Operational company, proven service delivery, break-even achieved, Year 2 partnerships lined up.
+
+\subsection{Year 2: Growth Phase (Months 13-24)}
+
+\textbf{Q1 (Months 13-15):}
+\begin{itemize}
+    \item Launch yield prediction app pilot (500-1K farmers via BRAC)
+    \item Continue government project delivery (BDT 30-40L revenue)
+    \item Collect yield data from pilot farmers
+\end{itemize}
+
+\textbf{Q2-Q3 (Months 16-21):}
+\begin{itemize}
+    \item Release app v2.0 with farmer feedback
+    \item Launch disease detection app
+    \item Expand pilot to 2-3K farmers
+    \item Open Chittagong + Khulna hubs
+\end{itemize}
+
+\textbf{Q4 (Months 22-24):}
+\begin{itemize}
+    \item Scale farmer base to 5K across NGO networks
+    \item Achieve BDT 96.5L revenue (51\% margin)
+    \item Full team expansion (18 people)
+\end{itemize}
+
+\subsection{Year 3: Scaling Phase (Months 25-36)}
+
+\textbf{Q1 (Months 25-27):}
+\begin{itemize}
+    \item Formalize partnerships with 3-5 major NGOs
+    \item 8-10K farmers on apps
+    \item Launch "impact bonds" pilot with government/donors
+\end{itemize}
+
+\textbf{Q2-Q3 (Months 28-33):}
+\begin{itemize}
+    \item Reach 16K farmer users
+    \item Open Sylhet hub (tea plantation specialization)
+    \item Launch consulting practice
+\end{itemize}
+
+\textbf{Q4 (Months 34-36):}
+\begin{itemize}
+    \item BDT 204L annual revenue achieved
+    \item 67\% profit margins
+    \item Plan for Series A funding + regional expansion
+\end{itemize}
+
+\section{Key Operational Metrics}
+
+\begin{table}[h!]
+    \centering
+    \caption{Operational Targets by Year}
+    \label{tab:operational_targets}
+    \begin{tabularx}{\textwidth}{l | X | X | X}
+        \hline
+        \theader{Metric} & \theader{Year 1} & \theader{Year 2} & \theader{Year 3} \\
+        \hline
+        Projects Delivered & 5-8 & 15-20 & 35-40 \\
+        \hline
+        Area Surveyed (sq km) & 12-15 & 30-40 & 70-80 \\
+        \hline
+        Farmer Users & 0 & 5K & 16K \\
+        \hline
+        Geographic Hubs & 1 & 3 & 4 \\
+        \hline
+        Team Size & 10-12 & 18 & 25 \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+% ============================================================================
+% END OF CHAPTER 3
+% ============================================================================

@@ -1,0 +1,465 @@
+% ============================================================================
+% CHAPTER 3: OPERATIONAL PLAN
+% ============================================================================
+
+\chapter{Operational Plan}
+
+\section{Equipment \& Technology Requirements}
+
+\subsection{Primary Equipment Investment}
+
+The following table outlines the critical equipment needed for Year 1 operations:
+
+\begin{table}[h!]
+    \centering
+    \caption{Equipment Investment Breakdown}
+    \label{tab:equipment_investment}
+    \begin{tabularx}{\textwidth}{l | X | X | X | X}
+        \hline
+        \theader{Equipment} & \theader{Specification} & \theader{Unit Cost (USD)} & \theader{Qty} & \theader{Total (USD)} \\
+        \hline
+        Drone - Enterprise & DJI Matrice 300 RTK & 15,000 & 2 & 30,000 \\
+        \hline
+        LiDAR Sensor & Zenmuse H30T (LiDAR) & 8,000 & 2 & 16,000 \\
+        \hline
+        RGB Camera & High-resolution camera & 2,000 & 2 & 4,000 \\
+        \hline
+        RTK GPS & GPS receivers for GCP & 3,000 & 2 & 6,000 \\
+        \hline
+        Processing Server & Workstation (32GB, GPU) & 3,000 & 1 & 3,000 \\
+        \hline
+        LiDAR Software & CloudCompare, LasTools & 5,000 & - & 5,000 \\
+        \hline
+        GIS Software & QGIS, PostGIS, tools & 2,000 & - & 2,000 \\
+        \hline
+        Office Equipment & Computers, monitors, furniture & 5,000 & - & 5,000 \\
+        \hline
+        Office Space (6 months) & Dhaka location & 3,000 & - & 3,000 \\
+        \hline
+        Contingency (10\%) & Backup equipment, repairs & - & - & 7,400 \\
+        \hline
+        \cellcolor{LightGrey}\textbf{TOTAL CAPEX} & & & & \cellcolor{LightGrey}\textbf{82,400 USD} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\textbf{Converted Cost:} USD 82,400 × 110 BDT/USD = \textcolor{AccentGreen}{\textbf{BDT 90.6 lakhs}}
+
+\subsection{Software Stack}
+
+\begin{table}[h!]
+    \centering
+    \caption{Software Tools \& Cost Model}
+    \label{tab:software_stack}
+    \begin{tabularx}{\textwidth}{l | X | X}
+        \hline
+        \theader{Category} & \theader{Tools} & \theader{Cost Model} \\
+        \hline
+        GIS Processing & QGIS, PostGIS, ArcGIS Online & Open-source + Freemium \\
+        \hline
+        LiDAR Processing & CloudCompare, LasTools & Free + Commercial licenses \\
+        \hline
+        Photogrammetry & Pix4D, Agisoft, WebODM & Freemium alternatives \\
+        \hline
+        Custom Development & Python, JavaScript, Node.js & Open-source \\
+        \hline
+        Web Frameworks & React, Vue.js, Flask & Open-source \\
+        \hline
+        Database & PostgreSQL + PostGIS & Open-source \\
+        \hline
+        Cloud Hosting & AWS, Google Cloud GIS & Pay-as-you-go \\
+        \hline
+        Version Control & Git, GitHub, GitLab & Free + subscription \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\textbf{Software Cost Strategy:} Leverage open-source tools to minimize licensing costs while maintaining professional-grade capabilities.
+
+\section{Operational Locations}
+
+The company will establish three regional hubs in Year 1, with expansion to a fourth hub in Year 3:
+
+\subsection{Hub 1: Dhaka Central (Headquarters)}
+
+\textbf{Location:} Dhaka
+\textbf{Operational Timeline:} Month 1, Year 1
+\textbf{Staffing:} 8-10 people
+\textbf{Functions:}
+\begin{itemize}
+    \item Core business operations and management
+    \item Data processing and analysis
+    \item Software development
+    \item Client management and consulting
+    \item Government and real estate client base
+\end{itemize}
+
+\subsection{Hub 2: Chittagong Southeast}
+
+\textbf{Location:} Chittagong
+\textbf{Operational Timeline:} Month 3, Year 1
+\textbf{Staffing:} 3-4 people
+\textbf{Functions:}
+\begin{itemize}
+    \item Regional operations for Chittagong, Cox's Bazar, Rangamati
+    \item Hilly terrain surveys (specialized capability)
+    \item Port authority and tourism projects
+    \item Field support and quality control
+\end{itemize}
+
+\subsection{Hub 3: Khulna Southwest (Future)}
+
+\textbf{Location:} Khulna
+\textbf{Operational Timeline:} Month 6, Year 2
+\textbf{Staffing:} 3-4 people
+\textbf{Functions:}
+\begin{itemize}
+    \item Delta region coverage
+    \item Agricultural focus and NGO partnerships
+    \item Barisal, Satkhira districts
+    \item Aquaculture and fisheries projects
+\end{itemize}
+
+\subsection{Hub 4: Sylhet Northeast (Future)}
+
+\textbf{Location:} Sylhet
+\textbf{Operational Timeline:} Month 6, Year 3
+\textbf{Staffing:} 2-3 people (partnered operations)
+\textbf{Functions:}
+\begin{itemize}
+    \item Tea garden mapping and monitoring
+    \item Forest surveys and ecosystem monitoring
+    \item Research institution partnerships
+\end{itemize}
+
+\section{Team Structure \& Staffing}
+
+\subsection{Year 1 Team Composition (12 People)}
+
+\begin{table}[h!]
+    \centering
+    \caption{Year 1 Team Structure \& Roles}
+    \label{tab:year1_team}
+    \begin{tabularx}{\textwidth}{l | X | X}
+        \hline
+        \theader{Role} & \theader{Count} & \theader{Primary Responsibility} \\
+        \hline
+        Operations Manager & 1 & Overall business, client relations, strategy \\
+        \hline
+        GIS Analyst (Senior) & 2 & Project design, data processing, QA \\
+        \hline
+        Drone Pilot (Certified) & 2 & Flight operations, data collection, safety \\
+        \hline
+        Software Developer & 2 & Custom app development, API integration \\
+        \hline
+        Data Processing Specialist & 2 & Point cloud processing, map generation \\
+        \hline
+        Business Development & 1 & Client acquisition, partnerships \\
+        \hline
+        Finance \& Administration & 1 & Accounting, HR, compliance, reporting \\
+        \hline
+        Part-time Consultants & Varies & Specialized domain expertise as needed \\
+        \hline
+        \textbf{TOTAL} & \textbf{12} & \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\subsection{Year 2-3 Expansion}
+
+\textbf{Year 2:} Add 6-8 staff
+\begin{itemize}
+    \item Regional hub managers (2)
+    \item Additional GIS analysts (2)
+    \item UI/UX designer (1)
+    \item Data Science engineer (1)
+\end{itemize}
+
+\textbf{Year 3:} Add 4-6 more staff as needed for scaling
+
+\section{Regulatory Compliance - Bangladesh (CAAB Requirements)}
+
+\subsection{Overview of CAAB Drone Regulations}
+
+\begin{importantbox}
+    Bangladesh drone operations are regulated by the Civil Aviation Authority of Bangladesh (CAAB). Key regulations are defined in the UAS/Drone Circular and Draft Drone Regulations 2024. All commercial drone operations require CAAB approval and compliance.
+
+    \textbf{Contact:} dfsr@caab.gov.bd | Website: https://ops.caab.gov.bd/
+\end{importantbox}
+
+\subsection{1. Drone Registration Requirements}
+
+\textbf{Registration is mandatory for:}
+\begin{itemize}
+    \item All drones weighing more than 248 grams
+    \item Any drone with controller range exceeding 100 meters
+    \item All commercial drones (regardless of weight)
+\end{itemize}
+
+\textbf{Exemption:}
+\begin{itemize}
+    \item Toy drones weighing less than 250g
+    \item No audio/video recording capability
+    \item Flown only in Green Zones (designated safe areas)
+    \item Maximum altitude: 60 meters
+\end{itemize}
+
+\textbf{Registration Process:}
+\begin{itemize}
+    \item Register through CAAB's online registration system
+    \item Provide drone specifications and technical details
+    \item Pay registration fee
+    \item Receive registration certificate (valid for fixed period)
+\end{itemize}
+
+\subsection{2. Remote Pilot Certification (ROC)}
+
+\textbf{Remote Operator Certificate Requirements:}
+
+\textbf{Age \& Eligibility:}
+\begin{itemize}
+    \item Minimum age: 18 years for commercial operations
+    \item Minimum age: 16 years for certificate eligibility
+    \item Valid Class 3 medical certification from CAAB-approved doctor
+    \item No disqualifying medical conditions
+\end{itemize}
+
+\textbf{Training \& Knowledge:}
+\begin{itemize}
+    \item Complete CAAB-regulated training program
+    \item Recommended: Avion Aerospace Academy (Bangladesh's first CAAB-compliant training institute)
+    \item Curriculum covers: UAV theory, regulations, safety, weather, airspace management
+    \item Instructors must be CAAB/AOPA certified
+\end{itemize}
+
+\textbf{Flight Experience:}
+\begin{itemize}
+    \item Recommended minimum flight hours: 50+ hours
+    \item Hands-on training with actual drone operations
+    \item Ground simulator practice available at Avion Aerospace
+    \item Documentation of all flight time
+\end{itemize}
+
+\textbf{Examination \& Certification:}
+\begin{itemize}
+    \item CAAB theoretical knowledge examination
+    \item Practical demonstration of flying skills
+    \item Remote Operator Certificate (ROC) issued upon passing
+    \item Certificate renewal required periodically
+\end{itemize}
+
+\textbf{Recommended Training Provider:}
+\begin{itemize}
+    \item \textbf{Avion Aerospace Academy}
+    \item First organization in Bangladesh with ground simulator laboratory
+    \item CAAB-compliant curriculum
+    \item Instructors: CAAB and AOPA licensed UAV pilots \& aeronautical engineers
+    \item Track record: 160+ UAV pilots trained
+    \item Website: https://academy.avionaerospace.com/
+    \item Simulator facility ensures safe, cost-effective training
+\end{itemize}
+
+\subsection{3. Flight Authorization \& Clearance}
+
+\textbf{Pre-Flight Requirements (submit 45 days in advance):}
+
+\begin{itemize}
+    \item FSR (Flight Safety Request) application to CAAB
+    \item Detailed flight plan and operation parameters
+    \item Insurance certificate proof
+    \item Pilot certification verification
+    \item Environmental assessment (if required)
+\end{itemize}
+
+\textbf{Required Clearances from Multiple Agencies:}
+
+Each flight operation must obtain clearance from:
+\begin{itemize}
+    \item \textbf{Air Defence Operations Centre (ADOC)} - Airspace coordination
+    \item \textbf{Defence Intelligence Agency (DGFI)} - National security
+    \item \textbf{National Security Intelligence (NSI)} - Security clearance
+    \item \textbf{Local Police} - Area-specific authorization
+\end{itemize}
+
+\textbf{Flight Conditions:}
+\begin{itemize}
+    \item \textbf{Daylight operations only} - No night flying
+    \item \textbf{Visual Meteorological Conditions (VMC)} - Clear weather required
+    \item \textbf{Line of Sight (LoS)} - Pilot must maintain visual contact
+    \item \textbf{Restricted zones} - No flying over military, government, or sensitive areas
+\end{itemize}
+
+\subsection{4. Operational Categories}
+
+\textbf{CAAB classifies drone operations into three categories:}
+
+\begin{table}[h!]
+    \centering
+    \caption{CAAB Operational Categories}
+    \label{tab:operational_categories}
+    \begin{tabularx}{\textwidth}{l | X | X}
+        \hline
+        \theader{Category} & \theader{Risk Level} & \theader{Requirements} \\
+        \hline
+        Open Category & Low-risk & Commercial surveying, mapping, photography \\
+        \hline
+        Specific Category & Medium-risk & Complex operations in populated areas \\
+        \hline
+        Certified Category & High-risk & Cargo delivery, passenger transport \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+Your proposed operations fall under the \textbf{Specific Category} (surveying, mapping in various areas).
+
+\subsection{5. Insurance Requirements}
+
+\textbf{Mandatory Insurance for All Commercial Drones:}
+\begin{itemize}
+    \item \textbf{Minimum Coverage:} BDT 50-100 lakhs liability insurance
+    \item \textbf{Coverage Types:}
+    \begin{itemize}
+        \item Third-party injury or death
+        \item Property damage to ground assets
+        \item Equipment damage/loss during operations
+    \end{itemize}
+    \item \textbf{Insurance Provider:} From CAAB-approved insurers
+    \item \textbf{Documentation:} Certificate must accompany all flight requests
+\end{itemize}
+
+\subsection{Land \& Geospatial Data Regulations}
+
+\begin{itemize}
+    \item \textbf{Survey of Bangladesh Coordination:} Notify and coordinate with government surveying authority
+    \item \textbf{Data Classification:} Avoid military and sensitive infrastructure areas
+    \item \textbf{Data Sharing Restrictions:} Government approval needed for certain data uses
+    \item \textbf{Map Scale Approvals:} Large-scale maps (1:5000 or larger) may require approvals
+\end{itemize}
+
+\subsection{Business Registration \& Taxes}
+
+\begin{itemize}
+    \item Company registration with Registrar of Joint Stock Companies (RJSC)
+    \item Tax Identification Number (TIN) from National Board of Revenue
+    \item Import permits and custom clearance for equipment
+    \item Import duty and taxes on drone and sensor equipment
+\end{itemize}
+
+\subsection{Data Protection Regulations}
+
+\begin{itemize}
+    \item Personal data handling (if applicable)
+    \item Data security standards and encryption
+    \item Client data confidentiality agreements
+    \item Storage location restrictions (data residency)
+\end{itemize}
+
+\subsection{Regulatory Timeline \& Budget}
+
+\textbf{Critical Path for CAAB Compliance:}
+
+\begin{table}[h!]
+    \centering
+    \caption{Regulatory Compliance Timeline \& Costs (CAAB-Based)}
+    \label{tab:regulatory_timeline}
+    \begin{tabularx}{\textwidth}{l | X | X}
+        \hline
+        \theader{Task} & \theader{Timeline} & \theader{Estimated Cost (BDT)} \\
+        \hline
+        \multicolumn{3}{l}{\textbf{Month 0 (Pre-Launch - Before Operations)}} \\
+        \hline
+        Business registration (RJSC) & Week 1-2 & 1-2 lakhs \\
+        \hline
+        TIN and tax compliance (NBR) & Week 2-3 & 50K-1L \\
+        \hline
+        \multicolumn{3}{l}{\textbf{Month 1-2 (Pilot Certification)}} \\
+        \hline
+        Avion Aerospace Academy Training & 4-6 weeks & 4-6 lakhs \\
+        (50+ flight hours, theory, simulator) & & \\
+        \hline
+        CAAB Medical Certification (Class 3) & Week 1-2 & 50K-1L \\
+        \hline
+        CAAB Pilot Examination \& ROC & Week 6-8 & 1-2 lakhs \\
+        \hline
+        \multicolumn{3}{l}{\textbf{Month 1-3 (Drone \& Equipment Registration)}} \\
+        \hline
+        Drone equipment procurement & Week 1-4 & 80-90 lakhs \\
+        \hline
+        CAAB Drone Registration (online) & Week 8-12 & 50K-1L \\
+        \hline
+        Equipment import permits \& customs & Month 1-2 & 2-3 lakhs \\
+        \hline
+        \multicolumn{3}{l}{\textbf{Month 1 (Ongoing - Pre \& Post Operations)}} \\
+        \hline
+        Insurance (3-year liability coverage) & Month 1 & 10-15 lakhs \\
+        \hline
+        \multicolumn{3}{l}{\textbf{Per Flight Operation (45-day advance)}} \\
+        \hline
+        FSR (Flight Safety Request) to CAAB & Month 0 (45 days before) & 50K-1L \\
+        \hline
+        Security clearances (ADOC, DGFI, NSI, Police) & Month 0 & Processing time \\
+        \hline
+        Survey of Bangladesh Coordination & Ongoing & 1-2 lakhs \\
+        \hline
+        \textbf{TOTAL (Pre-Launch)} & & \textbf{21-35 lakhs} \\
+        \hline
+        \textbf{TOTAL (First Year, incl. operations)} & & \textbf{25-45 lakhs} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\textbf{Key Timeline Notes:}
+\begin{itemize}
+    \item \textbf{Pilot Certification:} Can be done in parallel (4-6 weeks via Avion Aerospace)
+    \item \textbf{Drone Registration:} Must be completed BEFORE operations
+    \item \textbf{Flight Approvals:} Require 45-day advance submission to CAAB
+    \item \textbf{Critical Path:} Pilot training + Drone registration = 6-8 weeks minimum
+    \item \textbf{First Flight:} Possible Month 3 (after all approvals)
+    \item \textbf{Regular Operations:} All flights need 45-day FSR advance notice
+\end{itemize}
+
+\textbf{Updated Equipment Investment (includes regulatory costs):}
+
+Total startup capex increases from BDT 90.6L to approximately BDT 100-110L when including regulatory compliance, training, insurance, and import permits. This fits within your planned BDT 100-125L initial investment.
+
+\section{Operational Workflow}
+
+\subsection{Project Execution Flow}
+
+\begin{enumerate}
+    \item \textbf{Project Scoping (Week 1)}
+        \begin{itemize}
+            \item Client requirements assessment
+            \item Area survey and flight planning
+            \item Regulatory approvals (CAAB flight path)
+            \item Resource allocation
+        \end{itemize}
+
+    \item \textbf{Data Collection (Week 2-3)}
+        \begin{itemize}
+            \item Ground control points (GCP) establishment
+            \item Drone flights (weather dependent)
+            \item Data quality assurance
+            \item Backup data creation
+        \end{itemize}
+
+    \item \textbf{Processing (Week 4-6)}
+        \begin{itemize}
+            \item LiDAR point cloud processing
+            \item Photogrammetry alignment and meshing
+            \item Accuracy verification and calibration
+            \item Analysis and interpretation
+        \end{itemize}
+
+    \item \textbf{Delivery \& Support (Week 7-8)}
+        \begin{itemize}
+            \item Report and map generation
+            \item Client presentation and Q\&A
+            \item Data delivery (cloud or physical)
+            \item Post-delivery support
+        \end{itemize}
+\end{enumerate}
+
+% ============================================================================
+% END OF CHAPTER 3
+% ============================================================================

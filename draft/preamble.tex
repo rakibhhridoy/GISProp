@@ -1,0 +1,193 @@
+% ============================================================================
+% PREAMBLE - LaTeX Configuration for GIS Services Proposal
+% ============================================================================
+
+\documentclass[12pt,a4paper,oneside]{book}
+
+% ============================================================================
+% PACKAGES
+% ============================================================================
+
+% Core Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in,top=1.2in,bottom=1.2in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% Color Scheme (Professional Dark Blue / Red / Orange)
+\usepackage[dvipsnames,svgnames,x11names]{xcolor}
+\definecolor{PrimaryBlue}{RGB}{0,51,102}      % Dark professional blue
+\definecolor{SecondaryBlue}{RGB}{0,102,204}   % Medium blue
+\definecolor{AccentGreen}{RGB}{220,53,69}     % Professional red (replaced green)
+\definecolor{AccentRed}{RGB}{220,53,69}       % Professional red
+\definecolor{AccentOrange}{RGB}{255,140,0}    % Dark orange
+\definecolor{DarkGrey}{RGB}{51,51,51}         % Dark grey
+\definecolor{LightGrey}{RGB}{240,240,240}     % Light grey
+\definecolor{HeaderGrey}{RGB}{80,80,80}       % Header grey
+
+% Typography & Styling
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=SecondaryBlue,
+    citecolor=SecondaryBlue,
+    urlcolor=SecondaryBlue,
+    pdftitle={GIS Drone Services Proposal - Bangladesh},
+    pdfauthor={Md Rakib Hasan},
+    pdfsubject={Business Proposal},
+    pdfkeywords={GIS, LiDAR, Photogrammetry, Bangladesh}
+}
+
+% Tables & Data
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{makecell}
+
+% Graphics & Figures
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+% Data Visualization (pgfplots)
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+
+% Lists & Formatting
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+% Bibliography
+\usepackage[
+    backend=biber,
+    style=numeric-comp,
+    sorting=nyt,
+    hyperref=true
+]{biblatex}
+\addbibresource{references.bib}
+
+% Watermark (Confidentiality) - REMOVED
+% \usepackage{draftwatermark}
+% Watermark removed - document is now official proposal
+
+% Code Listings (if needed)
+\usepackage{listings}
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    breakatwhitespace=true,
+    frame=single,
+    backgroundcolor=\color{LightGrey}
+}
+
+% ============================================================================
+% CUSTOM FORMATTING
+% ============================================================================
+
+% Chapter Styling
+\titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries\color{PrimaryBlue}}
+    {\chaptertitlename\ \thechapter}
+    {20pt}
+    {}
+    [\vspace{15pt}\rule{\textwidth}{2pt}]
+
+% Section Styling
+\titleformat{\section}
+    {\normalfont\Large\bfseries\color{SecondaryBlue}}
+    {\thesection}
+    {10pt}
+    {}
+
+% Subsection Styling
+\titleformat{\subsection}
+    {\normalfont\large\bfseries\color{DarkGrey}}
+    {\thesubsection}
+    {8pt}
+    {}
+
+% Subsubsection Styling
+\titleformat{\subsubsection}
+    {\normalfont\normalsize\bfseries\color{HeaderGrey}}
+    {\thesubsubsection}
+    {6pt}
+    {}
+
+% ============================================================================
+% HEADER & FOOTER
+% ============================================================================
+
+\pagestyle{fancy}
+\fancyhf{}
+
+% Header
+\fancyhead[L]{\small\textcolor{DarkGrey}{GIS Drone Services Proposal}}
+\fancyhead[R]{\small\textcolor{DarkGrey}{Bangladesh 2026}}
+
+% Footer
+\fancyfoot[C]{\small\textcolor{DarkGrey}{\thepage}}
+\fancyfoot[L]{\small\textcolor{DarkGrey}{Confidential}}
+\fancyfoot[R]{\small\textcolor{DarkGrey}{February 2026}}
+
+% Remove line
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrule}{\color{SecondaryBlue}\hrule}
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\footrule}{\color{SecondaryBlue}\hrule}
+
+% ============================================================================
+% CUSTOM COMMANDS
+% ============================================================================
+
+% Key Highlight Box
+\newcommand{\highlight}[1]{
+    \tcbox[
+        on line,
+        arc=3pt,
+        colback=LightGrey,
+        colframe=SecondaryBlue,
+        boxrule=1pt
+    ]{#1}
+}
+
+% Important Note Box
+\usepackage{tcolorbox}
+\newtcolorbox{importantbox}{
+    colback=yellow!10,
+    colframe=AccentGreen,
+    boxrule=1pt,
+    arc=3pt,
+    left=10pt,
+    right=10pt,
+    top=8pt,
+    bottom=8pt,
+    fontupper=\small
+}
+
+% Table Header Style
+\newcommand{\theader}[1]{\textbf{\textcolor{white}{\cellcolor{PrimaryBlue}#1}}}
+
+% Figure Reference
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\tableref}[1]{Table~\ref{#1}}
+
+% ============================================================================
+% TABLE OF CONTENTS STYLING
+% ============================================================================
+
+\renewcommand{\contentsname}{\textcolor{PrimaryBlue}{\Large Table of Contents}}
+
+% ============================================================================
+% END OF PREAMBLE
+% ============================================================================
