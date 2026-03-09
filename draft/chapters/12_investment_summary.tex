@@ -31,6 +31,30 @@
     \end{tabularx}
 \end{table}
 
+\subsection{Capital Allocation Chart}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \pie[
+            radius=3.2,
+            color={SecondaryBlue!80, AccentGreen!70, AccentOrange!80, MidGrey!90},
+            text=legend,
+            style={drop shadow},
+            before number=\phantom{},
+            after number=\%,
+            sum=100
+        ]{
+            75/Equipment \& Technology (75\%),
+            7/Office \& Infrastructure (7\%),
+            11/Regulatory \& Compliance (11\%),
+            11/Working Capital (11\%)
+        }
+    \end{tikzpicture}
+    \caption{Startup Capital Allocation (BDT 120--140 Lakhs)}
+    \label{fig:capital_allocation}
+\end{figure}
+
 \section{Expected Returns (3-Year Horizon)}
 
 \begin{table}[h!]

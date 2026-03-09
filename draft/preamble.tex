@@ -5,29 +5,104 @@
 \documentclass[12pt,a4paper,oneside]{book}
 
 % ============================================================================
-% PACKAGES
+% CORE PACKAGES
 % ============================================================================
 
-% Core Packages
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage{microtype}                          % Better text rendering & justification
 \usepackage[margin=1in,top=1.2in,bottom=1.2in]{geometry}
 \usepackage{setspace}
 \onehalfspacing
+\usepackage[parfill]{parskip}                   % Paragraph spacing instead of indent
 
-% Color Scheme (Professional Dark Blue / Red / Orange)
+% ============================================================================
+% COLOR SCHEME
+% ============================================================================
+
 \usepackage[dvipsnames,svgnames,x11names]{xcolor}
-\definecolor{PrimaryBlue}{RGB}{0,51,102}      % Dark professional blue
-\definecolor{SecondaryBlue}{RGB}{0,102,204}   % Medium blue
-\definecolor{AccentGreen}{RGB}{220,53,69}     % Professional red (replaced green)
-\definecolor{AccentRed}{RGB}{220,53,69}       % Professional red
-\definecolor{AccentOrange}{RGB}{255,140,0}    % Dark orange
-\definecolor{DarkGrey}{RGB}{51,51,51}         % Dark grey
-\definecolor{LightGrey}{RGB}{240,240,240}     % Light grey
-\definecolor{HeaderGrey}{RGB}{80,80,80}       % Header grey
+\definecolor{PrimaryBlue}{RGB}{0,45,90}         % Deep navy blue
+\definecolor{SecondaryBlue}{RGB}{0,102,204}     % Medium blue
+\definecolor{AccentGreen}{RGB}{0,153,76}        % Professional green
+\definecolor{AccentRed}{RGB}{200,30,50}         % Deep red
+\definecolor{AccentOrange}{RGB}{230,120,0}      % Rich orange
+\definecolor{DarkGrey}{RGB}{50,50,60}           % Near-black text
+\definecolor{LightGrey}{RGB}{245,246,248}       % Soft off-white
+\definecolor{MidGrey}{RGB}{180,185,195}         % Rule / divider
+\definecolor{HeaderGrey}{RGB}{80,88,100}        % Subtle heading
+\definecolor{BoxBlue}{RGB}{230,240,255}         % Info box background
+\definecolor{BoxGreen}{RGB}{230,248,237}        % Success box background
+\definecolor{BoxOrange}{RGB}{255,245,225}       % Warning box background
 
-% Typography & Styling
+% ============================================================================
+% BOXES (tcolorbox — loaded early so \highlight can use it)
+% ============================================================================
+
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+% Important / Warning box
+\newtcolorbox{importantbox}{
+    enhanced,
+    breakable,
+    colback=BoxOrange,
+    colframe=AccentOrange,
+    boxrule=1.2pt,
+    arc=4pt,
+    left=10pt, right=10pt,
+    top=8pt, bottom=8pt,
+    fontupper=\small,
+    title={\faIcon{exclamation-triangle}\hspace{4pt}\textbf{Important}},
+    attach boxed title to top left={yshift=-2mm, xshift=6mm},
+    boxed title style={colback=AccentOrange, colframe=AccentOrange, arc=3pt,
+                        fontupper=\small\bfseries\color{white}}
+}
+
+% Info box
+\newtcolorbox{infobox}[1][Note]{
+    enhanced,
+    breakable,
+    colback=BoxBlue,
+    colframe=SecondaryBlue,
+    boxrule=1.2pt,
+    arc=4pt,
+    left=10pt, right=10pt,
+    top=8pt, bottom=8pt,
+    fontupper=\small,
+    title={\textbf{#1}},
+    attach boxed title to top left={yshift=-2mm, xshift=6mm},
+    boxed title style={colback=SecondaryBlue, colframe=SecondaryBlue, arc=3pt,
+                        fontupper=\small\bfseries\color{white}}
+}
+
+% Success / Key Metric box
+\newtcolorbox{successbox}[1][Key Metric]{
+    enhanced,
+    breakable,
+    colback=BoxGreen,
+    colframe=AccentGreen,
+    boxrule=1.2pt,
+    arc=4pt,
+    left=10pt, right=10pt,
+    top=8pt, bottom=8pt,
+    fontupper=\small,
+    title={\textbf{#1}},
+    attach boxed title to top left={yshift=-2mm, xshift=6mm},
+    boxed title style={colback=AccentGreen, colframe=AccentGreen, arc=3pt,
+                        fontupper=\small\bfseries\color{white}}
+}
+
+% Highlight inline command
+\newcommand{\highlight}[1]{%
+    \tcbox[on line, arc=3pt, colback=LightGrey, colframe=SecondaryBlue,
+           boxrule=0.8pt, left=3pt, right=3pt, top=1pt, bottom=1pt]{#1}%
+}
+
+% ============================================================================
+% TYPOGRAPHY & NAVIGATION
+% ============================================================================
+
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{titletoc}
@@ -37,20 +112,27 @@
     linkcolor=SecondaryBlue,
     citecolor=SecondaryBlue,
     urlcolor=SecondaryBlue,
-    pdftitle={GIS Drone Services Proposal - Bangladesh},
-    pdfauthor={Md Rakib Hasan},
+    pdftitle={GIS Drone Services Proposal - Precinct Smart},
+    pdfauthor={Precinct Smart},
     pdfsubject={Business Proposal},
-    pdfkeywords={GIS, LiDAR, Photogrammetry, Bangladesh}
+    pdfkeywords={GIS, LiDAR, Photogrammetry, Bangladesh, Precinct Smart}
 }
 
-% Tables & Data
+% ============================================================================
+% TABLES & DATA
+% ============================================================================
+
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{makecell}
+\usepackage{colortbl}
 
-% Graphics & Figures
+% ============================================================================
+% GRAPHICS & FIGURES
+% ============================================================================
+
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -59,16 +141,33 @@
 \usepackage{subcaption}
 \usepackage{wrapfig}
 
-% Data Visualization (pgfplots)
 \pgfplotsset{compat=1.18}
 \usepgfplotslibrary{groupplots}
+\usetikzlibrary{shadows}
+\usepackage{pgf-pie}
 
-% Lists & Formatting
+% Caption styling
+\captionsetup{
+    font=small,
+    labelfont={bf,color=DarkGrey},
+    labelsep=period,
+    skip=6pt
+}
+
+% ============================================================================
+% LISTS & MATH
+% ============================================================================
+
 \usepackage{enumitem}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\setlist[itemize]{leftmargin=1.5em, itemsep=2pt, topsep=4pt}
+\setlist[enumerate]{leftmargin=1.5em, itemsep=2pt, topsep=4pt}
 
-% Bibliography
+% ============================================================================
+% BIBLIOGRAPHY
+% ============================================================================
+
 \usepackage[
     backend=biber,
     style=numeric-comp,
@@ -77,47 +176,55 @@
 ]{biblatex}
 \addbibresource{references.bib}
 
-% Watermark (Confidentiality) - REMOVED
-% \usepackage{draftwatermark}
-% Watermark removed - document is now official proposal
+% ============================================================================
+% CODE LISTINGS
+% ============================================================================
 
-% Code Listings (if needed)
 \usepackage{listings}
 \lstset{
     basicstyle=\ttfamily\small,
     breaklines=true,
     breakatwhitespace=true,
     frame=single,
-    backgroundcolor=\color{LightGrey}
+    backgroundcolor=\color{LightGrey},
+    rulecolor=\color{MidGrey}
 }
 
 % ============================================================================
-% CUSTOM FORMATTING
+% CHAPTER STYLING
 % ============================================================================
 
-% Chapter Styling
 \titleformat{\chapter}[display]
-    {\normalfont\huge\bfseries\color{PrimaryBlue}}
-    {\chaptertitlename\ \thechapter}
-    {20pt}
+    {\normalfont\Huge\bfseries\color{PrimaryBlue}}
     {}
-    [\vspace{15pt}\rule{\textwidth}{2pt}]
+    {0pt}
+    {%
+        \begin{tikzpicture}[remember picture]
+            \fill[PrimaryBlue] (0,0) rectangle (\textwidth, 2pt);
+        \end{tikzpicture}\\[6pt]
+        \chaptertitlename~\thechapter\quad
+    }
+    [{\color{PrimaryBlue}\rule{\textwidth}{2pt}}\vspace{4pt}]
 
-% Section Styling
+\titlespacing*{\chapter}{0pt}{-20pt}{24pt}
+
+% ============================================================================
+% SECTION STYLING
+% ============================================================================
+
 \titleformat{\section}
     {\normalfont\Large\bfseries\color{SecondaryBlue}}
     {\thesection}
     {10pt}
     {}
+    [{\color{MidGrey}\titlerule[0.5pt]}\vspace{2pt}]
 
-% Subsection Styling
 \titleformat{\subsection}
     {\normalfont\large\bfseries\color{DarkGrey}}
     {\thesubsection}
     {8pt}
     {}
 
-% Subsubsection Styling
 \titleformat{\subsubsection}
     {\normalfont\normalsize\bfseries\color{HeaderGrey}}
     {\thesubsubsection}
@@ -131,56 +238,42 @@
 \pagestyle{fancy}
 \fancyhf{}
 
-% Header
-\fancyhead[L]{\small\textcolor{DarkGrey}{GIS Drone Services Proposal}}
-\fancyhead[R]{\small\textcolor{DarkGrey}{Bangladesh 2026}}
+\fancyhead[L]{%
+    \begin{tikzpicture}[baseline=(text.base)]
+        \node[inner sep=0pt] (text) {\small\textcolor{SecondaryBlue}{\textbf{Precinct Smart}} \textcolor{DarkGrey}{$|$ GIS Drone Services Proposal}};
+    \end{tikzpicture}%
+}
+\fancyhead[R]{\small\textcolor{HeaderGrey}{Bangladesh 2026}}
 
-% Footer
 \fancyfoot[C]{\small\textcolor{DarkGrey}{\thepage}}
-\fancyfoot[L]{\small\textcolor{DarkGrey}{Confidential}}
-\fancyfoot[R]{\small\textcolor{DarkGrey}{February 2026}}
+\fancyfoot[L]{\small\textcolor{HeaderGrey}{\textit{Confidential}}}
+\fancyfoot[R]{\small\textcolor{HeaderGrey}{March 2026}}
 
-% Remove line
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\headrule}{\color{SecondaryBlue}\hrule}
-\renewcommand{\footrulewidth}{0.5pt}
-\renewcommand{\footrule}{\color{SecondaryBlue}\hrule}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\color{SecondaryBlue}\hrule width\headwidth height\headrulewidth}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrule}{\color{MidGrey}\hrule width\headwidth height\footrulewidth}
 
 % ============================================================================
 % CUSTOM COMMANDS
 % ============================================================================
 
-% Key Highlight Box
-\newcommand{\highlight}[1]{
-    \tcbox[
-        on line,
-        arc=3pt,
-        colback=LightGrey,
-        colframe=SecondaryBlue,
-        boxrule=1pt
-    ]{#1}
-}
-
-% Important Note Box
-\usepackage{tcolorbox}
-\newtcolorbox{importantbox}{
-    colback=yellow!10,
-    colframe=AccentGreen,
-    boxrule=1pt,
-    arc=3pt,
-    left=10pt,
-    right=10pt,
-    top=8pt,
-    bottom=8pt,
-    fontupper=\small
-}
-
 % Table Header Style
 \newcommand{\theader}[1]{\textbf{\textcolor{white}{\cellcolor{PrimaryBlue}#1}}}
 
-% Figure Reference
+% Figure / Table references
 \newcommand{\figref}[1]{Figure~\ref{#1}}
 \newcommand{\tableref}[1]{Table~\ref{#1}}
+
+% KPI display: \kpi{value}{label}
+\newcommand{\kpi}[2]{%
+    \begin{tcolorbox}[enhanced, colback=PrimaryBlue!8, colframe=PrimaryBlue,
+        arc=6pt, boxrule=1pt, left=8pt, right=8pt, top=6pt, bottom=4pt,
+        halign=center]
+        {\Large\bfseries\color{PrimaryBlue}#1}\\[2pt]
+        {\small\color{DarkGrey}#2}
+    \end{tcolorbox}%
+}
 
 % ============================================================================
 % TABLE OF CONTENTS STYLING

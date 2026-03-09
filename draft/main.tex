@@ -11,78 +11,109 @@
 % ============================================================================
 
 \begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay]
+        % Top color bar
+        \fill[PrimaryBlue] (current page.north west)
+            rectangle ([yshift=-3.2cm]current page.north east);
+        % Bottom accent bar
+        \fill[SecondaryBlue] (current page.south west)
+            rectangle ([yshift=1.2cm]current page.south east);
+    \end{tikzpicture}
+
     \begin{center}
-        \vspace*{2cm}
+        \vspace*{0.8cm}
 
-        % Logo Placeholder
-        \textcolor{PrimaryBlue}{\rule{\textwidth}{3pt}}
+        % Company name in top bar
+        {\fontsize{22}{26}\selectfont\bfseries\color{white}
+            PRECINCT SMART
+        }
 
-        \vspace{1.5cm}
+        \vspace{0.3cm}
+        {\large\color{white!80!PrimaryBlue}
+            Geospatial Intelligence \& Drone Technology
+        }
 
-        {\Huge\bfseries\textcolor{PrimaryBlue}{
-            GIS DRONE SERVICES PROPOSAL
+        \vspace{2.2cm}
+
+        % Main title
+        {\fontsize{28}{34}\selectfont\bfseries\color{PrimaryBlue}
+            GIS DRONE SERVICES
+        }
+
+        \vspace{0.2cm}
+
+        {\fontsize{20}{24}\selectfont\bfseries\color{PrimaryBlue}
+            BUSINESS PROPOSAL
+        }
+
+        \vspace{0.4cm}
+
+        \textcolor{MidGrey}{\rule{0.7\textwidth}{1pt}}
+
+        \vspace{0.3cm}
+
+        {\large\textcolor{SecondaryBlue}{
+            Bangladesh LiDAR \& Photogrammetry Initiative
         }}
 
-        \vspace{0.5cm}
+        \vspace{1.8cm}
 
-        {\Large\textcolor{SecondaryBlue}{
-            Bangladesh LiDAR \& Photogrammetry Technology Initiative
-        }}
+        % Info table
+        \begin{tcolorbox}[enhanced, colback=LightGrey, colframe=MidGrey,
+            arc=6pt, boxrule=0.8pt, width=0.78\textwidth,
+            left=14pt, right=14pt, top=10pt, bottom=10pt]
+            \renewcommand{\arraystretch}{1.4}
+            \begin{tabular}{@{}ll@{}}
+                \textcolor{HeaderGrey}{\textbf{Prepared By:}}   & Precinct Smart \\
+                \textcolor{HeaderGrey}{\textbf{Contact:}}       & \href{mailto:info@precinctsmart.com}{\textcolor{SecondaryBlue}{info@precinctsmart.com}} \\
+                \textcolor{HeaderGrey}{\textbf{Version:}}       & 1.0 \\
+                \textcolor{HeaderGrey}{\textbf{Date:}}          & March 2026 \\
+                \textcolor{HeaderGrey}{\textbf{Status:}}        & Official Proposal --- Confidential \\
+                \textcolor{HeaderGrey}{\textbf{Focus Region:}}  & Bangladesh (4 Regions) \\
+            \end{tabular}
+        \end{tcolorbox}
 
-        \vspace{3cm}
+        \vspace{1.6cm}
 
-        \textcolor{DarkGrey}{\rule{0.8\textwidth}{1pt}}
+        % KPI row
+        {\large\bfseries\textcolor{DarkGrey}{Key Business Parameters}}
 
-        \vspace{2cm}
+        \vspace{0.6cm}
 
-        {\large\textcolor{DarkGrey}{
-            \textbf{Document Information}
-        }}
-
-        \vspace{1cm}
-
-        \begin{tabular}{l l}
-            \textbf{Prepared For:} & Startup GIS Company, Bangladesh \\
-            \textbf{Version:} & 1.0 \\
-            \textbf{Date:} & February 2026 \\
-            \textbf{Status:} & Draft - Confidential \\
-            \textbf{Geographic Focus:} & Bangladesh (4 Regions) \\
+        \begin{tabular}{p{3.8cm} p{0.3cm} p{3.8cm} p{0.3cm} p{3.8cm}}
+            \centering
+            \begin{tcolorbox}[colback=PrimaryBlue!8, colframe=PrimaryBlue,
+                arc=5pt, boxrule=0.9pt, halign=center,
+                left=4pt, right=4pt, top=6pt, bottom=6pt]
+                {\large\bfseries\color{PrimaryBlue}BDT 100--125L}\\
+                {\small\color{DarkGrey}Initial Investment}
+            \end{tcolorbox}
+            & &
+            \centering
+            \begin{tcolorbox}[colback=AccentGreen!8, colframe=AccentGreen,
+                arc=5pt, boxrule=0.9pt, halign=center,
+                left=4pt, right=4pt, top=6pt, bottom=6pt]
+                {\large\bfseries\color{AccentGreen}Month 10}\\
+                {\small\color{DarkGrey}Break-even}
+            \end{tcolorbox}
+            & &
+            \centering
+            \begin{tcolorbox}[colback=SecondaryBlue!8, colframe=SecondaryBlue,
+                arc=5pt, boxrule=0.9pt, halign=center,
+                left=4pt, right=4pt, top=6pt, bottom=6pt]
+                {\large\bfseries\color{SecondaryBlue}BDT 330.5L}\\
+                {\small\color{DarkGrey}3-Year Revenue}
+            \end{tcolorbox}
         \end{tabular}
-
-        \vspace{2cm}
-
-        {\large\textcolor{AccentGreen}{
-            \textbf{Key Business Parameters}
-        }}
-
-        \vspace{1cm}
-
-        \begin{tabular}{c | c | c}
-            \hline
-            \textbf{Initial Investment} & \textbf{Break-even} & \textbf{3-Yr Revenue} \\
-            \hline
-            BDT 100-125L & Month 10 & BDT 330.5L \\
-            (USD 120-150K) & (Year 1) & \\
-            \hline
-        \end{tabular}
-
-        \vspace{3cm}
-
-        \textcolor{DarkGrey}{\rule{0.8\textwidth}{1pt}}
-
-        \vspace{2cm}
-
-        {\footnotesize\textcolor{DarkGrey}{
-            \textit{This document contains proprietary and confidential information.} \\
-            \textit{Unauthorized copying or distribution is strictly prohibited.}
-        }}
 
         \vfill
 
-        {\small\textcolor{DarkGrey}{
-            Generated by Claude Code AI\\
-            \textit{Proposal Builder}
+        {\footnotesize\textcolor{HeaderGrey}{
+            \textit{This document contains proprietary and confidential information.}\\
+            \textit{Unauthorized reproduction or distribution is strictly prohibited.}
         }}
+
+        \vspace{1cm}
 
     \end{center}
 \end{titlepage}

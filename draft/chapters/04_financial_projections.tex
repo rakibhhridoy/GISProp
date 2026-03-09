@@ -246,6 +246,64 @@ The total startup capital required is shown in the following detailed breakdown:
     \end{tabularx}
 \end{table}
 
+\subsection{Revenue Growth Visualization}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            bar width=18pt,
+            width=0.92\textwidth,
+            height=7cm,
+            enlarge x limits=0.25,
+            symbolic x coords={Year 1, Year 2, Year 3},
+            xtick=data,
+            xlabel={\textbf{Year}},
+            ylabel={\textbf{BDT (Lakhs)}},
+            ymin=0, ymax=230,
+            ytick={0,50,100,150,200},
+            grid=major,
+            grid style={dotted, gray!40},
+            legend style={at={(0.98,0.97)}, anchor=north east,
+                          font=\small, draw=MidGrey, fill=LightGrey},
+            tick label style={font=\small},
+            label style={font=\small\bfseries},
+            title={\textbf{3-Year Financial Overview (BDT Lakhs)}},
+            title style={font=\normalsize\bfseries\color{PrimaryBlue}},
+            axis line style={color=DarkGrey},
+            nodes near coords,
+            nodes near coords style={font=\scriptsize\bfseries, color=DarkGrey},
+            every node near coord/.append style={rotate=0, anchor=south},
+        ]
+        % Revenue bars
+        \addplot[fill=SecondaryBlue!80, draw=PrimaryBlue] coordinates {
+            (Year 1, 30) (Year 2, 96.5) (Year 3, 204)
+        };
+        % Cost bars
+        \addplot[fill=AccentRed!60, draw=AccentRed] coordinates {
+            (Year 1, 28) (Year 2, 47) (Year 3, 68)
+        };
+        % Profit bars
+        \addplot[fill=AccentGreen!70, draw=AccentGreen] coordinates {
+            (Year 1, 2) (Year 2, 49.5) (Year 3, 136)
+        };
+        \legend{Revenue, Operating Costs, Net Profit}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{3-Year Revenue, Cost, and Profit Overview}
+    \label{fig:revenue_growth}
+\end{figure}
+
+\begin{successbox}[3-Year Financial Highlights]
+    \begin{tabular}{@{}llll@{}}
+        \textbf{Metric} & \textbf{Year 1} & \textbf{Year 2} & \textbf{Year 3} \\
+        Revenue growth  & BDT 30L         & +222\%          & +111\%          \\
+        Profit margin   & 7\%             & 51\%            & 67\%            \\
+        Cumulative profit & BDT 2L        & BDT 51.5L       & BDT 187.5L      \\
+    \end{tabular}
+\end{successbox}
+
 \section{Cost Structure per Service}
 
 Understanding the actual cost to deliver each service is critical for pricing and margin management:
