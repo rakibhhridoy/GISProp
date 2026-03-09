@@ -61,38 +61,36 @@ Unlike competitors offering only data or only services, Precinct Smart provides:
 
 Precinct Smart will occupy a unique position in the market:
 
-\vspace{1cm}
-
-\begin{tikzpicture}[scale=1.2]
-    % Axes
-    \draw[thick, ->] (0,0) -- (5.5,0) node[right] {\textbf{Cost / Pricing}};
-    \draw[thick, ->] (0,0) -- (0,5.5) node[above] {\textbf{Technology Sophistication}};
-
-    % Quadrant labels
-    \node at (2.5, 5) {\small \textcolor{PrimaryBlue}{Advanced Tech,}};
-    \node at (2.5, 4.7) {\small \textcolor{PrimaryBlue}{Premium Price}};
-
-    \node at (2.5, 0.5) {\small \textcolor{DarkGrey}{Basic Tech,}};
-    \node at (2.5, 0.2) {\small \textcolor{DarkGrey}{Low Cost}};
-
-    % Competitor positions
-    \node[draw, circle, fill=AccentGreen!20] at (4.5, 2.5) {Precinct Smart};
-    \node at (4.5, 2) {\tiny Advanced + Affordable};
-
-    \node[draw, circle, fill=gray!20] at (1, 4) {GeoTech};
-    \node at (1, 3.5) {\tiny Premium};
-
-    \node[draw, circle, fill=gray!20] at (1.5, 2) {Digital Survey};
-    \node at (1.5, 1.5) {\tiny Balanced};
-
-    \node[draw, circle, fill=gray!20] at (2, 1) {Agnibot};
-    \node at (2, 0.5) {\tiny Low-cost};
-
-    % Center point
-    \node at (0, 0) {\small \$};
-\end{tikzpicture}
-
-\vspace{1cm}
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1.3]
+        % Axes
+        \draw[thick,->] (0,0) -- (6.5,0) node[right,font=\small\bfseries] {Cost / Pricing};
+        \draw[thick,->] (0,0) -- (0,6.0) node[above,font=\small\bfseries] {Technology Sophistication};
+        % Axis tick labels
+        \node[font=\tiny,text=DarkGrey] at (1.2,-0.3) {Low Cost};
+        \node[font=\tiny,text=DarkGrey] at (5.5,-0.3) {High Cost};
+        \node[font=\tiny,text=DarkGrey,rotate=90] at (-0.4,1.2) {Basic};
+        \node[font=\tiny,text=DarkGrey,rotate=90] at (-0.4,4.8) {Advanced};
+        % Competitor bubbles
+        \node[draw,circle,fill=gray!20,minimum size=1.2cm,font=\tiny,align=center]
+            at (1.2,4.5) {GeoTech\\\tiny Premium};
+        \node[draw,circle,fill=gray!20,minimum size=1.2cm,font=\tiny,align=center]
+            at (2.0,2.2) {Digital\\\tiny Survey};
+        \node[draw,circle,fill=gray!20,minimum size=1.2cm,font=\tiny,align=center]
+            at (1.8,1.0) {Agnibot\\\tiny Low-cost};
+        % Precinct Smart — highlighted
+        \node[draw,circle,fill=AccentGreen!30,draw=AccentGreen,very thick,
+              minimum size=1.6cm,font=\small\bfseries,align=center,text=PrimaryBlue]
+            at (4.8,4.8) {Precinct\\Smart};
+        \node[font=\tiny,text=AccentGreen] at (4.8,3.9) {Advanced + Affordable};
+        % Dashed centre lines
+        \draw[dashed,MidGrey] (3.2,0) -- (3.2,5.8);
+        \draw[dashed,MidGrey] (0,3.0) -- (6.2,3.0);
+    \end{tikzpicture}
+    \caption{Market Positioning Matrix: Technology Sophistication vs.\ Pricing}
+    \label{fig:positioning_matrix}
+\end{figure}
 
 The position in the \textbf{upper-left quadrant} (advanced technology + affordable pricing) is defensible and attractive to all market segments.
 

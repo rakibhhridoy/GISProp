@@ -96,54 +96,27 @@ This document presents a compelling business opportunity for a GIS services star
 
 \section{Risk Mitigation Summary}
 
-% Top 5 Risks — TikZ risk matrix
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.88cm]
-        % Header
-        \fill[AccentRed!70] (0,0) rectangle (13.5,0.88);
-        \foreach \xpos/\lbl in {0.1/{Risk}, 4.5/{Probability}, 7.5/{Mitigation}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.44) {\lbl};
-        }
-        % Explicit rows for reliable color coding
-        % Row 1
-        \fill[LightGrey!60] (0,-0.88) rectangle (13.5,0);
-        \draw[MidGrey!50] (0,-0.88) -- (13.5,-0.88);
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue,text width=4.2cm] at (0.1,-0.44) {Regulatory delays};
-        \node[anchor=west,font=\small\bfseries,text=AccentRed] at (4.5,-0.44) {High};
-        \node[anchor=west,font=\small,text=AccentGreen,text width=5.8cm] at (7.5,-0.44) {Start CAAB process immediately};
-        % Row 2
-        \fill[white] (0,-1.76) rectangle (13.5,-0.88);
-        \draw[MidGrey!50] (0,-1.76) -- (13.5,-1.76);
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue,text width=4.2cm] at (0.1,-1.32) {Weather/monsoon};
-        \node[anchor=west,font=\small\bfseries,text=AccentRed] at (4.5,-1.32) {High};
-        \node[anchor=west,font=\small,text=AccentGreen,text width=5.8cm] at (7.5,-1.32) {Multi-region operations};
-        % Row 3
-        \fill[LightGrey!60] (0,-2.64) rectangle (13.5,-1.76);
-        \draw[MidGrey!50] (0,-2.64) -- (13.5,-2.64);
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue,text width=4.2cm] at (0.1,-2.20) {Market adoption slow};
-        \node[anchor=west,font=\small\bfseries,text=AccentOrange] at (4.5,-2.20) {Medium};
-        \node[anchor=west,font=\small,text=AccentGreen,text width=5.8cm] at (7.5,-2.20) {Focus on high-value gov projects};
-        % Row 4
-        \fill[white] (0,-3.52) rectangle (13.5,-2.64);
-        \draw[MidGrey!50] (0,-3.52) -- (13.5,-3.52);
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue,text width=4.2cm] at (0.1,-3.08) {Talent shortage};
-        \node[anchor=west,font=\small\bfseries,text=AccentOrange] at (4.5,-3.08) {Medium};
-        \node[anchor=west,font=\small,text=AccentGreen,text width=5.8cm] at (7.5,-3.08) {University partnerships + training};
-        % Row 5
-        \fill[LightGrey!60] (0,-4.40) rectangle (13.5,-3.52);
-        \draw[MidGrey!50] (0,-4.40) -- (13.5,-4.40);
-        \node[anchor=west,font=\small\bfseries,text=PrimaryBlue,text width=4.2cm] at (0.1,-3.96) {Competition};
-        \node[anchor=west,font=\small\bfseries,text=AccentRed] at (4.5,-3.96) {High};
-        \node[anchor=west,font=\small,text=AccentGreen,text width=5.8cm] at (7.5,-3.96) {Differentiate on technology + impact};
-        \draw[AccentRed!80,thick] (0,-4.40) rectangle (13.5,0.88);
-        \foreach \xd in {4.45,7.45}{
-            \draw[MidGrey!70] (\xd,-4.40) -- (\xd,0.88);
-        }
-    \end{tikzpicture}
     \caption{Top 5 Risks \& Mitigation}
     \label{tab:top_risks}
-\end{figure}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabularx}{\textwidth}{>{\bfseries}p{3.8cm} | >{\bfseries\centering\arraybackslash}p{2cm} | X}
+        \hline
+        \theader{Risk} & \theader{Probability} & \theader{Mitigation} \\
+        \hline
+        \textcolor{PrimaryBlue}{Regulatory delays} & \textcolor{AccentRed}{High} & Start CAAB licensing process immediately \\
+        \hline
+        \textcolor{PrimaryBlue}{Weather / monsoon} & \textcolor{AccentRed}{High} & Multi-region operations; seasonal scheduling \\
+        \hline
+        \textcolor{PrimaryBlue}{Market adoption slow} & \textcolor{AccentOrange}{Medium} & Focus on high-value government projects first \\
+        \hline
+        \textcolor{PrimaryBlue}{Talent shortage} & \textcolor{AccentOrange}{Medium} & University partnerships + internal training programme \\
+        \hline
+        \textcolor{PrimaryBlue}{Competition} & \textcolor{AccentRed}{High} & Differentiate on LiDAR technology + social impact \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \section{Investment Decision Framework}
 

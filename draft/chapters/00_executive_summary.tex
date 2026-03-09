@@ -22,46 +22,27 @@ Precinct Smart is establishing a \textbf{geospatial intelligence platform} combi
 
 Six major competitors were identified. All have significant gaps that Precinct Smart uniquely addresses:
 
-% Competitive Differentiation — TikZ comparison matrix
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm, y=0.85cm]
-        % Column header backgrounds
-        \fill[PrimaryBlue]   (0,0) rectangle (3.4,0.75);
-        \fill[PrimaryBlue]   (3.5,0) rectangle (8.0,0.75);
-        \fill[AccentGreen!80](8.1,0) rectangle (13.5,0.75);
-        % Header text
-        \node[text=white,font=\bfseries\small,anchor=west] at (0.1,0.37)    {Capability};
-        \node[text=white,font=\bfseries\small,anchor=west] at (3.6,0.37)    {Competitors};
-        \node[text=white,font=\bfseries\small,anchor=west] at (8.2,0.37)    {Precinct Smart};
-        % Row data
-        \foreach \row/\cap/\comp/\us in {
-            1/{Technology}/{Photogrammetry OR basic LiDAR}/{LiDAR + Data Science (only ones)},
-            2/{Services}/{Data collection only}/{Data + apps + consulting},
-            3/{Distribution}/{Direct sales}/{NGO partnerships (10M farmers)},
-            4/{Revenue}/{Projects only}/{Projects + subscriptions},
-            5/{First-Mover}/{---}/{18--24 month advantage}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.75}
-            \pgfmathsetmacro{\ytop}{\ybot+0.75}
-            % Alternating row shading
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.5,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.5,\ybot);
-            \node[anchor=west,font=\small\bfseries,text=PrimaryBlue] at (0.1,\ybot+0.37) {\cap};
-            \node[anchor=west,font=\small,text=DarkGrey,text width=4.3cm] at (3.6,\ybot+0.37) {\comp};
-            \node[anchor=west,font=\small\bfseries,text=AccentGreen,text width=5.2cm] at (8.2,\ybot+0.37) {\us};
-        }
-        % Outer border
-        \draw[PrimaryBlue,thick] (0,-3.75) rectangle (13.5,0.75);
-        % Column dividers
-        \draw[MidGrey] (3.45,-3.75) -- (3.45,0.75);
-        \draw[MidGrey] (8.05,-3.75) -- (8.05,0.75);
-    \end{tikzpicture}
     \caption{Competitive Differentiation: Precinct Smart vs.\ Competitors}
     \label{tab:exec_differentiation}
-\end{figure}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabularx}{\textwidth}{>{\bfseries}p{2.8cm} | X | >{\bfseries}X}
+        \hline
+        \theader{Capability} & \theader{Competitors} & \theader{Precinct Smart} \\
+        \hline
+        \textcolor{PrimaryBlue}{Technology} & Photogrammetry or basic LiDAR only & \textcolor{AccentGreen}{LiDAR + Data Science (only provider)} \\
+        \hline
+        \textcolor{PrimaryBlue}{Services} & Data collection only & \textcolor{AccentGreen}{Data + apps + consulting} \\
+        \hline
+        \textcolor{PrimaryBlue}{Distribution} & Direct sales & \textcolor{AccentGreen}{NGO partnerships (10M+ farmers)} \\
+        \hline
+        \textcolor{PrimaryBlue}{Revenue} & Projects only & \textcolor{AccentGreen}{Projects + subscriptions} \\
+        \hline
+        \textcolor{PrimaryBlue}{First-Mover} & --- & \textcolor{AccentGreen}{18--24 month head-start advantage} \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \section*{Business Model}
 
@@ -178,56 +159,23 @@ Farmer price: BDT 5-8K/year (3-12 week payback period) --- compelling economics 
 
 \section*{Key Risks \& Mitigation}
 
-% Top 3 Risks — TikZ risk cards
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=1cm]
-        % Card 1 — Competitive Pressure
-        \fill[AccentRed!10] (0,0) rectangle (4.3,3.8);
-        \draw[AccentRed,thick] (0,0) rectangle (4.3,3.8);
-        \fill[AccentRed] (0,3.1) rectangle (4.3,3.8);
-        \node[text=white,font=\bfseries\small,text width=4cm,align=center]
-            at (2.15,3.45) {Competitive Pressure};
-        \node[font=\bfseries\footnotesize,text=AccentRed,text width=3.9cm,align=left]
-            at (2.15,2.6) {Impact:};
-        \node[font=\footnotesize,text=DarkGrey,text width=3.9cm,align=left]
-            at (2.15,2.22) {Reduce differentiation};
-        \node[font=\bfseries\footnotesize,text=AccentGreen,text width=3.9cm,align=left]
-            at (2.15,1.7) {Mitigation:};
-        \node[font=\footnotesize,text=DarkGrey,text width=3.9cm,align=left]
-            at (2.15,1.0) {Speed + NGO lock-in (exclusive deals) + data moat};
-        % Card 2 — NGO Partnership Failure
-        \fill[AccentOrange!10] (4.6,0) rectangle (8.9,3.8);
-        \draw[AccentOrange,thick] (4.6,0) rectangle (8.9,3.8);
-        \fill[AccentOrange] (4.6,3.1) rectangle (8.9,3.8);
-        \node[text=white,font=\bfseries\small,text width=4cm,align=center]
-            at (6.75,3.45) {NGO Partnership Failure};
-        \node[font=\bfseries\footnotesize,text=AccentOrange,text width=3.9cm,align=left]
-            at (6.75,2.6) {Impact:};
-        \node[font=\footnotesize,text=DarkGrey,text width=3.9cm,align=left]
-            at (6.75,2.22) {Delayed app revenue};
-        \node[font=\bfseries\footnotesize,text=AccentGreen,text width=3.9cm,align=left]
-            at (6.75,1.7) {Mitigation:};
-        \node[font=\footnotesize,text=DarkGrey,text width=3.9cm,align=left]
-            at (6.75,1.0) {Phased pilot (5K farmers) before full scale};
-        % Card 3 — Farmer Adoption Delays
-        \fill[SecondaryBlue!8] (9.2,0) rectangle (13.5,3.8);
-        \draw[SecondaryBlue,thick] (9.2,0) rectangle (13.5,3.8);
-        \fill[SecondaryBlue] (9.2,3.1) rectangle (13.5,3.8);
-        \node[text=white,font=\bfseries\small,text width=4cm,align=center]
-            at (11.35,3.45) {Farmer Adoption Delays};
-        \node[font=\bfseries\footnotesize,text=SecondaryBlue,text width=3.9cm,align=left]
-            at (11.35,2.6) {Impact:};
-        \node[font=\footnotesize,text=DarkGrey,text width=3.9cm,align=left]
-            at (11.35,2.22) {Slower revenue ramp};
-        \node[font=\bfseries\footnotesize,text=AccentGreen,text width=3.9cm,align=left]
-            at (11.35,1.7) {Mitigation:};
-        \node[font=\footnotesize,text=DarkGrey,text width=3.9cm,align=left]
-            at (11.35,1.0) {Proven market (127K already adopt), reasonable pricing};
-    \end{tikzpicture}
     \caption{Top 3 Risks \& Mitigation Strategies}
     \label{tab:exec_risks}
-\end{figure}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabularx}{\textwidth}{>{\bfseries}p{3.5cm} | X | X}
+        \hline
+        \theader{Risk} & \theader{Impact} & \theader{Mitigation} \\
+        \hline
+        \textcolor{AccentRed}{Competitive pressure} & Reduced differentiation & Speed to market + NGO exclusivity deals + proprietary data moat \\
+        \hline
+        \textcolor{AccentOrange}{NGO partnership failure} & Delayed app revenue & Phased pilot (5K farmers) before full-scale rollout \\
+        \hline
+        \textcolor{SecondaryBlue}{Farmer adoption delays} & Slower revenue ramp & Proven demand (127K already adopting); accessible pricing \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \section*{Investment Required}
 

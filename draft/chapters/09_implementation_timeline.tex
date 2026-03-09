@@ -32,40 +32,23 @@
 
 \section{PHASE 2: Launch \& Market Entry (Months 4-12)}
 
-% Phase 2 — TikZ timeline
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.85cm]
-        % Header
-        \fill[SecondaryBlue!85] (0,0) rectangle (13.0,0.85);
-        \foreach \xpos/\lbl in {0.1/{Period}, 2.5/{Focus}, 7.5/{Target}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.425) {\lbl};
-        }
-        \foreach \row/\per/\focus/\tgt in {
-            1/{Q2 (M4--6)}/{Dhaka launch}/{5--8 projects, 2 case studies},
-            2/{Q3 (M7--9)}/{Chittagong hub}/{5+ projects, hub operational},
-            3/{Q4 (M10--12)}/{Data Science app dev}/{Crop Health Monitor MVP}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.85}
-            \pgfmathsetmacro{\ytop}{\ybot+0.85}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.0,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.0,\ybot);
-            \node[anchor=west,font=\small\bfseries,text=SecondaryBlue] at (0.1,\ybot+0.425) {\per};
-            \node[anchor=west,font=\small\bfseries,text=PrimaryBlue,text width=4.8cm]
-                at (2.5,\ybot+0.425) {\focus};
-            \node[anchor=west,font=\small,text=DarkGrey,text width=5.2cm]
-                at (7.5,\ybot+0.425) {\tgt};
-        }
-        \draw[SecondaryBlue,thick] (0,-2.55) rectangle (13.0,0.85);
-        \foreach \xd in {2.45,7.45}{
-            \draw[MidGrey!70] (\xd,-2.55) -- (\xd,0.85);
-        }
-    \end{tikzpicture}
     \caption{Phase 2 Quarterly Milestones}
     \label{tab:phase2}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{l | X | X}
+        \hline
+        \theader{Period} & \theader{Focus} & \theader{Target} \\
+        \hline
+        \textbf{\textcolor{SecondaryBlue}{Q2 (M4--6)}} & \textbf{\textcolor{PrimaryBlue}{Dhaka launch}} & 5--8 projects, 2 case studies \\
+        \hline
+        \textbf{\textcolor{SecondaryBlue}{Q3 (M7--9)}} & \textbf{\textcolor{PrimaryBlue}{Chittagong hub}} & 5+ projects, hub operational \\
+        \hline
+        \textbf{\textcolor{SecondaryBlue}{Q4 (M10--12)}} & \textbf{\textcolor{PrimaryBlue}{Data Science app development}} & Crop Health Monitor MVP \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \noindent
 \begin{minipage}[t]{0.48\textwidth}
@@ -128,39 +111,21 @@
 
 \section{PHASE 4: Scaling \& Innovation (Months 25-36)}
 
-% Phase 4 — TikZ timeline
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.85cm]
-        % Header
-        \fill[AccentOrange!80] (0,0) rectangle (13.0,0.85);
-        \foreach \xpos/\lbl in {0.1/{Period}, 2.5/{Focus}, 7.5/{Target}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.425) {\lbl};
-        }
-        \foreach \row/\per/\focus/\tgt in {
-            1/{Q1--2 (M25--30)}/{Sylhet hub launch}/{50K farmers on platform},
-            2/{Q3--4 (M31--36)}/{Platform optimization}/{60+ projects/year, multi-NGO}
-        }{
-            \pgfmathsetmacro{\ybot}{-(\row-1)*0.85}
-            \pgfmathsetmacro{\ytop}{\ybot+0.85}
-            \ifodd\row
-                \fill[LightGrey!60] (0,\ybot) rectangle (13.0,\ytop);
-            \fi
-            \draw[MidGrey!50] (0,\ybot) -- (13.0,\ybot);
-            \node[anchor=west,font=\small\bfseries,text=AccentOrange] at (0.1,\ybot+0.425) {\per};
-            \node[anchor=west,font=\small\bfseries,text=PrimaryBlue,text width=4.8cm]
-                at (2.5,\ybot+0.425) {\focus};
-            \node[anchor=west,font=\small,text=DarkGrey,text width=5.2cm]
-                at (7.5,\ybot+0.425) {\tgt};
-        }
-        \draw[AccentOrange,thick] (0,-1.70) rectangle (13.0,0.85);
-        \foreach \xd in {2.45,7.45}{
-            \draw[MidGrey!70] (\xd,-1.70) -- (\xd,0.85);
-        }
-    \end{tikzpicture}
     \caption{Phase 4 Quarterly Milestones}
     \label{tab:phase4}
-\end{figure}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{l | X | X}
+        \hline
+        \theader{Period} & \theader{Focus} & \theader{Target} \\
+        \hline
+        \textbf{\textcolor{AccentOrange}{Q1--2 (M25--30)}} & \textbf{\textcolor{PrimaryBlue}{Sylhet hub launch}} & 50K farmers on platform \\
+        \hline
+        \textbf{\textcolor{AccentOrange}{Q3--4 (M31--36)}} & \textbf{\textcolor{PrimaryBlue}{Platform optimisation}} & 60+ projects/year, multi-NGO \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \noindent
 \begin{minipage}[t]{0.32\textwidth}

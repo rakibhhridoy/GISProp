@@ -6,77 +6,31 @@
 
 \section{Critical Business Risks}
 
-% Risk Assessment — TikZ risk matrix grid
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \begin{tikzpicture}[x=1cm,y=0.88cm]
-        % Header
-        \fill[AccentRed!70] (0,0) rectangle (13.5,0.88);
-        \foreach \xpos/\lbl in {
-            0.1/{Risk},
-            3.8/{Impact},
-            6.8/{Probability},
-            9.0/{Mitigation}}{
-            \node[text=white,font=\bfseries\small,anchor=west] at (\xpos,0.44) {\lbl};
-        }
-        % Risk rows — explicit rows to allow per-row probability color
-        % Row 1
-        \fill[LightGrey!60] (0,-0.88) rectangle (13.5,0);
-        \draw[MidGrey!50] (0,-0.88) -- (13.5,-0.88);
-        \node[anchor=west,font=\scriptsize\bfseries,text=PrimaryBlue,text width=3.5cm] at (0.1,-0.44) {CAAB regulatory delays};
-        \node[anchor=west,font=\scriptsize,text=DarkGrey,text width=2.7cm] at (3.8,-0.44) {3--6 month halt};
-        \node[anchor=west,font=\scriptsize\bfseries,text=AccentRed] at (6.8,-0.44) {High};
-        \node[anchor=west,font=\scriptsize,text=AccentGreen,text width=4.3cm] at (9.0,-0.44) {Start licensing immediately; hire consultant};
-        % Row 2
-        \fill[white] (0,-1.76) rectangle (13.5,-0.88);
-        \draw[MidGrey!50] (0,-1.76) -- (13.5,-1.76);
-        \node[anchor=west,font=\scriptsize\bfseries,text=PrimaryBlue,text width=3.5cm] at (0.1,-1.32) {Monsoon weather impact};
-        \node[anchor=west,font=\scriptsize,text=DarkGrey,text width=2.7cm] at (3.8,-1.32) {40\% year non-flyable};
-        \node[anchor=west,font=\scriptsize\bfseries,text=AccentRed] at (6.8,-1.32) {High};
-        \node[anchor=west,font=\scriptsize,text=AccentGreen,text width=4.3cm] at (9.0,-1.32) {Multi-region ops; seasonal scheduling};
-        % Row 3
-        \fill[LightGrey!60] (0,-2.64) rectangle (13.5,-1.76);
-        \draw[MidGrey!50] (0,-2.64) -- (13.5,-2.64);
-        \node[anchor=west,font=\scriptsize\bfseries,text=PrimaryBlue,text width=3.5cm] at (0.1,-2.20) {Equipment malfunction};
-        \node[anchor=west,font=\scriptsize,text=DarkGrey,text width=2.7cm] at (3.8,-2.20) {Project delay, client loss};
-        \node[anchor=west,font=\scriptsize\bfseries,text=AccentOrange] at (6.8,-2.20) {Medium};
-        \node[anchor=west,font=\scriptsize,text=AccentGreen,text width=4.3cm] at (9.0,-2.20) {Backup drone + maintenance fund};
-        % Row 4
-        \fill[white] (0,-3.52) rectangle (13.5,-2.64);
-        \draw[MidGrey!50] (0,-3.52) -- (13.5,-3.52);
-        \node[anchor=west,font=\scriptsize\bfseries,text=PrimaryBlue,text width=3.5cm] at (0.1,-3.08) {Market adoption slow};
-        \node[anchor=west,font=\scriptsize,text=DarkGrey,text width=2.7cm] at (3.8,-3.08) {Revenue below projections};
-        \node[anchor=west,font=\scriptsize\bfseries,text=AccentOrange] at (6.8,-3.08) {Medium};
-        \node[anchor=west,font=\scriptsize,text=AccentGreen,text width=4.3cm] at (9.0,-3.08) {Focus on high-value government projects};
-        % Row 5
-        \fill[LightGrey!60] (0,-4.40) rectangle (13.5,-3.52);
-        \draw[MidGrey!50] (0,-4.40) -- (13.5,-4.40);
-        \node[anchor=west,font=\scriptsize\bfseries,text=PrimaryBlue,text width=3.5cm] at (0.1,-3.96) {Talent shortage};
-        \node[anchor=west,font=\scriptsize,text=DarkGrey,text width=2.7cm] at (3.8,-3.96) {Can't scale operations};
-        \node[anchor=west,font=\scriptsize\bfseries,text=AccentOrange] at (6.8,-3.96) {Medium};
-        \node[anchor=west,font=\scriptsize,text=AccentGreen,text width=4.3cm] at (9.0,-3.96) {Remote hiring; university partnerships};
-        % Row 6
-        \fill[white] (0,-5.28) rectangle (13.5,-4.40);
-        \draw[MidGrey!50] (0,-5.28) -- (13.5,-5.28);
-        \node[anchor=west,font=\scriptsize\bfseries,text=PrimaryBlue,text width=3.5cm] at (0.1,-4.84) {Competitive price war};
-        \node[anchor=west,font=\scriptsize,text=DarkGrey,text width=2.7cm] at (3.8,-4.84) {Margin compression};
-        \node[anchor=west,font=\scriptsize\bfseries,text=AccentRed] at (6.8,-4.84) {High};
-        \node[anchor=west,font=\scriptsize,text=AccentGreen,text width=4.3cm] at (9.0,-4.84) {Differentiate with tech + applications};
-        % Row 7
-        \fill[LightGrey!60] (0,-6.16) rectangle (13.5,-5.28);
-        \draw[MidGrey!50] (0,-6.16) -- (13.5,-6.16);
-        \node[anchor=west,font=\scriptsize\bfseries,text=PrimaryBlue,text width=3.5cm] at (0.1,-5.72) {Data security breach};
-        \node[anchor=west,font=\scriptsize,text=DarkGrey,text width=2.7cm] at (3.8,-5.72) {Loss of client trust};
-        \node[anchor=west,font=\scriptsize\bfseries,text=AccentGreen] at (6.8,-5.72) {Low};
-        \node[anchor=west,font=\scriptsize,text=AccentGreen,text width=4.3cm] at (9.0,-5.72) {ISO 27001; encrypted storage};
-        \draw[AccentRed!80,thick] (0,-6.16) rectangle (13.5,0.88);
-        \foreach \xd in {3.75,6.75,8.95}{
-            \draw[MidGrey!70] (\xd,-6.16) -- (\xd,0.88);
-        }
-    \end{tikzpicture}
     \caption{Risk Assessment \& Mitigation Strategies}
     \label{tab:risk_assessment}
-\end{figure}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabularx}{\textwidth}{>{\bfseries}p{3.2cm} | X | >{\bfseries\centering\arraybackslash}p{1.8cm} | X}
+        \hline
+        \theader{Risk} & \theader{Impact} & \theader{Probability} & \theader{Mitigation} \\
+        \hline
+        \textcolor{PrimaryBlue}{CAAB regulatory delays} & 3--6 month operational halt & \textcolor{AccentRed}{High} & Start licensing immediately; engage regulatory consultant \\
+        \hline
+        \textcolor{PrimaryBlue}{Monsoon weather impact} & 40\% of year non-flyable & \textcolor{AccentRed}{High} & Multi-region operations; seasonal project scheduling \\
+        \hline
+        \textcolor{PrimaryBlue}{Equipment malfunction} & Project delays, client loss & \textcolor{AccentOrange}{Medium} & Backup drone policy; dedicated maintenance fund \\
+        \hline
+        \textcolor{PrimaryBlue}{Market adoption slow} & Revenue below projections & \textcolor{AccentOrange}{Medium} & Focus on high-value government contracts first \\
+        \hline
+        \textcolor{PrimaryBlue}{Talent shortage} & Cannot scale operations & \textcolor{AccentOrange}{Medium} & Remote hiring; university partnerships; internal training \\
+        \hline
+        \textcolor{PrimaryBlue}{Competitive price war} & Margin compression & \textcolor{AccentRed}{High} & Differentiate on LiDAR technology + applications layer \\
+        \hline
+        \textcolor{PrimaryBlue}{Data security breach} & Loss of client trust & \textcolor{AccentGreen}{Low} & ISO 27001 compliance; end-to-end encrypted storage \\
+        \hline
+    \end{tabularx}
+\end{table}
 
 \section{Operational Challenges}
 
