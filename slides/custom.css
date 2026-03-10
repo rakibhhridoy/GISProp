@@ -191,9 +191,9 @@
     padding: 2em 2em;
 }
 
-/* Section backgrounds */
+/* Section backgrounds — must remain transparent so Reveal.js .slide-background divs show through */
 .reveal section {
-    background: #1A1A1A;
+    background: transparent;
 }
 
 /* Notes section styling */
