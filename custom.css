@@ -514,3 +514,77 @@ div[style*="background-color: rgba"] {
 /* ============================================================================ */
 
 /* Background images are handled by Reveal.js via .slide-background divs */
+
+/* ============================================================================ */
+/* ALIGNMENT FIXES — CONSISTENT TITLE SPACING & BOX ALIGNMENT                  */
+/* ============================================================================ */
+
+/* h3: full width so underline spans same width as content below */
+.reveal h3 {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 0.8em !important;
+}
+
+/* h2 inside overlay cards: keep inline-block for the card layout */
+.reveal section > div h2 {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Consistent gap between slide title and first content element */
+.reveal h3 + div,
+.reveal h3 + p,
+.reveal h3 + table,
+.reveal h3 + ul,
+.reveal h3 + ol {
+    margin-top: 0.5em;
+}
+
+/* All direct content wrappers: same max-width and centered */
+.reveal section > div[style],
+.reveal section > table,
+.reveal section > ul,
+.reveal section > ol,
+.reveal section > p {
+    max-width: 92% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
+}
+
+/* Left-align text inside bordered boxes for readability */
+div[style*="border-left"] {
+    text-align: left !important;
+}
+
+/* Left-align list items globally (prevent centering from flex parent) */
+.reveal ul,
+.reveal ol {
+    text-align: left !important;
+}
+
+/* Consistent padding inside info/metric boxes */
+div[style*="border-left: 4px solid"] {
+    padding: 0.9em 1.1em !important;
+    box-sizing: border-box;
+}
+
+/* Vertically align grid children to top so boxes at same height start together */
+div[style*="display: grid"] {
+    align-items: start !important;
+}
+
+/* Consistent table margin */
+.reveal table {
+    margin: 0.6em auto !important;
+    width: 100% !important;
+    max-width: 92% !important;
+}
+
+/* h4 spacing consistency */
+.reveal h4 {
+    margin-top: 0.5em !important;
+    margin-bottom: 0.4em !important;
+}
