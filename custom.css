@@ -191,9 +191,9 @@
     padding: 2em 2em;
 }
 
-/* Section backgrounds */
+/* Section backgrounds — transparent so Reveal.js .slide-background divs show through */
 .reveal section {
-    background: #1A1A1A;
+    background: transparent;
 }
 
 /* Notes section styling */
@@ -308,11 +308,27 @@
 
 /* Progress bar */
 .reveal .progress {
-    color: #48BB78;
+    color: #ED8936;
 }
 
 .reveal .progress span {
-    background-color: #48BB78;
+    background-color: #ED8936;
+}
+
+/* Navigation controls — orange */
+.reveal .controls {
+    color: #ED8936;
+}
+
+.reveal .controls button {
+    color: #ED8936 !important;
+}
+
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-down {
+    border-color: #ED8936 !important;
 }
 
 /* Fragment animations */
@@ -497,12 +513,4 @@ div[style*="background-color: rgba"] {
 /* BACKGROUND IMAGES WITH LIGHT OVERLAYS - DISABLED */
 /* ============================================================================ */
 
-/* NOTE: Background images disabled due to conflicts with nested sections */
-/* Reveal.js vertical slides require transparent outer containers */
-/* Background images should be applied at slide-by-slide level, not section level */
-
-/* Disable background images on all sections */
-.reveal section[data-background-image] {
-    background-image: none !important;
-    background-color: transparent !important;
-}
+/* Background images are handled by Reveal.js via .slide-background divs */
