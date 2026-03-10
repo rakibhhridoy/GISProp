@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  11 MAR 2026 00:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  11 MAR 2026 01:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1576,15 +1576,15 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
-* v-part:(T,H,B)=(86.72377pt, 671.5993pt, 86.72377pt)
+* h-part:(L,W,R)=(50.58878pt, 496.33032pt, 50.58878pt)
+* v-part:(T,H,B)=(54.2025pt, 736.64185pt, 54.2025pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=452.9679pt
-* \textheight=671.5993pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-17.42001pt
+* \textwidth=496.33032pt
+* \textheight=736.64185pt
+* \oddsidemargin=-21.68121pt
+* \evensidemargin=-21.68121pt
+* \topmargin=-49.94128pt
 * \headheight=12.0pt
 * \headsep=19.8738pt
 * \topskip=12.0pt
@@ -1748,7 +1748,7 @@ l.121 \newpage
 ]
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 66.
+(Font)              <10.95> on input line 72.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.09999pt, for example:
@@ -1784,16 +1784,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[6]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[7])
+[6])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
@@ -1806,11 +1797,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[8] (./chapters/00_competitive_landscape.tex
+[7] (./chapters/00_competitive_landscape.tex
+Overfull \hbox (2.43571pt too wide) in paragraph at lines 5--5
+\T1/lmr/bx/n/24.88 (-20) Mar-ket Re-search: Com-pet-i-tive Land-scape
+ []
 
-[9
+
+
+[8
 
 ]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
+
+[9]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1856,59 +1861,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [14]
-Underfull \hbox (badness 1521) in paragraph at lines 242--242
-[]|\T1/lmr/m/n/12 (+20) Photo + Li-
- []
-
-
-Overfull \hbox (14.38733pt too wide) in paragraph at lines 242--242
-[]|\T1/lmr/m/n/12 (-20) Photogrammetry| 
- []
-
-
-Overfull \hbox (14.38733pt too wide) in paragraph at lines 242--242
-[]|\T1/lmr/m/n/12 (-20) Photogrammetry| 
- []
-
-
-Overfull \hbox (19.88882pt too wide) in paragraph at lines 242--242
-[]|\T1/lmr/m/n/12 (-20) Construction/Dev| 
- []
-
-
-Overfull \hbox (14.38733pt too wide) in paragraph at lines 242--242
-[]|\T1/lmr/m/n/12 (-20) Photogrammetry| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 242--242
-[]|\T1/lmr/bx/n/12 (+20) LiDAR +
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 242--242
-[]|\T1/lmr/bx/n/12 (+20) Multi-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[15]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[16]
 Package pgfplots info on input line 309: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 
@@ -1920,48 +1872,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[17]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[18{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm
+[15{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm
 /lm-rm.enc}{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/
 dvips/lm/lm-mathit.enc}]
-Underfull \hbox (badness 1688) in paragraph at lines 376--376
-[]|\T1/lmr/m/n/12 (+20) Photo + Ba-sic Li-
- []
-
-
-Underfull \hbox (badness 1226) in paragraph at lines 376--376
-[]|[]\T1/lmr/bx/n/12 (+20) Data + Apps +
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 376--376
-[]|[]\T1/lmr/bx/n/12 (+20) Multi-sector +
- []
-
-
-Underfull \hbox (badness 7415) in paragraph at lines 376--376
-[]|[]\T1/lmr/bx/n/12 (+20) Direct + NGO
- []
-
-
-Underfull \hbox (badness 2772) in paragraph at lines 376--376
-[]|[]\T1/lmr/bx/n/12 (+20) Projects + Sub-
- []
-
-
-Underfull \hbox (badness 3009) in paragraph at lines 376--376
-[]|[]\T1/lmr/bx/n/12 (+20) Rapid Data Sci-
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1970,7 +1883,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[19]
+[16]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1979,7 +1892,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[20])
+[17])
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1988,11 +1901,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[21] (./chapters/01_market_analysis.tex
+[18] (./chapters/01_market_analysis.tex
 Chapter 1.
 
 
-[22
+[19
 
 ]
 
@@ -2003,7 +1916,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[23]
+[20]
 Package pgfplots info on input line 101: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 
@@ -2015,7 +1928,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[24]
+[21]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
+
+[22]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
+
+[23]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
+
+[24]) (./chapters/02_business_model.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2025,71 +1965,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [25]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[26]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[27]
-Underfull \hbox (badness 4429) in paragraph at lines 210--210
-[]|\T1/lmr/m/n/12 (+20) Photo + Li-
- []
-
-
-Overfull \hbox (10.23283pt too wide) in paragraph at lines 210--210
-[]|\T1/lmr/m/n/12 (-20) Photogrammetry| 
- []
-
-
-Overfull \hbox (10.23283pt too wide) in paragraph at lines 210--210
-[]|\T1/lmr/m/n/12 (-20) Photogrammetry| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--210
-[]|\T1/lmr/m/n/12 (+20) Quick
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--210
-[]|\T1/lmr/bx/n/12 (+20) LiDAR +
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[28]) (./chapters/02_business_model.tex
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[29]
 Chapter 2.
 
 
-[30
+[26
 
 ]
 
@@ -2100,16 +1979,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[31]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[32]
+[27]
 Package pgfplots info on input line 135: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
 
@@ -2121,7 +1991,74 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[33]
+[28]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
+
+[29]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
+
+[30]
+Underfull \hbox (badness 1137) in paragraph at lines 271--271
+[]|\T1/lmr/m/n/12 (+20) Cost + 150% + yield
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
+
+[31]) (./chapters/03_operational_plan.tex
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
+
+[32]
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+[]|\T1/lmr/m/n/12 (+20) Zenmuse H30T (Li-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+[]|\T1/lmr/m/n/12 (+20) Workstation (32GB,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+[]|\T1/lmr/m/n/12 (+20) CloudCompare, Las-
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 44--44
+[]|\T1/lmr/m/n/12 (+20) Computers, mon-i-tors,
+ []
+
+
+
+[33
+
+]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2140,16 +2077,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 271--271
-[]|\T1/lmr/m/n/12 (+20) Cost re-cov-ery +
- []
-
-
-Underfull \hbox (badness 1472) in paragraph at lines 271--271
-[]|\T1/lmr/m/n/12 (+20) Farmer map-ping +
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2158,7 +2085,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[36]) (./chapters/03_operational_plan.tex
+[36]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2168,47 +2095,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [37]
-Chapter 3.
-
-Underfull \hbox (badness 2495) in paragraph at lines 44--44
-[]|\T1/lmr/m/n/12 (+20) DJI Ma-trice 300
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
-[]|[]\T1/lmr/bx/n/12 (+20) Processing
- []
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
-[]|\T1/lmr/m/n/12 (+20) Workstation
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
-[]|\T1/lmr/m/n/12 (+20) CloudCompare,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
-[]|\T1/lmr/m/n/12 (+20) QGIS, Post-GIS,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
-[]|[]\T1/lmr/bx/n/12 (+20) Office Equip-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
-[]|[]\T1/lmr/bx/n/12 (+20) Contingency
- []
-
-
-
-[38
-
-]
+[38]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2236,21 +2131,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [41]
-Underfull \hbox (badness 2809) in paragraph at lines 168--168
-[]|\T1/lmr/m/n/12 (+20) Overall busi-ness, client re-la-tions,
- []
-
-
-Underfull \hbox (badness 1242) in paragraph at lines 168--168
-[]|\T1/lmr/m/n/12 (+20) Flight op-er-a-tions, data col-lec-tion,
- []
-
-
-Underfull \hbox (badness 7291) in paragraph at lines 168--168
-[]|\T1/lmr/m/n/12 (+20) Specialized do-main ex-per-tise as
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2259,7 +2139,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[42]
+[42]) (./chapters/04_financial_projections.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2269,15 +2149,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [43]
+Chapter 4.
+
+Overfull \hbox (10.14252pt too wide) in paragraph at lines 35--57
+[] [] 
+ []
+
+Package pgfplots info on input line 87: Using 'lua backend=false' for axis: x c
+oord trafo unsupported.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
+[44
 
-[44]
+]
+Package pgfplots info on input line 161: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2287,25 +2174,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
-[]|\T1/lmr/m/n/12 (+20) Commercial
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
-\T1/lmr/m/n/12 (+20) sur-vey-ing,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
-\T1/lmr/m/n/12 (+20) map-ping,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
-[]|\T1/lmr/m/n/12 (+20) Cargo de-liv-
- []
-
+Package pgfplots info on input line 236: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
 
 
 
@@ -2316,6 +2186,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [46]
+Package pgfplots info on input line 314: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2333,7 +2206,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[48]) (./chapters/04_financial_projections.tex
+[48]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2343,22 +2216,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [49]
-Chapter 4.
-
-Overfull \hbox (11.87741pt too wide) in paragraph at lines 35--57
-[] [] 
- []
-
-
-
-[50
-
-]
-Package pgfplots info on input line 87: Using 'lua backend=false' for axis: x c
-oord trafo unsupported.
-Package pgfplots info on input line 161: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2367,10 +2224,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[51]
-Package pgfplots info on input line 236: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
+[50]
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
+
+[51]) (./chapters/05_competitive_strategy.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2380,18 +2243,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [52]
-Package pgfplots info on input line 314: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
+Chapter 5.
 
 
+[53
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[53]
+]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2410,26 +2267,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [55]
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+[]|\T1/lmr/m/n/12 (+20) Premium (10--15%
+ []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[56]
+Underfull \hbox (badness 2393) in paragraph at lines 160--160
+[]|[]\T1/lmr/bx/n/12 (+20) Data + Apps +
+ []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+[]|[]\T1/lmr/bx/n/12 (+20) Partnership-
+ []
 
-[57]
-Underfull \hbox (badness 10000) in paragraph at lines 510--510
-[]|\T1/lmr/m/n/12 (+20) Cloud in-fras-truc-ture setup
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+[]|[]\T1/lmr/m/n/12 (+20) Long-term re-la-tion-
  []
 
 
@@ -2441,7 +2295,57 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[58]) (./chapters/05_competitive_strategy.tex
+[56]) (./chapters/06_risks_challenges.tex
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
+
+[57]
+Chapter 6.
+
+Overfull \hbox (13.75002pt too wide) in paragraph at lines 32--32
+ []|[]\T1/lmr/bx/n/12 (-20) Probability[]| 
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 32--32
+[]|[]\T1/lmr/bx/n/12 (+20) CAAB reg-u-la-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|[]\T1/lmr/bx/n/12 (+20) Monsoon
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\T1/lmr/bx/n/12 (+20) weather im-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|[]\T1/lmr/bx/n/12 (+20) Market adop-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|[]\T1/lmr/bx/n/12 (+20) Competitive
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|[]\T1/lmr/bx/n/12 (+20) Data se-cu-rity
+ []
+
+
+
+[58
+
+]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2451,12 +2355,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [59]
-Chapter 5.
 
 
-[60
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-]
+[60]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2474,12 +2381,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[62]
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
-[]|[]\T1/lmr/bx/n/12 (+20) Partnership-
- []
-
-
+[62]) (./chapters/07_regional_delivery.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2489,15 +2391,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [63]
+Chapter 7.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
+[64
 
-[64]) (./chapters/06_risks_challenges.tex
+]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2507,77 +2406,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [65]
-Chapter 6.
-
-Overfull \hbox (13.75002pt too wide) in paragraph at lines 32--32
- []|[]\T1/lmr/bx/n/12 (-20) Probability[]| 
- []
 
 
-Underfull \hbox (badness 2671) in paragraph at lines 32--32
-[]|[]\T1/lmr/bx/n/12 (+20) CAAB reg-u-la-
- []
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-
-Underfull \hbox (badness 3158) in paragraph at lines 32--32
-[]|\T1/lmr/m/n/12 (+20) 3--6 month op-er-a-tional
- []
-
-
-Underfull \hbox (badness 2181) in paragraph at lines 32--32
-[]|\T1/lmr/m/n/12 (+20) Start li-cens-ing im-me-di-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
-[]|[]\T1/lmr/bx/n/12 (+20) Monsoon
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
-\T1/lmr/bx/n/12 (+20) weather im-
- []
-
-
-Underfull \hbox (badness 2726) in paragraph at lines 32--32
-[]|\T1/lmr/m/n/12 (+20) Multi-region op-er-a-tions;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
-[]|[]\T1/lmr/bx/n/12 (+20) Market adop-
- []
-
-
-Underfull \hbox (badness 5817) in paragraph at lines 32--32
-[]|\T1/lmr/m/n/12 (+20) Revenue be-low pro-jec-
- []
-
-
-Underfull \hbox (badness 2426) in paragraph at lines 32--32
-[]|\T1/lmr/m/n/12 (+20) Remote hir-ing; uni-ver-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
-[]|[]\T1/lmr/bx/n/12 (+20) Competitive
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
-[]|[]\T1/lmr/bx/n/12 (+20) Data se-cu-rity
- []
-
-
-Underfull \hbox (badness 3679) in paragraph at lines 32--32
-[]|\T1/lmr/m/n/12 (+20) ISO 27001 com-pli-ance;
- []
-
-
-
-[66
-
-]
+[66]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2604,7 +2441,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[69]
+[69]) (./chapters/08_ml_farmer_apps.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2614,15 +2451,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [70]
+Chapter 8.
+
+Overfull \hbox (33.7601pt too wide) in paragraph at lines 5--5
+\T1/lmr/bx/n/24.88 (-20) ML & Farmer-Level Ap-pli-ca-tion Roadmap| 
+ []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[71]) (./chapters/07_regional_delivery.tex
+[71
+
+]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2632,12 +2471,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [72]
-Chapter 7.
 
 
-[73
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-]
+[73]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2656,6 +2498,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [75]
+Underfull \hbox (badness 4013) in paragraph at lines 242--242
+[]|\T1/lmr/m/n/12 (+20) Agriculture, cli-mate adap-ta-tion,
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2664,7 +2514,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[76]
+[76]) (./chapters/09_implementation_timeline.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2674,6 +2524,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [77]
+Chapter 9.
+
+Overfull \hbox (10.14252pt too wide) in paragraph at lines 53--68
+[] [] 
+ []
+
+
+
+[78
+
+]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2682,16 +2543,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[78]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[79]) (./chapters/08_ml_farmer_apps.tex
+[79]) (./chapters/10_kpis.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2701,12 +2553,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [80]
-Chapter 8.
-
-Overfull \hbox (77.12253pt too wide) in paragraph at lines 5--5
-\T1/lmr/bx/n/24.88 (-20) ML & Farmer-Level Ap-pli-ca-tion Roadmap| 
- []
-
+Chapter 10.
 
 
 [81
@@ -2720,7 +2567,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[82]
+[82]) (./chapters/11_market_outlook.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2730,6 +2577,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [83]
+Chapter 11.
+
+
+[84
+
+]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2738,20 +2591,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[84]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[85]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
+[85]) (./chapters/12_investment_summary.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2761,119 +2601,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
 [86]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[87]) (./chapters/09_implementation_timeline.tex
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[88]
-Chapter 9.
-
-
-[89
-
-]
-Overfull \hbox (11.87741pt too wide) in paragraph at lines 53--68
-[] [] 
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[90]) (./chapters/10_kpis.tex
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[91]
-Chapter 10.
-
-
-[92
-
-]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[93]) (./chapters/11_market_outlook.tex
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[94]
-Chapter 11.
-
-
-[95
-
-]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[96]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[97]) (./chapters/12_investment_summary.tex
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[98]
 Chapter 12.
 
-Overfull \hbox (11.87741pt too wide) in paragraph at lines 36--56
+Overfull \hbox (10.14252pt too wide) in paragraph at lines 36--56
 [] [] 
  []
 
 
 
-[99
+[87
 
 ]
 Package pgfplots info on input line 109: Using 'lua backend=false' for axis: x 
@@ -2887,7 +2623,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[100]
+[88]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2896,7 +2632,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[101]
+[89]) (./chapters/13_conclusion.tex
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2905,31 +2641,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[102]) (./chapters/13_conclusion.tex
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[103]
+[90]
 Chapter 13.
 
-Overfull \hbox (53.39273pt too wide) in paragraph at lines 5--5
+Overfull \hbox (10.0303pt too wide) in paragraph at lines 5--5
 \T1/lmr/bx/n/24.88 (-20) Con-clu-sion & Rec-om-mended Next Steps| 
  []
 
 
-Overfull \hbox (0.15475pt too wide) in paragraph at lines 13--14
-[][]\T1/lmr/bx/n/12 (-20) Technology Gap:[] \T1/lmr/m/n/12 (-20) Li-DAR + Data 
-Sci-ence in-te-gra-tion re-mains un-tapped in Bangladesh 
- []
 
-
-
-[104
+[91
 
 ]
 
@@ -2940,16 +2661,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[105]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[106]
+[92]
 Overfull \hbox (8.05956pt too wide) in paragraph at lines 118--118
  []|[]\T1/lmr/bx/n/12 (-20) Probability[]| 
  []
@@ -2973,7 +2685,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[107]) (./chapters/appendix.tex
+[93]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2982,14 +2694,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[108]
-Overfull \hbox (3.50977pt too wide) in paragraph at lines 5--5
-\T1/lmr/bx/n/24.88 (-20) Ap-pendix A: Equip-ment Spec-i-fi-ca-tions
- []
+[94]) (./chapters/appendix.tex
 
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.09999pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.09999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[109
+[95]
+
+[96
 
 ]
 
@@ -3000,27 +2716,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[110]
-Overfull \hbox (30.89565pt too wide) in paragraph at lines 48--48
-\T1/lmr/bx/n/24.88 (-20) Ap-pendix B: Mar-ket Re-search Sources| 
- []
+[97]
 
-
-
-[111
-
-]
-Overfull \hbox (8.31052pt too wide) in paragraph at lines 62--62
-\T1/lmr/bx/n/24.88 (-20) Ap-pendix C: CAAB Reg-u-la-tory Frame-
- []
-
-
-
-[112
+[98
 
 ]
 
-[113
+[99
+
+]
+
+[100
 
 ]
 
@@ -3031,25 +2737,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
 
-[114]
-Overfull \hbox (11.81604pt too wide) in paragraph at lines 120--120
-\T1/lmr/bx/n/24.88 (-20) Ap-pendix E: Team Hir-ing Guide-lines| 
- []
+[101])
 
+[102
 
-
-[115
-
-])
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.09999pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.09999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.09999pt}.
-
-[116]
+]
 
 LaTeX Warning: Empty bibliography on input line 192.
 
@@ -3062,24 +2754,18 @@ L3 programming layer <2025-01-18>
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: BD8D19537F5DE4679A54944A1BB6CFD4;46016
-(rerunfilecheck)             After:  8A82A7B437AD75D593F11678B90D6C35;45997.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 8A82A7B437AD75D593F11678B90D6C35;45997.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53002 strings out of 473190
- 1207357 string characters out of 5704335
- 2168758 words of memory out of 5000000
- 74610 multiletter control sequences out of 15000+600000
- 667452 words of font info for 236 fonts, out of 8000000 for 9000
+ 52979 strings out of 473190
+ 1207284 string characters out of 5704335
+ 2168810 words of memory out of 5000000
+ 74623 multiletter control sequences out of 15000+600000
+ 666403 words of font info for 225 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  121i,19n,124p,1193b,2415s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/
@@ -3096,10 +2782,10 @@ e1/public/lm/lmri10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-di
 st/fonts/type1/public/lm/lmri12.pfb></opt/homebrew/Cellar/texlive/20250308_1/sh
 are/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></opt/homebrew/Cellar/texlive/2
 0250308_1/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (117 pages, 509532 bytes).
+Output written on main.pdf (103 pages, 497092 bytes).
 PDF statistics:
- 2058 PDF objects out of 2073 (max. 8388607)
- 1869 compressed objects within 19 object streams
- 537 named destinations out of 1000 (max. 500000)
+ 1997 PDF objects out of 2073 (max. 8388607)
+ 1822 compressed objects within 19 object streams
+ 523 named destinations out of 1000 (max. 500000)
  63389 words of extra memory for PDF output out of 74296 (max. 10000000)
 

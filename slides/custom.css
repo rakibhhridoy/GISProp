@@ -497,12 +497,4 @@ div[style*="background-color: rgba"] {
 /* BACKGROUND IMAGES WITH LIGHT OVERLAYS - DISABLED */
 /* ============================================================================ */
 
-/* NOTE: Background images disabled due to conflicts with nested sections */
-/* Reveal.js vertical slides require transparent outer containers */
-/* Background images should be applied at slide-by-slide level, not section level */
-
-/* Disable background images on all sections */
-.reveal section[data-background-image] {
-    background-image: none !important;
-    background-color: transparent !important;
-}
+/* Background images are handled by Reveal.js via .slide-background divs */
