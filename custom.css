@@ -588,3 +588,21 @@ div[style*="display: grid"] {
     margin-top: 0.5em !important;
     margin-bottom: 0.4em !important;
 }
+
+/* ============================================================================ */
+/* THINNER TITLE UNDERLINES                                                     */
+/* ============================================================================ */
+
+.reveal h2 {
+    border-bottom: 1px solid #48BB78 !important;
+}
+
+.reveal h3 {
+    border-bottom: 1px solid #63B3ED !important;
+}
+
+/* Override any inline 3px border on h2 inside overlay cards */
+.reveal section div h2,
+.reveal section div h3 {
+    border-bottom-width: 1px !important;
+}
